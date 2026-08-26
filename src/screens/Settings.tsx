@@ -22,13 +22,31 @@ export default function Settings() {
   async function doImportVideos(files: FileList) {
     try {
       await navigator.storage?.persist?.();
-      for (let i = 0; i < files.length; i++) {
-        const f = files[i];
-        setImporting(`Importando ${i + 1}/${files.length}: ${f.name}…`);
-        await importVideoFile(f, (pct) => setImporting(`Importando ${i + 1}/${files.length}: ${f.name} · ${pct}%`));
+      // nombres válidos del dataset: id de encuentro (clip) o id de YouTube (vídeo completo)
+      const perfs = await db.performances.toArray();
+      const validBases = new Set<string>();
+      for (const p of perfs) {
+        if (p.videoId) { validBases.add(p.id); validBases.add(p.videoId); }
+        if (p.aoVideoId) validBases.add(p.aoVideoId);
+      }
+      const list = Array.from(files);
+      const sinCorrespondencia: string[] = [];
+      for (let i = 0; i < list.length; i++) {
+        const f = list[i];
+        setImporting(`Importando ${i + 1}/${list.length}: ${f.name}…`);
+        await importVideoFile(f, (pct) => setImporting(`Importando ${i + 1}/${list.length}: ${f.name} · ${pct}%`));
+        const base = f.name.replace(/\.(mp4|m4v|mov|webm)$/i, '');
+        if (!validBases.has(base)) sinCorrespondencia.push(f.name);
       }
       setImporting('');
-      setMsg(`✅ ${files.length} vídeo${files.length !== 1 ? 's' : ''} importado${files.length !== 1 ? 's' : ''}.`);
+      // cuántos encuentros quedan enlazados a un vídeo local
+      const nombres = new Set((await listLocalVideos()).map((v) => v.name.replace(/\.(mp4|m4v|mov|webm)$/i, '')));
+      const enlazados = perfs.filter((p) => p.videoId && (nombres.has(p.id) || nombres.has(p.videoId))).length;
+      let m = `✅ ${list.length} vídeo${list.length !== 1 ? 's' : ''} importado${list.length !== 1 ? 's' : ''} · ${enlazados} encuentros enlazados automáticamente.`;
+      if (sinCorrespondencia.length) {
+        m += ` ⚠️ ${sinCorrespondencia.length} sin correspondencia (nombre no coincide con ningún encuentro): ${sinCorrespondencia.slice(0, 5).join(', ')}${sinCorrespondencia.length > 5 ? '…' : ''}`;
+      }
+      setMsg(m);
       setVideos(await listLocalVideos());
     } catch (e) {
       setImporting('');
@@ -83,9 +101,10 @@ export default function Settings() {
       <div className="card">
         <p className="muted">
           Si tienes los vídeos como archivos, impórtalos aquí y la app los usará en vez de YouTube: sin anuncios y
-          sin conexión. Nombres que reconoce: <b>id-del-encuentro.mp4</b> (clip ya cortado, ver listado de cortes) o{' '}
-          <b>id-de-youtube.mp4</b> (vídeo completo; la app salta sola a los minutos). En el iPhone puedes elegirlos
-          desde Archivos / iCloud Drive.
+          sin conexión. Pon los archivos en cualquier carpeta de Archivos (iCloud Drive, p. ej.), toca <b>Importar
+          vídeos</b>, y en el selector <b>selecciona todos a la vez</b> — se enlazan solos a cada encuentro por el
+          nombre del archivo, sin hacer nada más. (No hace falta que estén en ninguna carpeta concreta: la app no
+          puede leer carpetas del sistema, solo los archivos que eliges aquí.)
         </p>
         <button className="btn-primary" onClick={() => videoRef.current?.click()} disabled={!!importing}>
           🎞 Importar vídeos
