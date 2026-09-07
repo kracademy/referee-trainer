@@ -68,6 +68,11 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
   // en exámenes, la actuación de AO puede venir de otro vídeo
   const clipVideo = (!onAkaClip && perf?.aoVideoId) || perf?.videoId;
 
+  // Al pasar a valorar (fin de AKA, decisión, resultado) el vídeo se PARA, sea local o de YouTube
+  useEffect(() => {
+    if (phase === 'interlude' || phase === 'decision' || phase === 'reveal') playerRef.current?.pause();
+  }, [phase]);
+
   // Vídeo local (sin anuncios): <performanceId>.mp4 = clip cortado; <videoId>.mp4 = vídeo completo
   const [local, setLocal] = useState<LocalSrc>(undefined);
   useEffect(() => {

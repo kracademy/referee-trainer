@@ -74,9 +74,10 @@ const I = {
     </svg>
   ),
   gear: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+    // engranaje estilo iOS (8 dientes)
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19.3 10.5 21.6 10.9 21.6 13.1 19.3 13.5 18.3 16.1 19.6 18.0 18.0 19.6 16.1 18.3 13.5 19.3 13.1 21.6 10.9 21.6 10.5 19.3 7.9 18.3 6.0 19.6 4.4 18.0 5.7 16.1 4.7 13.5 2.4 13.1 2.4 10.9 4.7 10.5 5.7 7.9 4.4 6.0 6.0 4.4 7.9 5.7 10.5 4.7 10.9 2.4 13.1 2.4 13.5 4.7 16.1 5.7 18.0 4.4 19.6 6.0 18.3 7.9z" />
       <circle cx="12" cy="12" r="3.1" />
-      <path d="M12 2.8v2.6M12 18.6v2.6M21.2 12h-2.6M5.4 12H2.8M18.5 5.5l-1.84 1.84M7.34 16.66 5.5 18.5M18.5 18.5l-1.84-1.84M7.34 7.34 5.5 5.5" />
     </svg>
   ),
 };
