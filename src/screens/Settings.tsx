@@ -19,7 +19,7 @@ export default function Settings() {
     listLocalVideos().then(setVideos).catch(() => setVideos([]));
   }, []);
 
-  async function doImportVideos(files: FileList) {
+  async function doImportVideos(list: File[]) {
     try {
       await navigator.storage?.persist?.();
       // nombres válidos del dataset: id de encuentro (clip) o id de YouTube (vídeo completo)
@@ -29,12 +29,19 @@ export default function Settings() {
         if (p.videoId) { validBases.add(p.id); validBases.add(p.videoId); }
         if (p.aoVideoId) validBases.add(p.aoVideoId);
       }
-      const list = Array.from(files);
       const sinCorrespondencia: string[] = [];
+      const fallidos: string[] = [];
+      let importados = 0;
       for (let i = 0; i < list.length; i++) {
         const f = list[i];
         setImporting(`Importando ${i + 1}/${list.length}: ${f.name}…`);
-        await importVideoFile(f, (pct) => setImporting(`Importando ${i + 1}/${list.length}: ${f.name} · ${pct}%`));
+        try {
+          await importVideoFile(f, (pct) => setImporting(`Importando ${i + 1}/${list.length}: ${f.name} · ${pct}%`));
+          importados++;
+        } catch (err) {
+          fallidos.push(`${f.name} (${err instanceof Error ? err.message : err})`);
+          continue; // un archivo que falla no aborta el resto
+        }
         const base = f.name.replace(/\.(mp4|m4v|mov|webm)$/i, '');
         if (!validBases.has(base)) sinCorrespondencia.push(f.name);
       }
@@ -42,7 +49,8 @@ export default function Settings() {
       // cuántos encuentros quedan enlazados a un vídeo local
       const nombres = new Set((await listLocalVideos()).map((v) => v.name.replace(/\.(mp4|m4v|mov|webm)$/i, '')));
       const enlazados = perfs.filter((p) => p.videoId && (nombres.has(p.id) || nombres.has(p.videoId))).length;
-      let m = `✅ ${list.length} vídeo${list.length !== 1 ? 's' : ''} importado${list.length !== 1 ? 's' : ''} · ${enlazados} encuentros enlazados automáticamente.`;
+      let m = `✅ ${importados} vídeo${importados !== 1 ? 's' : ''} importado${importados !== 1 ? 's' : ''} · ${enlazados} encuentros enlazados automáticamente.`;
+      if (fallidos.length) m += ` ❌ ${fallidos.length} con error: ${fallidos.slice(0, 3).join('; ')}${fallidos.length > 3 ? '…' : ''}`;
       if (sinCorrespondencia.length) {
         m += ` ⚠️ ${sinCorrespondencia.length} sin correspondencia (nombre no coincide con ningún encuentro): ${sinCorrespondencia.slice(0, 5).join(', ')}${sinCorrespondencia.length > 5 ? '…' : ''}`;
       }
@@ -106,6 +114,11 @@ export default function Settings() {
           nombre del archivo, sin hacer nada más. (No hace falta que estén en ninguna carpeta concreta: la app no
           puede leer carpetas del sistema, solo los archivos que eliges aquí.)
         </p>
+        <p className="muted">
+          <b>En el iPhone, importa en tandas de 10–15 vídeos</b> (no los 90 de golpe: iOS se queda sin memoria al
+          copiarlos y cierra la app) y asegúrate antes de que estén descargados en el teléfono (sin el icono de la
+          nube en Archivos). No cierres la app mientras importa.
+        </p>
         <button className="btn-primary" onClick={() => videoRef.current?.click()} disabled={!!importing}>
           🎞 Importar vídeos
         </button>
@@ -115,7 +128,12 @@ export default function Settings() {
           accept="video/mp4,video/quicktime,video/webm,.mp4,.m4v,.mov,.webm"
           multiple
           style={{ display: 'none' }}
-          onChange={(e) => { if (e.target.files?.length) doImportVideos(e.target.files); e.target.value = ''; }}
+          onChange={(e) => {
+            // copiar la lista ANTES de vaciar el input: la FileList es "viva" y se vacía con él
+            const list = Array.from(e.target.files ?? []);
+            e.target.value = '';
+            if (list.length) doImportVideos(list);
+          }}
         />
         {importing && <p className="muted center">{importing}</p>}
         {videos.length > 0 && (
