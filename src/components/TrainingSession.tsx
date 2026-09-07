@@ -81,7 +81,9 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
     setLocal(undefined);
     (async () => {
       if (!perf?.id || !clipVideo) { if (alive) setLocal(null); return; }
-      const clipFile = await findLocalVideo([perf.id]);
+      // AO desde otro vídeo (exámenes): solo vale el archivo de ese vídeo, con tiempos absolutos
+      const aoOther = clipVideo === perf.aoVideoId && perf.aoVideoId !== perf.videoId;
+      const clipFile = aoOther ? null : await findLocalVideo([perf.id]);
       const file = clipFile ?? (await findLocalVideo([clipVideo]));
       if (!alive) return;
       if (!file) { setLocal(null); return; }

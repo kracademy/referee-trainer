@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T14:04:06.801Z",
+  "generatedAt": "2026-09-07T20:02:17.687Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -21960,8 +21960,15 @@
         }
       ],
       "notes": "Final del Campeonato de Europa 2012. Vídeo antiguo (playlist): puede no estar disponible.",
-      "status": "VIDEO_CATALOGUED",
-      "videoId": "H-U7ojTyKBA"
+      "status": "READY",
+      "videoId": "H-U7ojTyKBA",
+      "startSeconds": 60,
+      "endSeconds": 415,
+      "akaStartSeconds": 60,
+      "akaEndSeconds": 250,
+      "aoStartSeconds": 277,
+      "aoEndSeconds": 415,
+      "closeResult": true
     },
     {
       "id": "former-exams-ekf-wkf_02",
@@ -21994,9 +22001,17 @@
         }
       ],
       "notes": "Karate1 Pamplona · FINALS (canal WKF). Equipos: sexo de la categoría por confirmar.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "ozp_rmJ4PWQ",
-      "startSeconds": 7303
+      "startSeconds": 7319,
+      "endSeconds": 8003,
+      "akaStartSeconds": 7319,
+      "akaEndSeconds": 7580,
+      "aoStartSeconds": 7723,
+      "aoEndSeconds": 8004,
+      "officialScoreAka": 24.82,
+      "officialScoreAo": 26.2,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_03",
@@ -22029,9 +22044,18 @@
         }
       ],
       "notes": "Final femenina · Karate 1 Series A Pamplona 2022. El enlace original está caído: falta un vídeo que funcione.",
-      "status": "VIDEO_CATALOGUED",
-      "videoId": "b2GHjcrtvsw",
-      "startSeconds": 46
+      "status": "READY",
+      "videoId": "uqBhx0K3avY",
+      "startSeconds": 57,
+      "endSeconds": 472,
+      "akaStartSeconds": 57,
+      "akaEndSeconds": 244,
+      "aoStartSeconds": 275,
+      "aoEndSeconds": 472,
+      "closeResult": true,
+      "officialScoreAka": 25.34,
+      "officialScoreAo": 25.26,
+      "judgesCount": 3
     },
     {
       "id": "former-exams-ekf-wkf_04",
@@ -22178,10 +22202,16 @@
           "order": 10
         }
       ],
-      "notes": "48th All Japan Karate Championships 2020: dos actuaciones de vídeos distintos (AO tiene su propio vídeo).",
-      "status": "VIDEO_CATALOGUED",
+      "notes": "48th All Japan Karate Championships 2020: AKA (Kiyuna) y AO (Shimbaba) vienen de vídeos distintos.",
+      "status": "READY",
       "videoId": "uF4C1O-YOIU",
-      "aoVideoId": "UGT4YtJN0pM"
+      "aoVideoId": "UGT4YtJN0pM",
+      "startSeconds": 6,
+      "endSeconds": 145,
+      "akaStartSeconds": 6,
+      "akaEndSeconds": 145,
+      "aoStartSeconds": 0,
+      "aoEndSeconds": 166
     },
     {
       "id": "former-exams-ekf-wkf_09",
@@ -22206,8 +22236,12 @@
         }
       ],
       "notes": "AKA: Tozaki en la PKF 2024 (el vídeo enlazado). La actuación de AO era de OTRO encuentro: un Gankaku con desequilibrio medio — atleta y vídeo por confirmar.",
-      "status": "VIDEO_CATALOGUED",
-      "videoId": "Fbdc79xwiHE"
+      "status": "READY",
+      "videoId": "Fbdc79xwiHE",
+      "startSeconds": 0,
+      "endSeconds": 157,
+      "akaStartSeconds": 0,
+      "akaEndSeconds": 157
     },
     {
       "id": "former-exams-ekf-wkf_10",
@@ -22232,9 +22266,12 @@
         }
       ],
       "notes": "WKF Cadet, Junior & U21 World Championships 2024 (Venecia) · bronces cadete, tatami 3. Atletas y categoría real (cadete) por confirmar.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "ulm0OLmGkMY",
-      "startSeconds": 834
+      "startSeconds": 832,
+      "endSeconds": 978,
+      "akaStartSeconds": 832,
+      "akaEndSeconds": 978
     },
     {
       "id": "former-exams-ekf-wkf_11",
@@ -22255,9 +22292,18 @@
         }
       ],
       "notes": "Final Para-Karate · Campeonato de Europa Guadalajara 2023 (medal bouts del domingo). A efectos del examen gana AKA: Vicente puntuó mejor en el kata, aunque el resultado global fue para AO.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "6I8h4CVHjTo",
-      "startSeconds": 17100
+      "startSeconds": 17118,
+      "endSeconds": 17498,
+      "akaStartSeconds": 17118,
+      "akaEndSeconds": 17315,
+      "aoStartSeconds": 17359,
+      "aoEndSeconds": 17499,
+      "closeResult": true,
+      "officialScoreAka": 42.4,
+      "officialScoreAo": 41.8,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_12",
@@ -22278,8 +22324,12 @@
         }
       ],
       "notes": "Karate1 Leipzig 2017 · bronce. AO no hizo el saludo. Nombres completos por confirmar.",
-      "status": "VIDEO_CATALOGUED",
-      "videoId": "XdMuWde5pLk"
+      "status": "READY",
+      "videoId": "XdMuWde5pLk",
+      "startSeconds": 7,
+      "endSeconds": 292,
+      "akaStartSeconds": 7,
+      "akaEndSeconds": 153
     },
     {
       "id": "former-exams-ekf-wkf_13",
@@ -22322,11 +22372,18 @@
         }
       ],
       "notes": "World Championships · bronces (sesión sábado mañana): dos actuaciones distintas del mismo directo emparejadas para el examen.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "_QZxXzNEI4o",
-      "startSeconds": 1439,
+      "startSeconds": 799,
       "akaStartSeconds": 1439,
-      "aoStartSeconds": 786
+      "aoStartSeconds": 799,
+      "endSeconds": 1693,
+      "akaEndSeconds": 1693,
+      "aoEndSeconds": 1010,
+      "closeResult": true,
+      "officialScoreAka": 42.6,
+      "officialScoreAo": 43.1,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_15",
@@ -22347,9 +22404,17 @@
         }
       ],
       "notes": "Karate1 Larnaca · FINALS. Nombres completos por confirmar.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "EfTN5YQmETs",
-      "startSeconds": 40
+      "startSeconds": 52,
+      "endSeconds": 515,
+      "akaStartSeconds": 52,
+      "akaEndSeconds": 179,
+      "aoStartSeconds": 221,
+      "aoEndSeconds": 463,
+      "officialScoreAka": 40.8,
+      "officialScoreAo": 42.8,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_16",
