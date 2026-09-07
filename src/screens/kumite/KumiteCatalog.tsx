@@ -328,10 +328,7 @@ export default function KumiteCatalog() {
   return (
     <>
       <h1>Catalogar kumite</h1>
-      <p className="muted">
-        Corta clips de situaciones arbitrales: la acción hasta el YAME (sin ver la decisión), etiqueta la situación y
-        registra lo que dio el árbitro central. Al terminar, exporta el catálogo para incorporarlo al dataset publicado.
-      </p>
+      <p className="muted">Corta cada acción hasta el YAME, etiqueta la situación y registra la decisión del central.</p>
       <div className="row">
         <button className="btn-primary" style={{ flex: 1 }} onClick={openNew}>➕ NUEVO CLIP</button>
         <button className="btn-secondary" style={{ flex: 1 }} onClick={exportClips} disabled={clips.length === 0}>

@@ -53,10 +53,7 @@ export default function KumiteHome() {
       </button>
 
       {clips.length === 0 && (
-        <div className="card muted">
-          Aún no hay clips de kumite. En el ordenador, ve a <b>Biblioteca → Catalogar clips</b>: carga un vídeo de
-          YouTube, corta cada situación hasta el YAME y registra la decisión real del árbitro central.
-        </div>
+        <div className="card muted">Aún no hay clips. Catalógalos desde Biblioteca en el ordenador.</div>
       )}
     </div>
   );

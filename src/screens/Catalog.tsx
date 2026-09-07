@@ -30,7 +30,7 @@ export default function Catalog() {
   const [ajustado, setAjustado] = useState(false);
   const [nota, setNota] = useState('');
   const [msg, setMsg] = useState('');
-  const [showDone, setShowDone] = useState(false);
+  const [showDone, setShowDone] = useState(true);
   // vídeos locales importados (por nombre base), para marcar qué encuentros ya tienen archivo
   const [localNames, setLocalNames] = useState<Set<string>>(new Set());
   useEffect(() => {
@@ -455,20 +455,16 @@ export default function Catalog() {
   return (
     <>
       <h1>Catalogar vídeos</h1>
-      <p className="muted">
-        En orden cronológico, agrupado por campeonato: busca la emisión en la pestaña <b>"Live"</b> del canal de
-        YouTube de la WKF (o elige un vídeo candidato precargado) y marca inicio/fin de cada actuación. Al terminar,
-        exporta el catálogo para incorporarlo al dataset publicado.
-      </p>
+      <p className="muted">Asigna vídeo y tiempos a cada encuentro. Al terminar, exporta el catálogo.</p>
       <button className="btn-primary" onClick={() => { setMsg(''); setAdding(true); }}>
-        ➕ AÑADIR ENCUENTRO (p. ej. Former Exam)
+        ➕ AÑADIR ENCUENTRO
       </button>
       <div className="row">
         <button className="btn-secondary" onClick={exportCatalog} disabled={doneCount === 0}>
           ⬇️ Exportar catálogo ({doneCount})
         </button>
         <button className="btn-secondary" onClick={() => setShowDone((s) => !s)}>
-          {showDone ? 'Ocultar listas' : `Ver listas (${doneCount})`}
+          {showDone ? 'Ocultar listas' : 'Ver listas'}
         </button>
       </div>
       <p className="muted center">

@@ -1,27 +1,46 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCatalog } from '../logic/useCatalog';
 import { analyzePerformance } from '../logic/stats';
 import { competitionTypeLabel, roundLabel } from '../logic/format';
-import { isCloseResult } from '../db/types';
+import { isCloseResult, officialAverage } from '../db/types';
 import type { Performance } from '../db/types';
+import YouTubePlayer from '../components/YouTubePlayer';
+import LocalVideoPlayer from '../components/LocalVideoPlayer';
+import { findLocalVideo } from '../logic/localVideos';
 
 const ROUND_ORDER: Record<string, number> = { FINAL: 0, BRONZE_1: 1, BRONZE_2: 2, OTHER: 3 };
 
-const STATUS_BADGE: Record<string, { cls: string; txt: string }> = {
-  READY: { cls: 'ready', txt: '🟢 Lista' },
-  VIDEO_CATALOGUED: { cls: 'nodata', txt: '⚪ Falta marcar tiempos' },
-  VIDEO_MISSING: { cls: 'missing', txt: '⚪ Sin vídeo' },
-  DATA_IMPORTED: { cls: 'nodata', txt: '⚪ Datos importados' },
-  MISSING_DATA: { cls: 'missing', txt: '🔴 Datos incompletos' },
-};
-
+/**
+ * Biblioteca = consulta. Todos los encuentros por campeonato; al tocar uno se ve el vídeo completo
+ * (local si existe) con el resultado oficial, katas, puntuaciones y tu historial — sin formato quiz.
+ */
 export default function Library() {
   const { performances, compById, categoryById, athleteById, attemptsByPerf } = useCatalog();
   const [q, setQ] = useState('');
   const [year, setYear] = useState('ALL');
   const [gender, setGender] = useState('ALL');
   const [status, setStatus] = useState('ALL');
+  const [open, setOpen] = useState<Performance | null>(null);
+  const [playerKey, setPlayerKey] = useState(0);
+
+  // vídeo local del encuentro abierto (clip del bout o vídeo completo)
+  const [local, setLocal] = useState<{ url: string; offset: number } | null | undefined>(undefined);
+  useEffect(() => {
+    let alive = true;
+    let objUrl: string | null = null;
+    setLocal(undefined);
+    (async () => {
+      if (!open?.videoId) { if (alive) setLocal(null); return; }
+      const clipFile = await findLocalVideo([open.id]);
+      const file = clipFile ?? (await findLocalVideo([open.videoId]));
+      if (!alive) return;
+      if (!file) { setLocal(null); return; }
+      objUrl = URL.createObjectURL(file);
+      setLocal({ url: objUrl, offset: clipFile ? (open.startSeconds ?? 0) : 0 });
+    })();
+    return () => { alive = false; if (objUrl) URL.revokeObjectURL(objUrl); };
+  }, [open]);
 
   const years = useMemo(
     () => [...new Set(performances.map((p) => compById.get(p.competitionId)?.year).filter(Boolean))].sort().reverse(),
@@ -33,7 +52,8 @@ export default function Library() {
     const cat = categoryById.get(p.categoryId);
     if (year !== 'ALL' && String(comp?.year) !== year) return false;
     if (gender !== 'ALL' && cat?.gender !== gender) return false;
-    if (status !== 'ALL' && p.status !== status) return false;
+    if (status === 'READY' && p.status !== 'READY') return false;
+    if (status === 'MISSING' && p.status === 'READY') return false;
     if (q) {
       const aka = athleteById.get(p.akaAthleteId);
       const ao = athleteById.get(p.aoAthleteId);
@@ -43,7 +63,6 @@ export default function Library() {
     return true;
   });
 
-  // agrupado por campeonato, como en Catalogar: más recientes primero por fecha real
   const groups = useMemo(() => {
     const byComp = new Map<string, Performance[]>();
     for (const p of list) {
@@ -61,39 +80,126 @@ export default function Library() {
       .sort((a, b) => (b.comp?.dateStart ?? `${b.comp?.year ?? 0}`).localeCompare(a.comp?.dateStart ?? `${a.comp?.year ?? 0}`));
   }, [list, compById, categoryById]);
 
+  // ---------- detalle de un encuentro ----------
+  if (open) {
+    const p = open;
+    const comp = compById.get(p.competitionId);
+    const cat = categoryById.get(p.categoryId);
+    const aka = athleteById.get(p.akaAthleteId);
+    const ao = athleteById.get(p.aoAthleteId);
+    const judges = p.judgesCount ?? 5;
+    const avgA = officialAverage(p.officialScoreAka, judges);
+    const avgO = officialAverage(p.officialScoreAo, judges);
+    const t = analyzePerformance(attemptsByPerf.get(p.id) ?? []);
+    const winner = p.officialWinner === 'AKA' ? aka : ao;
+    return (
+      <>
+        <button onClick={() => setOpen(null)}>← Biblioteca</button>
+        <h1 style={{ marginTop: 12, fontSize: '1.3rem' }}>{comp?.name}</h1>
+        <p className="muted" style={{ marginTop: -10 }}>{cat?.name} · {roundLabel(p.roundType)}</p>
+
+        {p.videoId ? (
+          <>
+            {local != null && (
+              <LocalVideoPlayer
+                key={`local-${playerKey}`}
+                src={local.url}
+                startSeconds={p.startSeconds != null ? Math.max(0, p.startSeconds - local.offset) : undefined}
+                endSeconds={p.endSeconds != null ? p.endSeconds - local.offset : undefined}
+                controls={true}
+                autoplay={false}
+              />
+            )}
+            {local === null && (
+              <div className="player-wrap">
+                <YouTubePlayer key={playerKey} videoId={p.videoId} startSeconds={p.startSeconds} endSeconds={p.endSeconds} controls={true} autoplay={false} />
+              </div>
+            )}
+            {local === undefined && <div className="player-wrap" />}
+            <button className="btn-secondary" style={{ marginTop: 10 }} onClick={() => setPlayerKey((k) => k + 1)}>↻ Recargar vídeo</button>
+          </>
+        ) : (
+          <div className="card muted center">Sin vídeo</div>
+        )}
+
+        <div className="card">
+          <table className="scores">
+            <thead>
+              <tr><th></th><th>Atleta</th><th>Kata</th><th>Total</th><th>Media</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="side-aka">AKA</td>
+                <td>{aka?.displayName} <span className="muted">({aka?.countryCode})</span></td>
+                <td>{p.kataAka ?? '—'}</td>
+                <td>{p.officialScoreAka?.toFixed(2) ?? '—'}</td>
+                <td>{avgA?.toFixed(2) ?? '—'}</td>
+              </tr>
+              <tr>
+                <td className="side-ao">AO</td>
+                <td>{ao?.displayName} <span className="muted">({ao?.countryCode})</span></td>
+                <td>{p.kataAo ?? '—'}</td>
+                <td>{p.officialScoreAo?.toFixed(2) ?? '—'}</td>
+                <td>{avgO?.toFixed(2) ?? '—'}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ margin: '12px 0 0', fontWeight: 700 }}>
+            🏆 {p.officialWinner} — {winner?.displayName} ({winner?.countryCode})
+            {p.judgeVotes && <span className="muted" style={{ fontWeight: 500 }}> · votos {p.judgeVotes.aka}–{p.judgeVotes.ao}</span>}
+            {isCloseResult(p) && <span className="badge" style={{ marginLeft: 6, background: '#fff3e0', color: '#b56000' }}>⚖️ Ajustado</span>}
+          </p>
+          {p.notes && <p className="muted" style={{ marginBottom: 0 }}>{p.notes}</p>}
+          {p.userNote && <p style={{ marginBottom: 0 }}>📝 {p.userNote}</p>}
+          {p.examAppearances && p.examAppearances.length > 0 && (
+            <p className="muted" style={{ marginBottom: 0 }}>
+              🎓 Exámenes: {p.examAppearances.map((a) => `${a.exam} (#${a.order})`).join(' · ')}
+            </p>
+          )}
+        </div>
+
+        {t.everAttempted && (
+          <div className="card muted">
+            Tus intentos: {t.attempts.length} · primer intento {t.firstAttempt?.isCorrectWinner ? 'acertado ✅' : 'fallado ❌'}
+            {t.learned ? ' · aprendida' : ''}
+          </div>
+        )}
+        {p.sportDataUrl && (
+          <p className="muted center"><a href={p.sportDataUrl} target="_blank" rel="noreferrer">Ver en SportData</a></p>
+        )}
+      </>
+    );
+  }
+
+  // ---------- lista ----------
   return (
     <>
       <h1>Biblioteca</h1>
-      <Link to="/kata/catalogar">
-        <button className="btn-secondary">🛠️ Catalogar vídeos (PC)</button>
-      </Link>
-
-      <input type="text" placeholder="Buscar atleta, país, kata, competición…" value={q} onChange={(e) => setQ(e.target.value)} />
+      <input type="text" placeholder="Buscar atleta, país, kata o campeonato" value={q} onChange={(e) => setQ(e.target.value)} />
       <div className="row" style={{ marginTop: 10 }}>
         <select value={year} onChange={(e) => setYear(e.target.value)}>
-          <option value="ALL">Año: todos</option>
+          <option value="ALL">Año</option>
           {years.map((y) => (
             <option key={y} value={String(y)}>{y}</option>
           ))}
         </select>
         <select value={gender} onChange={(e) => setGender(e.target.value)}>
-          <option value="ALL">Sexo: ambos</option>
+          <option value="ALL">Sexo</option>
           <option value="FEMALE">Female</option>
           <option value="MALE">Male</option>
         </select>
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="ALL">Estado: todos</option>
-          <option value="READY">Listas</option>
-          <option value="VIDEO_MISSING">Sin vídeo</option>
-          <option value="VIDEO_CATALOGUED">Sin tiempos</option>
+          <option value="ALL">Vídeo</option>
+          <option value="READY">Con vídeo</option>
+          <option value="MISSING">Sin vídeo</option>
         </select>
       </div>
 
-      <h2>{list.length} actuaciones · {groups.length} campeonatos</h2>
+      <h2>{list.length} encuentros · {groups.length} campeonatos</h2>
       {groups.map(({ comp, perfs }) => (
         <div key={comp?.id ?? '?'}>
           <div className="comp-header">
-            <span>{comp?.name}</span>
+            <span className="name">{comp?.name}</span>
             <span className="year">{comp?.year} · {competitionTypeLabel(comp?.competitionType ?? '')}</span>
           </div>
           {perfs.map((p) => {
@@ -101,46 +207,28 @@ export default function Library() {
             const aka = athleteById.get(p.akaAthleteId);
             const ao = athleteById.get(p.aoAthleteId);
             const t = analyzePerformance(attemptsByPerf.get(p.id) ?? []);
-            const badge = STATUS_BADGE[p.status] ?? STATUS_BADGE.MISSING_DATA;
             return (
-              <div className="card perf-item" key={p.id}>
+              <div className="card perf-item" key={p.id} onClick={() => setOpen(p)} style={{ cursor: 'pointer' }}>
                 <div className="meta">
                   {cat?.name} · <span className="badge round">{roundLabel(p.roundType)}</span>
-                  {p.examAppearances && p.examAppearances.length > 0 && (
-                    <>
-                      {' '}
-                      <span className="badge" style={{ background: 'rgba(0,122,255,0.12)', color: 'var(--blue)' }}>
-                        🎓 {p.examAppearances.length}× examen
-                      </span>
-                    </>
-                  )}
-                  {isCloseResult(p) && (
-                    <>
-                      {' '}
-                      <span className="badge" style={{ background: '#fff3e0', color: '#b56000' }}>
-                        ⚖️ Ajustado{p.judgeVotes ? ` ${p.judgeVotes.aka}–${p.judgeVotes.ao}` : ''}
-                      </span>
-                    </>
-                  )}
+                  {p.status !== 'READY' && <> <span className="badge nodata">Sin vídeo</span></>}
+                  {isCloseResult(p) && <> <span className="badge" style={{ background: '#fff3e0', color: '#b56000' }}>⚖️</span></>}
+                  {p.examAppearances && p.examAppearances.length > 0 && <> <span className="badge round">🎓 {p.examAppearances.length}×</span></>}
+                  {t.everAttempted && <> <span className="badge nodata">{t.firstAttempt?.isCorrectWinner ? '✅' : '❌'} {t.attempts.length}</span></>}
                 </div>
                 <div className="who">
                   🔴 {aka?.displayName} <span className="muted">({aka?.countryCode})</span> vs 🔵 {ao?.displayName}{' '}
                   <span className="muted">({ao?.countryCode})</span>
-                </div>
-                <div className="meta">
-                  <span className={`badge ${badge.cls}`}>{badge.txt}</span>{' '}
-                  {t.everAttempted && (
-                    <span className="badge nodata">
-                      {t.attempts.length} intento{t.attempts.length !== 1 ? 's' : ''} · 1º: {t.firstAttempt?.isCorrectWinner ? '✅' : '❌'}
-                      {t.learned ? ' · Aprendida' : ''}
-                    </span>
-                  )}
                 </div>
               </div>
             );
           })}
         </div>
       ))}
+
+      <Link to="/kata/catalogar">
+        <button className="btn-secondary" style={{ marginTop: 18 }}>Catalogar vídeos (ordenador)</button>
+      </Link>
     </>
   );
 }

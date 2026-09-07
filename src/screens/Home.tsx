@@ -50,10 +50,7 @@ export default function Home() {
       </button>
 
       {ready.length === 0 && (
-        <div className="card muted">
-          Aún no hay actuaciones listas para entrenar. Ve a <b>Biblioteca → Catalogar</b> en el ordenador para
-          asignar vídeos y marcar inicio/fin de cada actuación.
-        </div>
+        <div className="card muted">Aún no hay encuentros listos. Catalógalos desde Biblioteca en el ordenador.</div>
       )}
     </div>
   );

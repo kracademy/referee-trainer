@@ -47,7 +47,7 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     pause: () => videoRef.current?.pause(),
     play: () => { videoRef.current?.play().catch(() => undefined); },
     seekTo: (s: number) => { if (videoRef.current) videoRef.current.currentTime = s; },
-    setRate: (r: number) => { if (videoRef.current) videoRef.current.playbackRate = r; },
+    setRate: (r: number) => { rateRef.current = r; if (videoRef.current) applyRate(videoRef.current, r); },
   }));
 
   useEffect(() => {
@@ -62,6 +62,7 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     };
     const onLoaded = () => {
       if (startSeconds != null) v.currentTime = startSeconds;
+      (v as HTMLVideoElement & { preservesPitch?: boolean }).preservesPitch = false;
       v.playbackRate = rateRef.current;
       setDur(v.duration || 0);
       setT(startSeconds ?? 0);
@@ -97,7 +98,8 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
   useEffect(() => {
     rateRef.current = playbackRate;
     setRate(playbackRate);
-    if (videoRef.current) videoRef.current.playbackRate = playbackRate;
+    if (videoRef.current) applyRate(videoRef.current, playbackRate);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playbackRate]);
   // al salir de pantalla grande, forzar a iOS a re-muestrear el color de la barra de estado
   useEffect(() => {
@@ -107,10 +109,20 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     window.scrollTo(window.scrollX, window.scrollY);
   }, [fs]);
 
+  /** Cambia la velocidad re-sincronizando audio/vídeo (en iOS el audio se quedaba "arrastrado"). */
+  function applyRate(v: HTMLVideoElement, r: number) {
+    // sin corrección de tono: el time-stretch de WebKit deja el audio desfasado al volver a x1
+    (v as HTMLVideoElement & { preservesPitch?: boolean; webkitPreservesPitch?: boolean }).preservesPitch = false;
+    (v as HTMLVideoElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = false;
+    v.playbackRate = r;
+    // pequeño re-seek al mismo instante: fuerza a re-alinear la pista de audio con la de vídeo
+    const t = v.currentTime;
+    v.currentTime = t;
+  }
   function changeRate(r: number) {
     rateRef.current = r;
     setRate(r);
-    if (videoRef.current) videoRef.current.playbackRate = r;
+    if (videoRef.current) applyRate(videoRef.current, r);
   }
 
   // tramo visible en los controles propios

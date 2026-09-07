@@ -12,6 +12,7 @@ export default function Settings() {
   const fileRef = useRef<HTMLInputElement>(null);
   const videoRef = useRef<HTMLInputElement>(null);
   const [videos, setVideos] = useState<LocalVideoInfo[]>([]);
+  const [showList, setShowList] = useState(false);
   /** Progreso de importación: bytes copiados / totales, archivo actual y omitidos por duplicado. */
   const [progress, setProgress] = useState<{ done: number; total: number; index: number; count: number } | null>(null);
 
@@ -73,14 +74,14 @@ export default function Settings() {
   async function doExport() {
     const data = await exportBackup();
     downloadJson(data, `kata-trainer-backup-${new Date().toISOString().slice(0, 10)}.json`);
-    setMsg(`Backup exportado (${data.attempts.length} intentos).`);
+    setMsg(`Copia exportada (${data.attempts.length} intentos).`);
   }
 
   async function doImport(file: File) {
     try {
       const data = JSON.parse(await file.text()) as BackupFile;
       await importBackup(data);
-      setMsg('Backup importado correctamente.');
+      setMsg('Copia restaurada.');
     } catch (e) {
       setMsg(`Error al importar: ${e instanceof Error ? e.message : e}`);
     }
@@ -98,12 +99,9 @@ export default function Settings() {
 
       <h2>Copia de seguridad</h2>
       <div className="card">
-        <p className="muted">
-          Tus intentos y estadísticas viven solo en este dispositivo. Exporta un backup de vez en cuando
-          (especialmente en iPhone, donde el sistema puede purgar datos de apps poco usadas).
-        </p>
-        <button className="btn-primary" onClick={doExport}>⬇️ Exportar datos (JSON)</button>
-        <button className="btn-secondary" onClick={() => fileRef.current?.click()}>⬆️ Importar datos</button>
+        <p className="muted">Tus intentos y estadísticas se guardan solo en este dispositivo.</p>
+        <button className="btn-primary" onClick={doExport}>Exportar copia de seguridad</button>
+        <button className="btn-secondary" onClick={() => fileRef.current?.click()}>Restaurar copia de seguridad</button>
         <input
           ref={fileRef}
           type="file"
@@ -116,19 +114,11 @@ export default function Settings() {
       <h2>Vídeos locales (sin anuncios)</h2>
       <div className="card">
         <p className="muted">
-          Si tienes los vídeos como archivos, impórtalos aquí y la app los usará en vez de YouTube: sin anuncios y
-          sin conexión. Pon los archivos en cualquier carpeta de Archivos (iCloud Drive, p. ej.), toca <b>Importar
-          vídeos</b>, y en el selector <b>selecciona todos a la vez</b> — se enlazan solos a cada encuentro por el
-          nombre del archivo, sin hacer nada más. (No hace falta que estén en ninguna carpeta concreta: la app no
-          puede leer carpetas del sistema, solo los archivos que eliges aquí.)
-        </p>
-        <p className="muted">
-          Los que ya estén importados se detectan y se omiten, así puedes volver a seleccionar toda la carpeta cuando
-          añadas vídeos nuevos. En el iPhone, si se queda colgado al abrir muchos a la vez, hazlo en tandas y con los
-          archivos ya descargados (sin el icono de la nube). No cierres la app mientras importa.
+          Los vídeos importados se reproducen sin anuncios ni conexión y se enlazan solos a cada encuentro por su
+          nombre. Los ya importados se omiten.
         </p>
         <button className="btn-primary" onClick={() => videoRef.current?.click()} disabled={!!progress}>
-          🎞 Importar vídeos
+          Importar vídeos
         </button>
         <input
           ref={videoRef}
@@ -160,10 +150,10 @@ export default function Settings() {
         )}
         {videos.length > 0 && (
           <>
-            <p className="muted" style={{ marginBottom: 6 }}>
-              {videos.length} vídeo{videos.length !== 1 ? 's' : ''} · {fmtSize(videos.reduce((s, v) => s + v.size, 0))} en total
-            </p>
-            {videos.map((v) => (
+            <button className="btn-secondary" style={{ margin: '4px 0 8px' }} onClick={() => setShowList((x) => !x)}>
+              {videos.length} vídeo{videos.length !== 1 ? 's' : ''} · {fmtSize(videos.reduce((s, v) => s + v.size, 0))} {showList ? '▴' : '▾'}
+            </button>
+            {showList && videos.map((v) => (
               <div key={v.name} className="row" style={{ alignItems: 'center', marginBottom: 6 }}>
                 <span style={{ flex: 1, fontSize: '0.8rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {v.name} <span className="muted">({fmtSize(v.size)})</span>
@@ -182,27 +172,23 @@ export default function Settings() {
 
       <h2>Datos</h2>
       <div className="card">
-        <p className="muted">
-          El catálogo de actuaciones se publica con la app. Los campeonatos nuevos aparecen aquí
-          automáticamente tras cada actualización del dataset.
-        </p>
-        <button className="btn-secondary" onClick={async () => { await syncDataset(); setMsg('Dataset sincronizado.'); }}>
-          🔄 Re-sincronizar dataset
+        <button className="btn-secondary" onClick={async () => { await syncDataset(); setMsg('Catálogo actualizado.'); }}>
+          Actualizar catálogo
         </button>
         <p className="muted">
-          Almacenamiento persistente: {persisted == null ? 'desconocido' : persisted ? '✅ concedido' : '⚠️ no concedido'}
+          Almacenamiento persistente: {persisted == null ? 'desconocido' : persisted ? 'activado' : 'no activado'}
         </p>
       </div>
 
       <h2>Zona de peligro</h2>
       <div className="card">
         <button className="btn-secondary" style={{ borderColor: '#8f2a22', color: '#ef9a93' }} onClick={resetAttempts}>
-          🗑️ Borrar todos mis intentos
+          Borrar todos mis intentos
         </button>
       </div>
 
       {msg && <div className="card" role="status">{msg}</div>}
-      <p className="muted center">Kracademy Kata Trainer · v0.1 · Fase 1</p>
+      <p className="muted center">Kracademy Referee Trainer</p>
     </>
   );
 }

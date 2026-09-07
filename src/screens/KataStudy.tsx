@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useCatalog } from '../logic/useCatalog';
 import { roundLabel } from '../logic/format';
 import YouTubePlayer from '../components/YouTubePlayer';
@@ -135,9 +134,9 @@ export default function KataStudy() {
           </div>
         )}
         {local === undefined && <div className="player-wrap" />}
-        {local && <p className="muted center" style={{ margin: '6px 0 0' }}>🎞 Vídeo local · sin anuncios</p>}
+        {local && <p className="muted center" style={{ margin: '6px 0 0' }}>🎞 Vídeo local</p>}
         <button className="btn-secondary" style={{ marginTop: 10 }} onClick={() => setPlayerKey((k) => k + 1)}>
-          ↻ Recargar vídeo (si se queda en negro)
+          ↻ Recargar vídeo
         </button>
         <div className="card perf-item" style={{ marginTop: 12 }}>
           <div className="who">
@@ -146,9 +145,7 @@ export default function KataStudy() {
             {MEDAL[medalRank(playing)] ? ` ${MEDAL[medalRank(playing)]}` : ''}
           </div>
           <div className="meta">{comp?.name} · {cat?.name} · {roundLabel(playing.perf.roundType)}</div>
-          {!playing.isSubClip && (
-            <div className="meta">⚠️ Sin tiempos por atleta: se muestra el encuentro completo.</div>
-          )}
+          {!playing.isSubClip && <div className="meta">Encuentro completo (sin corte por atleta)</div>}
         </div>
         <button className="btn-primary" onClick={() => setPlaying(null)}>← VOLVER A LA LISTA</button>
       </>
@@ -174,7 +171,7 @@ export default function KataStudy() {
               </div>
               <div className="meta">
                 {comp?.name} · {cat?.name} · <span className="badge round">{roundLabel(e.perf.roundType)}</span>{' '}
-                {e.isSubClip ? <span className="badge ready">🎬 Clip del atleta</span> : <span className="badge nodata">Encuentro completo</span>}
+                {e.isSubClip ? <span className="badge ready">Clip del atleta</span> : <span className="badge nodata">Encuentro completo</span>}
               </div>
             </div>
           );
@@ -186,10 +183,6 @@ export default function KataStudy() {
   return (
     <>
       <h1>Estudio de katas</h1>
-      <p className="muted">
-        Todas las ejecuciones de cada kata en el dataset. Los clips por atleta se marcan en{' '}
-        <Link to="/kata/catalogar">Catalogar</Link>.
-      </p>
       <div className="row" style={{ marginBottom: 10 }}>
         <button className={`chip${fmt === 'INDIVIDUAL' ? ' sel' : ''}`} onClick={() => { setFmt('INDIVIDUAL'); setSelectedKata(null); }}>
           Individual
@@ -205,7 +198,7 @@ export default function KataStudy() {
           <div className="who">{kata}</div>
           <div className="meta">
             {s.total} ejecuci{s.total === 1 ? 'ón' : 'ones'}
-            {s.subClips > 0 && <> · <span className="badge ready">🎬 {s.subClips} con clip del atleta</span></>}
+            {s.subClips > 0 && <> · {s.subClips} con clip del atleta</>}
           </div>
         </div>
       ))}

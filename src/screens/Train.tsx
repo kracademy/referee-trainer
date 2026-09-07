@@ -64,6 +64,9 @@ export default function Train() {
             <option value="MALE">Male</option>
           </select>
         </div>
+      </div>
+
+      <div className="row">
         <div style={{ flex: 1 }}>
           <label>Modalidad</label>
           <select value={filters.format} onChange={set('format')}>
@@ -86,9 +89,9 @@ export default function Train() {
         <div style={{ flex: 1 }}>
           <label>Ronda</label>
           <select value={filters.round} onChange={set('round')}>
-            <option value="ALL">Medallas (final + bronces)</option>
-            <option value="FINAL">Solo finales</option>
-            <option value="BRONZE">Solo bronces</option>
+            <option value="ALL">Medallas</option>
+            <option value="FINAL">Finales</option>
+            <option value="BRONZE">Bronces</option>
             <option value="OTHER">Otras rondas</option>
           </select>
         </div>

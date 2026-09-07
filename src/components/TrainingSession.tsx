@@ -285,10 +285,10 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
                 x{r}
               </button>
             ))}
-            <button className="chip" onClick={() => setPlayerKey((k) => k + 1)} title="Recargar el vídeo si se queda en negro">
+            <button className="chip" onClick={() => setPlayerKey((k) => k + 1)} title="Recargar vídeo">
               ↻
             </button>
-            {local && <span className="badge ready">🎞 Local · sin anuncios</span>}
+            {local && <span className="badge ready">🎞 Local</span>}
           </div>
         </>
       )}

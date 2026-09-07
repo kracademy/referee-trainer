@@ -44,10 +44,7 @@ export default function KumitePolemics() {
   return (
     <>
       <h1>Situaciones polémicas</h1>
-      <p className="muted">
-        Acciones cuya decisión generó debate. Se estudian aparte del entrenamiento normal, con la explicación de por
-        qué son polémicas.
-      </p>
+      <p className="muted">Decisiones que generaron debate, con su explicación. No entran en el entrenamiento normal.</p>
       <h2>{clips.length} situaciones</h2>
       {clips.map((c) => (
         <div className="card perf-item" key={c.id} onClick={() => setOpen(c)} style={{ cursor: 'pointer' }}>
