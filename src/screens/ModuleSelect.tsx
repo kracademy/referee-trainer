@@ -4,15 +4,14 @@ import { db } from '../db/db';
 
 /* Iconos de módulo, misma estética de línea que los tiles (SF Symbols) */
 const kataIcon = (
-  // shiko-dachi de frente: postura ancha y baja, brazos abiertos con los puños marcados
+  // neko-ashi-dachi: peso atrás, pie delantero de puntillas, shuto adelante y mano recogida
   <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="4.3" r="2.1" />
-    <path d="M12 6.4v6" />
-    <path d="M12 8.3 5.8 8.9M12 8.3l6.2.6" />
-    <circle cx="4.7" cy="9" r="1.05" fill="currentColor" stroke="none" />
-    <circle cx="19.3" cy="9" r="1.05" fill="currentColor" stroke="none" />
-    <path d="M12 12.4 5.3 15.4l-.2 4.1M3.2 19.8H7" />
-    <path d="M12 12.4l6.7 3 .2 4.1M17 19.8h3.8" />
+    <circle cx="12.6" cy="3.9" r="1.8" />
+    <path d="M12.1 6 11.2 12.2" />
+    <path d="M12.1 7l3.2 1.3 3.7-1 1.4-.8" />
+    <path d="M12.1 7 9.3 9.1l2 1.6" />
+    <path d="M11.2 12.2 7.9 14.5l.5 5.2" />
+    <path d="M11.2 12.2l3.3 2.7 1.2 4.8" />
   </svg>
 );
 
