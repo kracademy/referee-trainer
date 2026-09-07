@@ -357,19 +357,15 @@ nav.bottom a .ico svg { display: block; }
 .lv-extra { display: flex; gap: 8px; align-items: center; }
 .lv-extra .chip { flex: 1; padding: 9px 4px; font-size: 0.8rem; }
 .lv-extra .lv-fs { flex: 0 0 46px; font-size: 1rem; }
-/* pantalla grande propia del estudio: vídeo arriba, controles debajo sobre negro */
+/* pantalla grande propia del estudio: fondo BLANCO (iOS pinta la barra de estado con el color de arriba
+   de la página y, si fuera negro, se quedaría negra al salir), vídeo arriba y controles debajo */
 .lv-stack.fs {
   position: fixed; inset: 0; z-index: 200;
-  background: #000;
-  padding: calc(env(safe-area-inset-top) + 8px) 10px calc(env(safe-area-inset-bottom) + 10px);
+  background: var(--bg);
+  padding: calc(env(safe-area-inset-top) + 10px) 12px calc(env(safe-area-inset-bottom) + 12px);
   gap: 10px;
 }
-.lv-stack.fs .player-wrap { flex: 1; aspect-ratio: auto; border-radius: 12px; min-height: 0; }
-.lv-stack.fs .lv-controls { background: rgba(255, 255, 255, 0.14); color: #fff; }
-.lv-stack.fs .lv-controls .lv-time { color: rgba(255, 255, 255, 0.85); }
-.lv-stack.fs .lv-controls button { background: rgba(255, 255, 255, 0.9); }
-.lv-stack.fs .chip { background: rgba(255, 255, 255, 0.14); color: #fff; box-shadow: none; }
-.lv-stack.fs .chip.sel { background: var(--aka); }
+.lv-stack.fs .player-wrap { flex: 1; aspect-ratio: auto; border-radius: 16px; min-height: 0; }
 
 /* Quiz de kumite: dos columnas (AO izquierda, AKA derecha), orden fijo, multi-selección */
 .quiz-col-head { font-weight: 800; text-align: center; margin-bottom: 6px; }

@@ -99,6 +99,14 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     setRate(playbackRate);
     if (videoRef.current) videoRef.current.playbackRate = playbackRate;
   }, [playbackRate]);
+  // al salir de pantalla grande, forzar a iOS a re-muestrear el color de la barra de estado
+  useEffect(() => {
+    if (fs) return;
+    const meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
+    if (meta) { const v = meta.content; meta.content = '#fffffe'; requestAnimationFrame(() => { meta.content = v; }); }
+    window.scrollTo(window.scrollX, window.scrollY);
+  }, [fs]);
+
   function changeRate(r: number) {
     rateRef.current = r;
     setRate(r);
