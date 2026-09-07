@@ -1,10 +1,11 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { db } from '../db/db';
 import { useCatalog } from '../logic/useCatalog';
 import { computeStatus } from '../data/dataset';
 import YouTubePlayer, { type YouTubePlayerHandle } from '../components/YouTubePlayer';
 import { extractYouTubeId, fmtTime, parseTime, roundLabel } from '../logic/format';
 import { downloadJson } from '../logic/backup';
+import { listLocalVideos } from '../logic/localVideos';
 import type { CatalogExport, Performance } from '../db/types';
 
 const ROUND_ORDER: Record<string, number> = { FINAL: 2, BRONZE_1: 0, BRONZE_2: 1, OTHER: 3 };
@@ -30,6 +31,14 @@ export default function Catalog() {
   const [nota, setNota] = useState('');
   const [msg, setMsg] = useState('');
   const [showDone, setShowDone] = useState(false);
+  // vídeos locales importados (por nombre base), para marcar qué encuentros ya tienen archivo
+  const [localNames, setLocalNames] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    listLocalVideos()
+      .then((l) => setLocalNames(new Set(l.map((v) => v.name.replace(/\.(mp4|m4v|mov|webm)$/i, '')))))
+      .catch(() => setLocalNames(new Set()));
+  }, [selectedId]);
+  const hasLocal = (p: Performance) => localNames.has(p.id) || (p.videoId != null && localNames.has(p.videoId));
   const playerRef = useRef<YouTubePlayerHandle>(null);
 
   // formulario "añadir encuentro" (exámenes EKF/WKF u otros bouts fuera del dataset)
@@ -127,6 +136,7 @@ export default function Catalog() {
 
   const doneCount = data.performances.filter((p) => p.status === 'READY').length;
   const pendingCount = data.performances.length - doneCount;
+  const readyNoLocal = data.performances.filter((p) => p.status === 'READY' && !hasLocal(p)).length;
 
   function open(id: string) {
     const p = data.performances.find((x) => x.id === id);
@@ -461,7 +471,10 @@ export default function Catalog() {
           {showDone ? 'Ocultar listas' : `Ver listas (${doneCount})`}
         </button>
       </div>
-      <p className="muted center">{pendingCount} pendientes · {doneCount} listas</p>
+      <p className="muted center">
+        {pendingCount} pendientes · {doneCount} listas · 🎞 {doneCount - readyNoLocal} con vídeo local
+        {readyNoLocal > 0 && <> · <b style={{ color: '#b56000' }}>⬇ {readyNoLocal} por descargar</b></>}
+      </p>
 
       {groups.map(({ comp, perfs, pending }) => {
         if (!comp) return null;
@@ -489,7 +502,10 @@ export default function Catalog() {
                         : <span className="badge nodata">⚪ Sin vídeo</span>}{' '}
                     {ready && (p.akaStartSeconds != null && p.aoStartSeconds != null
                       ? <span className="badge ready">🎬 AKA/AO</span>
-                      : <span className="badge nodata">⏱ Sin tiempos AKA/AO</span>)}
+                      : <span className="badge nodata">⏱ Sin tiempos AKA/AO</span>)}{' '}
+                    {ready && (hasLocal(p)
+                      ? <span className="badge ready">🎞 Local</span>
+                      : <span className="badge" style={{ background: 'rgba(255,149,0,0.14)', color: '#b56000' }}>⬇ Por descargar</span>)}
                   </div>
                   <div className="who">
                     🔴 {aka?.displayName} <span className="muted">({aka?.countryCode})</span> vs 🔵 {ao?.displayName}{' '}

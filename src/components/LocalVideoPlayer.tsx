@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import type { YouTubePlayerHandle } from './YouTubePlayer';
 
 interface Props {
@@ -13,9 +13,16 @@ interface Props {
   onPlayingChange?: (playing: boolean) => void;
 }
 
+const mmss = (s: number) => {
+  s = Math.max(0, Math.floor(s));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+};
+
 /**
  * Reproductor de vídeo local (sin anuncios): misma interfaz que YouTubePlayer
  * para poder intercambiarlos en las sesiones de entrenamiento.
+ * Con `controls`, muestra controles PROPIOS acotados al tramo [startSeconds, endSeconds]
+ * (la barra nativa enseñaría el archivo entero).
  */
 const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVideoPlayer(
   { src, startSeconds, endSeconds, autoplay = true, controls = true, playbackRate = 1, onEnded, onError, onPlayingChange },
@@ -27,6 +34,9 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
   cbRef.current = { onEnded, onError, onPlayingChange };
   const endRef = useRef(endSeconds);
   endRef.current = endSeconds;
+  const [t, setT] = useState(startSeconds ?? 0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [dur, setDur] = useState(0);
 
   useImperativeHandle(ref, () => ({
     getCurrentTime: () => videoRef.current?.currentTime,
@@ -49,17 +59,20 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     const onLoaded = () => {
       if (startSeconds != null) v.currentTime = startSeconds;
       v.playbackRate = playbackRate;
+      setDur(v.duration || 0);
+      setT(startSeconds ?? 0);
       if (autoplay) v.play().catch(() => undefined);
     };
     const onTime = () => {
+      setT(v.currentTime);
       const end = endRef.current;
       if (end != null && v.currentTime >= end) fireEnded();
     };
     v.addEventListener('loadedmetadata', onLoaded);
     v.addEventListener('timeupdate', onTime);
     v.addEventListener('ended', fireEnded);
-    const onPlay = () => cbRef.current.onPlayingChange?.(true);
-    const onPause = () => cbRef.current.onPlayingChange?.(false);
+    const onPlay = () => { setIsPlaying(true); cbRef.current.onPlayingChange?.(true); };
+    const onPause = () => { setIsPlaying(false); cbRef.current.onPlayingChange?.(false); };
     v.addEventListener('play', onPlay);
     v.addEventListener('pause', onPause);
     const onErr = () => cbRef.current.onError?.(0);
@@ -81,16 +94,54 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     if (videoRef.current) videoRef.current.playbackRate = playbackRate;
   }, [playbackRate]);
 
+  // tramo visible en los controles propios
+  const segStart = startSeconds ?? 0;
+  const segEnd = endSeconds ?? (dur || segStart + 1);
+  const rel = Math.min(Math.max(t - segStart, 0), segEnd - segStart);
+
+  function togglePlay() {
+    const v = videoRef.current;
+    if (!v) return;
+    if (isPlaying) { v.pause(); return; }
+    // si estaba al final del tramo, volver a empezar
+    if (v.currentTime >= segEnd - 0.25) v.currentTime = segStart;
+    endedFiredRef.current = false;
+    v.play().catch(() => undefined);
+  }
+
   return (
-    <video
-      ref={videoRef}
-      className="yt-holder"
-      src={src}
-      controls={controls}
-      playsInline
-      preload="auto"
-      style={{ objectFit: 'contain', background: '#000' }}
-    />
+    <>
+      <video
+        ref={videoRef}
+        className="yt-holder"
+        src={src}
+        controls={false}
+        playsInline
+        preload="auto"
+        style={{ objectFit: 'contain', background: '#000' }}
+        onClick={controls ? togglePlay : undefined}
+      />
+      {controls && (
+        <div className="lv-controls">
+          <button onClick={togglePlay} aria-label={isPlaying ? 'Pausa' : 'Reproducir'}>{isPlaying ? '⏸' : '▶︎'}</button>
+          <input
+            type="range"
+            min={0}
+            max={Math.max(0.1, segEnd - segStart)}
+            step={0.1}
+            value={rel}
+            onChange={(e) => {
+              const v = videoRef.current;
+              if (!v) return;
+              endedFiredRef.current = false;
+              v.currentTime = segStart + parseFloat(e.target.value);
+              setT(v.currentTime);
+            }}
+          />
+          <span className="lv-time">{mmss(rel)} / {mmss(segEnd - segStart)}</span>
+        </div>
+      )}
+    </>
   );
 });
 
