@@ -37,6 +37,10 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
   const [t, setT] = useState(startSeconds ?? 0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [dur, setDur] = useState(0);
+  // modo estudio (controls): velocidad propia y pantalla grande
+  const [rate, setRate] = useState(playbackRate);
+  const [fs, setFs] = useState(false);
+  const rateRef = useRef(playbackRate);
 
   useImperativeHandle(ref, () => ({
     getCurrentTime: () => videoRef.current?.currentTime,
@@ -58,7 +62,7 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     };
     const onLoaded = () => {
       if (startSeconds != null) v.currentTime = startSeconds;
-      v.playbackRate = playbackRate;
+      v.playbackRate = rateRef.current;
       setDur(v.duration || 0);
       setT(startSeconds ?? 0);
       if (autoplay) v.play().catch(() => undefined);
@@ -89,10 +93,17 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [src, startSeconds]);
 
-  // cambio de velocidad sin re-montar
+  // cambio de velocidad sin re-montar (prop desde el entrenamiento, o chips propios en estudio)
   useEffect(() => {
+    rateRef.current = playbackRate;
+    setRate(playbackRate);
     if (videoRef.current) videoRef.current.playbackRate = playbackRate;
   }, [playbackRate]);
+  function changeRate(r: number) {
+    rateRef.current = r;
+    setRate(r);
+    if (videoRef.current) videoRef.current.playbackRate = r;
+  }
 
   // tramo visible en los controles propios
   const segStart = startSeconds ?? 0;
@@ -125,10 +136,13 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
   // sin controles (entrenamiento): solo el vídeo, dentro del .player-wrap del padre
   if (!controls) return videoEl;
 
-  // con controles (estudio): vídeo + barra DEBAJO, para no tapar la imagen
+  // con controles (estudio): vídeo + barra DEBAJO (no tapa la imagen) + velocidad + pantalla grande
   return (
-    <div className="lv-stack">
-      <div className="player-wrap">{videoEl}</div>
+    <div className={`lv-stack${fs ? ' fs' : ''}`}>
+      <div className="player-wrap">
+        {videoEl}
+        {fs && <button className="fs-btn" onClick={() => setFs(false)} aria-label="Cerrar pantalla grande">✕</button>}
+      </div>
       <div className="lv-controls">
         <button onClick={togglePlay} aria-label={isPlaying ? 'Pausa' : 'Reproducir'}>{isPlaying ? '⏸' : '▶︎'}</button>
         <input
@@ -146,6 +160,12 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
           }}
         />
         <span className="lv-time">{mmss(rel)} / {mmss(segEnd - segStart)}</span>
+      </div>
+      <div className="lv-extra">
+        {[0.25, 0.5, 1, 1.5, 2].map((r) => (
+          <button key={r} className={`chip${rate === r ? ' sel' : ''}`} onClick={() => changeRate(r)}>x{r}</button>
+        ))}
+        <button className="chip lv-fs" onClick={() => setFs(!fs)} aria-label="Pantalla grande">{fs ? '✕' : '⤢'}</button>
       </div>
     </div>
   );
