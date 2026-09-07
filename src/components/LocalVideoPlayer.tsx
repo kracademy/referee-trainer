@@ -109,39 +109,45 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     v.play().catch(() => undefined);
   }
 
+  const videoEl = (
+    <video
+      ref={videoRef}
+      className="yt-holder"
+      src={src}
+      controls={false}
+      playsInline
+      preload="auto"
+      style={{ objectFit: 'contain', background: '#000' }}
+      onClick={controls ? togglePlay : undefined}
+    />
+  );
+
+  // sin controles (entrenamiento): solo el vídeo, dentro del .player-wrap del padre
+  if (!controls) return videoEl;
+
+  // con controles (estudio): vídeo + barra DEBAJO, para no tapar la imagen
   return (
-    <>
-      <video
-        ref={videoRef}
-        className="yt-holder"
-        src={src}
-        controls={false}
-        playsInline
-        preload="auto"
-        style={{ objectFit: 'contain', background: '#000' }}
-        onClick={controls ? togglePlay : undefined}
-      />
-      {controls && (
-        <div className="lv-controls">
-          <button onClick={togglePlay} aria-label={isPlaying ? 'Pausa' : 'Reproducir'}>{isPlaying ? '⏸' : '▶︎'}</button>
-          <input
-            type="range"
-            min={0}
-            max={Math.max(0.1, segEnd - segStart)}
-            step={0.1}
-            value={rel}
-            onChange={(e) => {
-              const v = videoRef.current;
-              if (!v) return;
-              endedFiredRef.current = false;
-              v.currentTime = segStart + parseFloat(e.target.value);
-              setT(v.currentTime);
-            }}
-          />
-          <span className="lv-time">{mmss(rel)} / {mmss(segEnd - segStart)}</span>
-        </div>
-      )}
-    </>
+    <div className="lv-stack">
+      <div className="player-wrap">{videoEl}</div>
+      <div className="lv-controls">
+        <button onClick={togglePlay} aria-label={isPlaying ? 'Pausa' : 'Reproducir'}>{isPlaying ? '⏸' : '▶︎'}</button>
+        <input
+          type="range"
+          min={0}
+          max={Math.max(0.1, segEnd - segStart)}
+          step={0.1}
+          value={rel}
+          onChange={(e) => {
+            const v = videoRef.current;
+            if (!v) return;
+            endedFiredRef.current = false;
+            v.currentTime = segStart + parseFloat(e.target.value);
+            setT(v.currentTime);
+          }}
+        />
+        <span className="lv-time">{mmss(rel)} / {mmss(segEnd - segStart)}</span>
+      </div>
+    </div>
   );
 });
 

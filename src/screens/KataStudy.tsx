@@ -114,17 +114,17 @@ export default function KataStudy() {
     return (
       <>
         <h1>{playing.kata}</h1>
-        <div className="player-wrap">
-          {local != null && (
-            <LocalVideoPlayer
-              key={`local-${playerKey}`}
-              src={local.url}
-              startSeconds={playing.start != null ? Math.max(0, playing.start - local.offset) : undefined}
-              endSeconds={playing.end != null ? playing.end - local.offset : undefined}
-              controls={true}
-            />
-          )}
-          {local === null && (
+        {local != null && (
+          <LocalVideoPlayer
+            key={`local-${playerKey}`}
+            src={local.url}
+            startSeconds={playing.start != null ? Math.max(0, playing.start - local.offset) : undefined}
+            endSeconds={playing.end != null ? playing.end - local.offset : undefined}
+            controls={true}
+          />
+        )}
+        {local === null && (
+          <div className="player-wrap">
             <YouTubePlayer
               key={playerKey}
               videoId={playing.perf.videoId!}
@@ -132,8 +132,9 @@ export default function KataStudy() {
               endSeconds={playing.end}
               controls={true}
             />
-          )}
-        </div>
+          </div>
+        )}
+        {local === undefined && <div className="player-wrap" />}
         {local && <p className="muted center" style={{ margin: '6px 0 0' }}>🎞 Vídeo local · sin anuncios</p>}
         <button className="btn-secondary" style={{ marginTop: 10 }} onClick={() => setPlayerKey((k) => k + 1)}>
           ↻ Recargar vídeo (si se queda en negro)
