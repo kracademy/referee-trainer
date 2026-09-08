@@ -102,6 +102,7 @@ const ROWS = [
     ao: { name: 'UEMURA', cc: 'JPN', kata: 'Kururunfa', video: 'XdMuWde5pLk' },
     winner: 'AKA', cat: 'senior-male-kata',
     note: 'Karate1 Leipzig 2017 · bronce. AO no hizo el saludo. Nombres completos por confirmar.',
+    clip: { start: 7, end: 292, akaStart: 7, akaEnd: 153, aoStart: 160, aoEnd: 292 },
   },
   {
     apps: [5, null, null, null, null],

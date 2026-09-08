@@ -59,7 +59,8 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
   /** Modo separado: la actuación tiene sub-clips de AKA y AO catalogados. */
   const split =
     perf?.akaStartSeconds != null && perf?.akaEndSeconds != null &&
-    perf?.aoStartSeconds != null && perf?.aoEndSeconds != null;
+    perf?.aoStartSeconds != null && perf?.aoEndSeconds != null &&
+    perf.akaStartSeconds < perf.akaEndSeconds && perf.aoStartSeconds < perf.aoEndSeconds;
   // En modo separado: clip de AKA hasta el interludio; clip de AO desde entonces
   // (decision/reveal mantienen el clip de AO para no re-montar el reproductor).
   const onAkaClip = phase === 'playing' || phase === 'interlude';
