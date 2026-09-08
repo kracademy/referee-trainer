@@ -1,3 +1,4 @@
+import { athleteName } from '../logic/names';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCatalog } from '../logic/useCatalog';
@@ -57,7 +58,7 @@ export default function Library() {
     if (q) {
       const aka = athleteById.get(p.akaAthleteId);
       const ao = athleteById.get(p.aoAthleteId);
-      const hay = `${comp?.name} ${aka?.displayName} ${ao?.displayName} ${aka?.countryCode} ${ao?.countryCode} ${p.kataAka} ${p.kataAo}`.toLowerCase();
+      const hay = `${comp?.name} ${athleteName(aka)} ${athleteName(ao)} ${aka?.countryCode} ${ao?.countryCode} ${p.kataAka} ${p.kataAo}`.toLowerCase();
       if (!hay.includes(q.toLowerCase())) return false;
     }
     return true;
@@ -130,14 +131,14 @@ export default function Library() {
             <tbody>
               <tr>
                 <td className="side-aka">AKA</td>
-                <td>{aka?.displayName} <span className="muted">({aka?.countryCode})</span></td>
+                <td>{athleteName(aka)} <span className="muted">({aka?.countryCode})</span></td>
                 <td>{p.kataAka ?? '—'}</td>
                 <td>{p.officialScoreAka?.toFixed(2) ?? '—'}</td>
                 <td>{avgA?.toFixed(2) ?? '—'}</td>
               </tr>
               <tr>
                 <td className="side-ao">AO</td>
-                <td>{ao?.displayName} <span className="muted">({ao?.countryCode})</span></td>
+                <td>{athleteName(ao)} <span className="muted">({ao?.countryCode})</span></td>
                 <td>{p.kataAo ?? '—'}</td>
                 <td>{p.officialScoreAo?.toFixed(2) ?? '—'}</td>
                 <td>{avgO?.toFixed(2) ?? '—'}</td>
@@ -145,7 +146,7 @@ export default function Library() {
             </tbody>
           </table>
           <p style={{ margin: '12px 0 0', fontWeight: 700 }}>
-            🏆 {p.officialWinner} — {winner?.displayName} ({winner?.countryCode})
+            🏆 {p.officialWinner} — {athleteName(winner)} ({winner?.countryCode})
             {p.judgeVotes && <span className="muted" style={{ fontWeight: 500 }}> · votos {p.judgeVotes.aka}–{p.judgeVotes.ao}</span>}
             {isCloseResult(p) && <span className="badge" style={{ marginLeft: 6, background: '#fff3e0', color: '#b56000' }}>⚖️ Ajustado</span>}
           </p>
@@ -217,7 +218,7 @@ export default function Library() {
                   {t.everAttempted && <> <span className="badge nodata">{t.firstAttempt?.isCorrectWinner ? '✅' : '❌'} {t.attempts.length}</span></>}
                 </div>
                 <div className="who">
-                  🔴 {aka?.displayName} <span className="muted">({aka?.countryCode})</span> vs 🔵 {ao?.displayName}{' '}
+                  🔴 {athleteName(aka)} <span className="muted">({aka?.countryCode})</span> vs 🔵 {athleteName(ao)}{' '}
                   <span className="muted">({ao?.countryCode})</span>
                 </div>
               </div>

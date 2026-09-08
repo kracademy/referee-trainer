@@ -1,3 +1,4 @@
+import { athleteName } from '../logic/names';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { db, LOCAL_USER_ID } from '../db/db';
 import type { OfficialResultType, Performance, Winner } from '../db/types';
@@ -155,7 +156,7 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
   }
 
   const winnerAthlete = perf.officialWinner === 'AKA' ? aka : ao;
-  const winnerName = winnerAthlete ? `${winnerAthlete.displayName} (${winnerAthlete.countryCode})` : '';
+  const winnerName = winnerAthlete ? `${athleteName(winnerAthlete)} (${winnerAthlete.countryCode})` : '';
   const hasScores = perf.officialScoreAka != null || perf.officialScoreAo != null;
 
   return (
@@ -255,12 +256,12 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
             </div>
           )}
           <div className="who" style={split && phase === 'playingAo' ? { opacity: 0.45 } : undefined}>
-            <span style={{ color: 'var(--aka)', fontWeight: 800 }}>{split && phase === 'playing' ? '▶ ' : ''}AKA</span> {aka?.displayName}{' '}
+            <span style={{ color: 'var(--aka)', fontWeight: 800 }}>{split && phase === 'playing' ? '▶ ' : ''}AKA</span> {athleteName(aka)}{' '}
             <span className="muted">({aka?.countryCode})</span>
             {perf.kataAka && <span className="muted"> — {perf.kataAka}</span>}
           </div>
           <div className="who" style={split && (phase === 'playing' || phase === 'interlude') ? { opacity: 0.45 } : undefined}>
-            <span style={{ color: 'var(--ao)', fontWeight: 800 }}>{split && phase === 'playingAo' ? '▶ ' : ''}AO</span> {ao?.displayName}{' '}
+            <span style={{ color: 'var(--ao)', fontWeight: 800 }}>{split && phase === 'playingAo' ? '▶ ' : ''}AO</span> {athleteName(ao)}{' '}
             <span className="muted">({ao?.countryCode})</span>
             {perf.kataAo && <span className="muted"> — {perf.kataAo}</span>}
           </div>
@@ -389,7 +390,7 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
               <tbody>
                 <tr>
                   <td className="side-aka">AKA</td>
-                  <td>{aka?.displayName} <span className="muted">({aka?.countryCode})</span></td>
+                  <td>{athleteName(aka)} <span className="muted">({aka?.countryCode})</span></td>
                   <td>{perf.kataAka ?? '—'}{perf.kataAkaNumber ? <span className="muted"> #{perf.kataAkaNumber}</span> : null}</td>
                   <td>{perf.officialScoreAka?.toFixed(2) ?? '—'}</td>
                   <td>{avgAka?.toFixed(2) ?? '—'}</td>
@@ -397,7 +398,7 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
                 </tr>
                 <tr>
                   <td className="side-ao">AO</td>
-                  <td>{ao?.displayName} <span className="muted">({ao?.countryCode})</span></td>
+                  <td>{athleteName(ao)} <span className="muted">({ao?.countryCode})</span></td>
                   <td>{perf.kataAo ?? '—'}{perf.kataAoNumber ? <span className="muted"> #{perf.kataAoNumber}</span> : null}</td>
                   <td>{perf.officialScoreAo?.toFixed(2) ?? '—'}</td>
                   <td>{avgAo?.toFixed(2) ?? '—'}</td>

@@ -1,3 +1,4 @@
+import { athleteName } from '../logic/names';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { db } from '../db/db';
 import { useCatalog } from '../logic/useCatalog';
@@ -326,7 +327,7 @@ export default function Catalog() {
         <div className="card perf-item">
           <div className="meta">{cat?.name} · {roundLabel(perf.roundType)}</div>
           <div className="who">
-            🔴 {aka?.displayName} <span className="muted">({aka?.countryCode})</span> vs 🔵 {ao?.displayName}{' '}
+            🔴 {athleteName(aka)} <span className="muted">({aka?.countryCode})</span> vs 🔵 {athleteName(ao)}{' '}
             <span className="muted">({ao?.countryCode})</span>
           </div>
           <div className="meta">Katas: {perf.kataAka ?? '—'} / {perf.kataAo ?? '—'} · Ganador oficial: {perf.officialWinner}</div>
@@ -504,7 +505,7 @@ export default function Catalog() {
                       : <span className="badge" style={{ background: 'rgba(255,149,0,0.14)', color: '#b56000' }}>⬇ Por descargar</span>)}
                   </div>
                   <div className="who">
-                    🔴 {aka?.displayName} <span className="muted">({aka?.countryCode})</span> vs 🔵 {ao?.displayName}{' '}
+                    🔴 {athleteName(aka)} <span className="muted">({aka?.countryCode})</span> vs 🔵 {athleteName(ao)}{' '}
                     <span className="muted">({ao?.countryCode})</span>
                   </div>
                   <button onClick={() => open(p.id)}>{ready ? 'Editar' : 'CATALOGAR'}</button>

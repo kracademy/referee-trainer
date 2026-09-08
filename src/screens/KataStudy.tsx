@@ -1,3 +1,4 @@
+import { athleteName } from '../logic/names';
 import { useEffect, useMemo, useState } from 'react';
 import { useCatalog } from '../logic/useCatalog';
 import { roundLabel } from '../logic/format';
@@ -141,7 +142,7 @@ export default function KataStudy() {
         <div className="card perf-item" style={{ marginTop: 12 }}>
           <div className="who">
             <span style={{ color: playing.side === 'AKA' ? 'var(--aka)' : 'var(--ao)', fontWeight: 800 }}>{playing.side}</span>{' '}
-            {ath?.displayName} <span className="muted">({ath?.countryCode})</span>
+            {athleteName(ath)} <span className="muted">({ath?.countryCode})</span>
             {MEDAL[medalRank(playing)] ? ` ${MEDAL[medalRank(playing)]}` : ''}
           </div>
           <div className="meta">{comp?.name} · {cat?.name} · {roundLabel(playing.perf.roundType)}</div>
@@ -166,7 +167,7 @@ export default function KataStudy() {
             <div className="card perf-item" key={`${e.perf.id}-${e.side}-${i}`} onClick={() => setPlaying(e)} style={{ cursor: 'pointer' }}>
               <div className="who">
                 <span style={{ color: e.side === 'AKA' ? 'var(--aka)' : 'var(--ao)', fontWeight: 800 }}>{e.side}</span>{' '}
-                {ath?.displayName} <span className="muted">({ath?.countryCode})</span>
+                {athleteName(ath)} <span className="muted">({ath?.countryCode})</span>
                 {MEDAL[medalRank(e)] ? ` ${MEDAL[medalRank(e)]}` : ''}
               </div>
               <div className="meta">

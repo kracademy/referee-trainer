@@ -2887,25 +2887,33 @@
       "id": "kimura-dyun-bra",
       "displayName": "_KIMURA DYUN",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Dyun",
+      "lastName": "Kimura"
     },
     {
       "id": "abdelrahim-shahd-egy",
       "displayName": "ABDELRAHIM SHAHD",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Shahd",
+      "lastName": "Abdelrahim"
     },
     {
       "id": "abdelsalam-abdelrahman-egy",
       "displayName": "ABDELSALAM ABDELRAHMAN",
       "country": "Elghobashy",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Abdelrahman",
+      "lastName": "Abdelsalam"
     },
     {
       "id": "abe-sakichi-jpn",
       "displayName": "ABE SAKICHI",
       "country": "Keio",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Sakichi",
+      "lastName": "Abe"
     },
     {
       "id": "team-abu-musa-sport-club-iri",
@@ -2941,55 +2949,73 @@
       "id": "afsaneh-mahsa-iri",
       "displayName": "AFSANEH MAHSA",
       "country": "Iran Karate Federation",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Mahsa",
+      "lastName": "Afsaneh"
     },
     {
       "id": "agalmam-sanae-mar",
       "displayName": "AGALMAM SANAE",
       "country": "Morocco",
-      "countryCode": "MAR"
+      "countryCode": "MAR",
+      "firstName": "Sanae",
+      "lastName": "Agalmam"
     },
     {
       "id": "agostini-coll-luis-ven",
       "displayName": "AGOSTINI COLL LUIS",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Luis",
+      "lastName": "Agostini Coll"
     },
     {
       "id": "akhmad-syifa-amalia-ina",
       "displayName": "AKHMAD SYIFA AMALIA",
       "country": "Dojo Hkc",
-      "countryCode": "INA"
+      "countryCode": "INA",
+      "firstName": "Syifa Amalia",
+      "lastName": "Akhmad"
     },
     {
       "id": "akiyoshi-yuto-jpn",
       "displayName": "AKIYOSHI YUTO",
       "country": "Waseda Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Yuto",
+      "lastName": "Akiyoshi"
     },
     {
       "id": "alandijani-jouri-ksa",
       "displayName": "ALANDIJANI JOURI",
       "country": "Saudi Arabia",
-      "countryCode": "KSA"
+      "countryCode": "KSA",
+      "firstName": "Jouri",
+      "lastName": "Alandijani"
     },
     {
       "id": "albadri-rakan-ksa",
       "displayName": "ALBADRI RAKAN",
       "country": "Saudi Arabia",
-      "countryCode": "KSA"
+      "countryCode": "KSA",
+      "firstName": "Rakan",
+      "lastName": "Albadri"
     },
     {
       "id": "alcaraz-carrion-irene-yao-esp",
       "displayName": "ALCARAZ CARRION IRENE YAO",
       "country": "Kumo Sport",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Irene Yao",
+      "lastName": "Alcaraz Carrion"
     },
     {
       "id": "alforte-sakura-phi",
       "displayName": "ALFORTE SAKURA",
       "country": "Karate Team Philippines",
-      "countryCode": "PHI"
+      "countryCode": "PHI",
+      "firstName": "Sakura",
+      "lastName": "Alforte"
     },
     {
       "id": "team-algeria-alg",
@@ -3007,43 +3033,57 @@
       "id": "allam-asmaa-egy",
       "displayName": "ALLAM ASMAA",
       "country": "Mahmoud",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Asmaa",
+      "lastName": "Allam"
     },
     {
       "id": "almalki-abdullah-ksa",
       "displayName": "ALMALKI ABDULLAH",
       "country": "Saudi Arabia",
-      "countryCode": "KSA"
+      "countryCode": "KSA",
+      "firstName": "Abdullah",
+      "lastName": "Almalki"
     },
     {
       "id": "almosawi-sayed-salman-kuw",
       "displayName": "ALMOSAWI SAYED SALMAN",
       "country": "Kuwait",
-      "countryCode": "KUW"
+      "countryCode": "KUW",
+      "firstName": "Sayed Salman",
+      "lastName": "Almosawi"
     },
     {
       "id": "amato-carolina-ita",
       "displayName": "AMATO CAROLINA",
       "country": "Centro Sportivo Esercito",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Carolina",
+      "lastName": "Amato"
     },
     {
       "id": "amaya-gomez-hernan-col",
       "displayName": "AMAYA GOMEZ HERNAN",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Hernan",
+      "lastName": "Amaya Gomez"
     },
     {
       "id": "amaya-gomez-hernan-david-col",
       "displayName": "AMAYA GÓMEZ HERNÁN DAVID",
       "country": "Colombia1",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Hernán David",
+      "lastName": "Amaya Gómez"
     },
     {
       "id": "amini-soumeh-kabodin-sepideh-iri",
       "displayName": "AMINI SOUMEH KABODIN SEPIDEH",
       "country": "Islamic Republic Of Iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Sepideh",
+      "lastName": "Amini Soumeh Kabodin"
     },
     {
       "id": "team-ankara-ego-spor-kulubu-tur",
@@ -3061,7 +3101,9 @@
       "id": "aranda-javes-ingrid-lizbeth-per",
       "displayName": "ARANDA JAVES INGRID LIZBETH",
       "country": "Peru",
-      "countryCode": "PER"
+      "countryCode": "PER",
+      "firstName": "Ingrid Lizbeth",
+      "lastName": "Aranda Javes"
     },
     {
       "id": "team-argentina-fernandez-gonzalez-impagnatiello-arg",
@@ -3079,13 +3121,17 @@
       "id": "armada-ruiz-andrea-esp",
       "displayName": "ARMADA RUIZ ANDREA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Andrea",
+      "lastName": "Armada Ruiz"
     },
     {
       "id": "arnone-federico-ita",
       "displayName": "ARNONE FEDERICO",
       "country": "Cpga Karate",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Federico",
+      "lastName": "Arnone"
     },
     {
       "id": "team-asd-master-rapid-skf-cbl-ita",
@@ -3109,7 +3155,9 @@
       "id": "aslan-gorkem-tur",
       "displayName": "ASLAN GORKEM",
       "country": "Turkye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Gorkem",
+      "lastName": "Aslan"
     },
     {
       "id": "team-austria-celo-celo-celo-aut",
@@ -3121,13 +3169,17 @@
       "id": "ayato-kai-jpn",
       "displayName": "AYATO KAI",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kai",
+      "lastName": "Ayato"
     },
     {
       "id": "aydin-simay-tur",
       "displayName": "AYDIN SIMAY",
       "country": "Turkiye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Simay",
+      "lastName": "Aydin"
     },
     {
       "id": "team-azerbaijan-aze",
@@ -3145,7 +3197,9 @@
       "id": "azuma-saeko-jpn",
       "displayName": "AZUMA SAEKO",
       "country": "Japan Karatedo Federation Shitokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Saeko",
+      "lastName": "Azuma"
     },
     {
       "id": "baillargeon-melissa-can",
@@ -3157,13 +3211,17 @@
       "id": "bakirov-varishan-xxx",
       "displayName": "BAKIROV VARISHAN",
       "country": "Wkf-1,wkf-1",
-      "countryCode": "???"
+      "countryCode": "???",
+      "firstName": "Varishan",
+      "lastName": "Bakirov"
     },
     {
       "id": "bardos-adam-hun",
       "displayName": "BÁRDOS ÁDÁM",
       "country": "Karate Klub Sportingbudo",
-      "countryCode": "HUN"
+      "countryCode": "HUN",
+      "firstName": "Ádám",
+      "lastName": "Bárdos"
     },
     {
       "id": "bareika-maksim",
@@ -3175,7 +3233,9 @@
       "id": "barra-asencio-cristobal-chi",
       "displayName": "BARRA ASENCIO CRISTOBAL",
       "country": "Chile",
-      "countryCode": "CHI"
+      "countryCode": "CHI",
+      "firstName": "Cristobal",
+      "lastName": "Barra Asencio"
     },
     {
       "id": "team-baskent-cinar-spor-bilgin-danama-polat-tur",
@@ -3193,31 +3253,41 @@
       "id": "benkacem-bilal-mar",
       "displayName": "BENKACEM BILAL",
       "country": "Morocco",
-      "countryCode": "MAR"
+      "countryCode": "MAR",
+      "firstName": "Bilal",
+      "lastName": "Benkacem"
     },
     {
       "id": "besbadem-enes-sad-tur",
       "displayName": "BESBADEM ENES SAD",
       "country": "Turkiye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Enes Sad",
+      "lastName": "Besbadem"
     },
     {
       "id": "bottaro-viviana-ita",
       "displayName": "BOTTARO VIVIANA",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Viviana",
+      "lastName": "Bottaro"
     },
     {
       "id": "boyd-tara-aus",
       "displayName": "BOYD TARA",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Tara",
+      "lastName": "Boyd"
     },
     {
       "id": "bozan-dilara-tur",
       "displayName": "BOZAN DILARA",
       "country": "Turkey",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Dilara",
+      "lastName": "Bozan"
     },
     {
       "id": "team-brazil-ferreira-kimura-santos-bra",
@@ -3241,13 +3311,17 @@
       "id": "bui-mai-linh-fra",
       "displayName": "BUI MAÏ-LINH",
       "country": "Annecy Dojo Karaté",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Maï-Linh",
+      "lastName": "Bui"
     },
     {
       "id": "busato-mattia-ita",
       "displayName": "BUSATO MATTIA",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Mattia",
+      "lastName": "Busato"
     },
     {
       "id": "team-cambodia-chhenghorng-sreynuch-sreyda-cam",
@@ -3265,67 +3339,89 @@
       "id": "carbonell-lopez-jose-manuel-esp",
       "displayName": "CARBONELL LOPEZ JOSE MANUEL",
       "country": "Kazokusport Pepe Carbonell",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Jose Manuel",
+      "lastName": "Carbonell Lopez"
     },
     {
       "id": "cardoso-leticia-bra",
       "displayName": "CARDOSO LETICIA",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Letícia",
+      "lastName": "Cardoso"
     },
     {
       "id": "cardoso-leticia-de-souza-bra",
       "displayName": "CARDOSO LETÍCIA DE SOUZA",
       "country": "Academia Multiação",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Letícia",
+      "lastName": "Cardoso de Souza"
     },
     {
       "id": "caridade-maisa-por",
       "displayName": "CARIDADE MAISA",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Maisa",
+      "lastName": "Caridade"
     },
     {
       "id": "carrico-cruz-ana-sofia-por",
       "displayName": "CARRICO CRUZ ANA SOFIA",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Ana Sofia",
+      "lastName": "Carrico Cruz"
     },
     {
       "id": "casale-carola-ita",
       "displayName": "CASALE CAROLA",
       "country": "Centro Sportivo Esercito",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Carola",
+      "lastName": "Casale"
     },
     {
       "id": "casanova-guerrero-cleiver-ven",
       "displayName": "CASANOVA GUERRERO CLEIVER",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Cleiver",
+      "lastName": "Casanova Guerrero"
     },
     {
       "id": "castano-leidy-daniela-col",
       "displayName": "CASTANO LEIDY DANIELA",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Leidy Daniela",
+      "lastName": "Castano"
     },
     {
       "id": "celo-funda-aut",
       "displayName": "CELO FUNDA",
       "country": "Austria",
-      "countryCode": "AUT"
+      "countryCode": "AUT",
+      "firstName": "Funda",
+      "lastName": "Celo"
     },
     {
       "id": "celo-isra-aut",
       "displayName": "CELO ISRA",
       "country": "Austria",
-      "countryCode": "AUT"
+      "countryCode": "AUT",
+      "firstName": "Isra",
+      "lastName": "Celo"
     },
     {
       "id": "cencion-hector-pan",
       "displayName": "CENCION HECTOR",
       "country": "Panama",
-      "countryCode": "PAN"
+      "countryCode": "PAN",
+      "firstName": "Hector",
+      "lastName": "Cencion"
     },
     {
       "id": "team-centro-de-karate-goju-ryu-do-porto-por",
@@ -3337,19 +3433,25 @@
       "id": "chang-yun-hsiang-tpe",
       "displayName": "CHANG YUN-HSIANG",
       "country": "Chinese Taipei",
-      "countryCode": "TPE"
+      "countryCode": "TPE",
+      "firstName": "Yun-Hsiang",
+      "lastName": "Chang"
     },
     {
       "id": "chen-chao-ching-tpe",
       "displayName": "CHEN CHAO-CHING",
       "country": "Chinese Taipei",
-      "countryCode": "TPE"
+      "countryCode": "TPE",
+      "firstName": "Chao-Ching",
+      "lastName": "Chen"
     },
     {
       "id": "cheng-tsz-man-chris-hkg",
       "displayName": "CHENG TSZ MAN CHRIS",
       "country": "Hong Kong",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Chris",
+      "lastName": "Cheng Tsz Man"
     },
     {
       "id": "team-chile-arbiol-aranda-barrientos-gorigoitia-gallo-araya-chi",
@@ -3367,7 +3469,9 @@
       "id": "chinen-rey-usa",
       "displayName": "CHINEN REY",
       "country": "Seinounyu",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Rey",
+      "lastName": "Chinen"
     },
     {
       "id": "team-chinese-taipei-tpe",
@@ -3379,19 +3483,25 @@
       "id": "chiu-chun-yin-hkg",
       "displayName": "CHIU CHUN YIN",
       "country": "Hong Kong China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Chun Yin",
+      "lastName": "Chiu"
     },
     {
       "id": "chung-yun-yun-tpe",
       "displayName": "CHUNG YUN-YUN",
       "country": "Chinese Taipei",
-      "countryCode": "TPE"
+      "countryCode": "TPE",
+      "firstName": "Yun-Yun",
+      "lastName": "Chung"
     },
     {
       "id": "colak-keyda-nur-tur",
       "displayName": "COLAK KEYDA NUR",
       "country": "Turkey",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Keyda Nur",
+      "lastName": "Colak"
     },
     {
       "id": "team-colombia-col",
@@ -3433,7 +3543,9 @@
       "id": "comanescu-petru-rou",
       "displayName": "COMANESCU PETRU",
       "country": "Romania",
-      "countryCode": "ROU"
+      "countryCode": "ROU",
+      "firstName": "Petru",
+      "lastName": "Comanescu"
     },
     {
       "id": "team-costa-rica-cambronero-alvarado-nunez-guevara-vargas-fonseca-crc",
@@ -3457,13 +3569,17 @@
       "id": "cruz-ana-por",
       "displayName": "CRUZ ANA",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Ana",
+      "lastName": "Cruz"
     },
     {
       "id": "cukanova-michaela-svk",
       "displayName": "CUKANOVA MICHAELA",
       "country": "Slovakia",
-      "countryCode": "SVK"
+      "countryCode": "SVK",
+      "firstName": "Michaela",
+      "lastName": "Cukanova"
     },
     {
       "id": "team-czech-republic-cze",
@@ -3481,19 +3597,25 @@
       "id": "d-onofrio-orsola-ita",
       "displayName": "D ONOFRIO ORSOLA",
       "country": "Asd Cam D Onofrio",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Orsola",
+      "lastName": "D'Onofrio"
     },
     {
       "id": "d-onofrio-terryana-ita",
       "displayName": "D'ONOFRIO TERRYANA",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Terryana",
+      "lastName": "D'Onofrio"
     },
     {
       "id": "damayanti-marzella-sekar-ina",
       "displayName": "DAMAYANTI MARZELLA SEKAR",
       "country": "Pb Shindoka",
-      "countryCode": "INA"
+      "countryCode": "INA",
+      "firstName": "Marzella Sekar",
+      "lastName": "Damayanti"
     },
     {
       "id": "darveau-olivier-can",
@@ -3505,31 +3627,41 @@
       "id": "das-bedant-ind",
       "displayName": "DAS BEDANT",
       "country": "India",
-      "countryCode": "IND"
+      "countryCode": "IND",
+      "firstName": "Bedant",
+      "lastName": "Das"
     },
     {
       "id": "de-la-rue-villalpando-cinthia-mex",
       "displayName": "DE LA RUE VILLALPANDO CINTHIA",
       "country": "Mexico",
-      "countryCode": "MEX"
+      "countryCode": "MEX",
+      "firstName": "Cinthia",
+      "lastName": "De la Rue Villalpando"
     },
     {
       "id": "dimitrova-maria-dom",
       "displayName": "DIMITROVA MARIA",
       "country": "Dominican Rep.",
-      "countryCode": "DOM"
+      "countryCode": "DOM",
+      "firstName": "Maria",
+      "lastName": "Dimitrova"
     },
     {
       "id": "dimoska-marijana-aus",
       "displayName": "DIMOSKA MARIJANA",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Marijana",
+      "lastName": "Dimoska"
     },
     {
       "id": "dimovska-stephanie-aus",
       "displayName": "DIMOVSKA STEPHANIE",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Stephanie",
+      "lastName": "Dimovska"
     },
     {
       "id": "team-dominican-rep-dom",
@@ -3541,49 +3673,65 @@
       "id": "dominici-roberta-ita",
       "displayName": "DOMINICI ROBERTA",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Roberta",
+      "lastName": "Dominici"
     },
     {
       "id": "donofrio-orsola-ita",
       "displayName": "DONOFRIO ORSOLA",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Orsola",
+      "lastName": "Donofrio"
     },
     {
       "id": "dunn-melissa-nzl",
       "displayName": "DUNN MELISSA",
       "country": "New Zealand",
-      "countryCode": "NZL"
+      "countryCode": "NZL",
+      "firstName": "Melissa",
+      "lastName": "Dunn"
     },
     {
       "id": "duque-maick-col",
       "displayName": "DUQUE MAICK",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Maick",
+      "lastName": "Duque"
     },
     {
       "id": "duque-maria-jose-col",
       "displayName": "DUQUE MARIA JOSE",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Maria Jose",
+      "lastName": "Duque"
     },
     {
       "id": "duran-kutluhan-tur",
       "displayName": "DURAN KUTLUHAN",
       "country": "Turkey",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Kutluhan",
+      "lastName": "Duran"
     },
     {
       "id": "edbert-setiabudi-christopher-ina",
       "displayName": "EDBERT SETIABUDI CHRISTOPHER",
       "country": "Indonesia",
-      "countryCode": "INA"
+      "countryCode": "INA",
+      "firstName": "Setiabudi Christopher",
+      "lastName": "Edbert"
     },
     {
       "id": "eguchi-sasara-jpn",
       "displayName": "EGUCHI SASARA",
       "country": "Eguchi",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Sasara",
+      "lastName": "Eguchi"
     },
     {
       "id": "team-egypt-egy",
@@ -3697,31 +3845,41 @@
       "id": "elezaby-mariam-egy",
       "displayName": "ELEZABY MARIAM",
       "country": "Elezaby",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Mariam",
+      "lastName": "Elezaby"
     },
     {
       "id": "elghobashy-mostafa-egy",
       "displayName": "ELGHOBASHY MOSTAFA",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Mostafa",
+      "lastName": "Elghobashy"
     },
     {
       "id": "elhakimi-adnane-mar",
       "displayName": "ELHAKIMI ADNANE",
       "country": "Morocco",
-      "countryCode": "MAR"
+      "countryCode": "MAR",
+      "firstName": "Adnane",
+      "lastName": "Elhakimi"
     },
     {
       "id": "elmowafi-abdelrahman-egy",
       "displayName": "ELMOWAFI ABDELRAHMAN",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Abdelrahman",
+      "lastName": "Elmowafi"
     },
     {
       "id": "en-nesyry-aya-mar",
       "displayName": "EN-NESYRY AYA",
       "country": "Morocco",
-      "countryCode": "MAR"
+      "countryCode": "MAR",
+      "firstName": "Aya",
+      "lastName": "En-Nesyry"
     },
     {
       "id": "team-england-eng",
@@ -3739,7 +3897,9 @@
       "id": "escudero-solis-nuria-esp",
       "displayName": "ESCUDERO SOLIS NURIA",
       "country": "Club Deportivo Pablo Armenteros",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Nuria",
+      "lastName": "Escudero Solis"
     },
     {
       "id": "team-etimesgut-belediyesi-gelisim-spor-klb-goksu-karaboga-kaynar-tur",
@@ -3751,31 +3911,41 @@
       "id": "eusepi-alessia-ita",
       "displayName": "EUSEPI ALESSIA",
       "country": "Fiamme Oro- Polizia Di Stato",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Alessia",
+      "lastName": "Eusepi"
     },
     {
       "id": "ezati-jodaghieh-melika-iri",
       "displayName": "EZATI JODAGHIEH MELIKA",
       "country": "Karateplus.iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Melika",
+      "lastName": "Ezati Jodaghieh"
     },
     {
       "id": "fedorov-yaroslav-ukr",
       "displayName": "FEDOROV YAROSLAV",
       "country": "Ukraine",
-      "countryCode": "UKR"
+      "countryCode": "UKR",
+      "firstName": "Yaroslav",
+      "lastName": "Fedorov"
     },
     {
       "id": "feracci-alexandra-fra",
       "displayName": "FERACCI ALEXANDRA",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Alexandra",
+      "lastName": "Feracci"
     },
     {
       "id": "fernandes-natacha-por",
       "displayName": "FERNANDES NATACHA",
       "country": "Grupo Musical E Desportivo Manique De Baixo",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Natacha",
+      "lastName": "Fernandes"
     },
     {
       "id": "ferreira-vielma-stephany-valentina-ven",
@@ -3793,13 +3963,17 @@
       "id": "fisher-dylan-aus",
       "displayName": "FISHER DYLAN",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Dylan",
+      "lastName": "Fisher"
     },
     {
       "id": "forero-pardo-karen-col",
       "displayName": "FORERO PARDO KAREN",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Karen",
+      "lastName": "Forero Pardo"
     },
     {
       "id": "team-france-fra",
@@ -3865,55 +4039,73 @@
       "id": "funada-aoi-jpn",
       "displayName": "FUNADA AOI",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Aoi",
+      "lastName": "Funada"
     },
     {
       "id": "furukawa-aoba-jpn",
       "displayName": "FURUKAWA AOBA",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Aoba",
+      "lastName": "Furukawa"
     },
     {
       "id": "galan-lopez-sergio-esp",
       "displayName": "GALAN LOPEZ SERGIO",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Sergio",
+      "lastName": "Galan Lopez"
     },
     {
       "id": "gallo-gianluca-ita",
       "displayName": "GALLO GIANLUCA",
       "country": "C.s. Carabinieri",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Gianluca",
+      "lastName": "Gallo"
     },
     {
       "id": "gamboa-oonah-can",
       "displayName": "GAMBOA OONAH",
       "country": "Canada",
-      "countryCode": "CAN"
+      "countryCode": "CAN",
+      "firstName": "Oonah",
+      "lastName": "Gamboa"
     },
     {
       "id": "gamova-natasa-svk",
       "displayName": "GAMOVA NATASA",
       "country": "Slovakia",
-      "countryCode": "SVK"
+      "countryCode": "SVK",
+      "firstName": "Natasa",
+      "lastName": "Gamova"
     },
     {
       "id": "garcia-cuadrado-oscar-esp",
       "displayName": "GARCIA CUADRADO OSCAR",
       "country": "Kyodai Galan",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Oscar",
+      "lastName": "Garcia Cuadrado"
     },
     {
       "id": "garcia-daniela-ven",
       "displayName": "GARCIA DANIELA",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Daniela",
+      "lastName": "Garcia"
     },
     {
       "id": "garcia-lozano-paola-esp",
       "displayName": "GARCIA LOZANO PAOLA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Paola",
+      "lastName": "Garcia Lozano"
     },
     {
       "id": "team-germany-ger",
@@ -3937,25 +4129,33 @@
       "id": "ghaly-karim-egy",
       "displayName": "GHALY KARIM",
       "country": "6tigersacademyegypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Karim",
+      "lastName": "Ghaly"
     },
     {
       "id": "ghaly-karim-waleed-egy",
       "displayName": "GHALY KARIM WALEED",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Karim Waleed",
+      "lastName": "Ghaly"
     },
     {
       "id": "ghinami-alessio-ita",
       "displayName": "GHINAMI ALESSIO",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Alessio",
+      "lastName": "Ghinami"
     },
     {
       "id": "giraldo-herrera-andres-col",
       "displayName": "GIRALDO HERRERA ANDRES",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Andres",
+      "lastName": "Giraldo Herrera"
     },
     {
       "id": "team-gmdmb-por",
@@ -3967,7 +4167,9 @@
       "id": "goktas-emre-vefa-tur",
       "displayName": "GOKTAS EMRE VEFA",
       "country": "Turkey",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Emre Vefa",
+      "lastName": "Goktas"
     },
     {
       "id": "team-guatemala-gua",
@@ -3979,85 +4181,113 @@
       "id": "hama-salih-binar-irq",
       "displayName": "HAMA SALIH BINAR",
       "country": "Iraq",
-      "countryCode": "IRQ"
+      "countryCode": "IRQ",
+      "firstName": "Binar",
+      "lastName": "Hama Salih"
     },
     {
       "id": "harrison-james-eng",
       "displayName": "HARRISON JAMES",
       "country": "England",
-      "countryCode": "ENG"
+      "countryCode": "ENG",
+      "firstName": "James",
+      "lastName": "Harrison"
     },
     {
       "id": "hayashida-chikashi-jpn",
       "displayName": "HAYASHIDA CHIKASHI",
       "country": "Luckland",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Chikashi",
+      "lastName": "Hayashida"
     },
     {
       "id": "he-zijun-chn",
       "displayName": "HE ZIJUN",
       "country": "China",
-      "countryCode": "CHN"
+      "countryCode": "CHN",
+      "firstName": "Zijun",
+      "lastName": "He"
     },
     {
       "id": "henrique-gabrielle-bra",
       "displayName": "HENRIQUE GABRIELLE",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Gabrielle",
+      "lastName": "Henrique"
     },
     {
       "id": "henrique-yasmin-bra",
       "displayName": "HENRIQUE YASMIN",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Yasmin",
+      "lastName": "Henrique"
     },
     {
       "id": "henry-mohamad-haznil-mas",
       "displayName": "HENRY MOHAMAD HAZNIL",
       "country": "Malaysia",
-      "countryCode": "MAS"
+      "countryCode": "MAS",
+      "firstName": "Mohamad Haznil",
+      "lastName": "Henry"
     },
     {
       "id": "hesham-aya-egy",
       "displayName": "HESHAM AYA",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Aya",
+      "lastName": "Hesham"
     },
     {
       "id": "heydarov-roman-aze",
       "displayName": "HEYDAROV ROMAN",
       "country": "Azerbaijan",
-      "countryCode": "AZE"
+      "countryCode": "AZE",
+      "firstName": "Roman",
+      "lastName": "Heydarov"
     },
     {
       "id": "hisami-nakaji-jpn",
       "displayName": "HISAMI NAKAJI",
       "country": "Hisami",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Nakaji",
+      "lastName": "Hisami"
     },
     {
       "id": "hisham-aya-egy",
       "displayName": "HISHAM AYA",
       "country": "Adam",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Aya",
+      "lastName": "Hisham"
     },
     {
       "id": "hishamadi-muhammad-arif-hafizi-mas",
       "displayName": "HISHAMADI MUHAMMAD ARIF HAFIZI",
       "country": "Malaysia",
-      "countryCode": "MAS"
+      "countryCode": "MAS",
+      "firstName": "Muhammad Arif Hafizi",
+      "lastName": "Hishamadi"
     },
     {
       "id": "hoang-thi-thu-uyen-vie",
       "displayName": "HOANG THI THU UYEN",
       "country": "Vietnam",
-      "countryCode": "VIE"
+      "countryCode": "VIE",
+      "firstName": "Thu Uyen",
+      "lastName": "Hoang Thi"
     },
     {
       "id": "hoffmann-lucas-fra",
       "displayName": "HOFFMANN LUCAS",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Lucas",
+      "lastName": "Hoffmann"
     },
     {
       "id": "hoffmann-molinas-alexandre-jordi-esp",
@@ -4075,19 +4305,25 @@
       "id": "horiba-haya-jpn",
       "displayName": "HORIBA HAYA",
       "country": "Kokushikan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Haya",
+      "lastName": "Horiba"
     },
     {
       "id": "hrcka-roman-svk",
       "displayName": "HRCKA ROMAN",
       "country": "Slovakia",
-      "countryCode": "SVK"
+      "countryCode": "SVK",
+      "firstName": "Roman",
+      "lastName": "Hrcka"
     },
     {
       "id": "hung-ho-wai-howard-hkg",
       "displayName": "HUNG HO WAI HOWARD",
       "country": "Hong Kong Karate",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Howard",
+      "lastName": "Hung Ho Wai"
     },
     {
       "id": "team-hungary-hun",
@@ -4105,19 +4341,25 @@
       "id": "hussain-mohammad-kuw",
       "displayName": "HUSSAIN MOHAMMAD",
       "country": "Kuwait",
-      "countryCode": "KUW"
+      "countryCode": "KUW",
+      "firstName": "Mohammad",
+      "lastName": "Hussain"
     },
     {
       "id": "hwang-taeyeon-kor",
       "displayName": "HWANG TAEYEON",
       "country": "Republic Of Korea",
-      "countryCode": "KOR"
+      "countryCode": "KOR",
+      "firstName": "Taeyeon",
+      "lastName": "Hwang"
     },
     {
       "id": "hypolito-naomi-bra",
       "displayName": "HYPOLITO NAOMI",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Naomi",
+      "lastName": "Hypolito"
     },
     {
       "id": "team-ibb-spor-kulubu-tur",
@@ -4129,13 +4371,17 @@
       "id": "ikarashi-risa-jpn",
       "displayName": "IKARASHI RISA",
       "country": "Ikarashi",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Risa",
+      "lastName": "Ikarashi"
     },
     {
       "id": "ikeda-ryusei-jpn",
       "displayName": "IKEDA RYUSEI",
       "country": "Ryueiryu Ryuhokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryusei",
+      "lastName": "Ikeda"
     },
     {
       "id": "team-india-ind",
@@ -4183,7 +4429,9 @@
       "id": "iodice-alessandro-ita",
       "displayName": "IODICE ALESSANDRO",
       "country": "Centro Sportivo Esercito",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Alessandro",
+      "lastName": "Iodice"
     },
     {
       "id": "team-iran-karate-team-amini-soumeh-kabodin-ezati-jodaghieh-hosseini-iri",
@@ -4207,7 +4455,9 @@
       "id": "ishikawa-taiga-jpn",
       "displayName": "ISHIKAWA TAIGA",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Taiga",
+      "lastName": "Ishikawa"
     },
     {
       "id": "team-islamic-republic-of-iran-iri",
@@ -4327,25 +4577,33 @@
       "id": "iwamoto-emiri-jpn",
       "displayName": "IWAMOTO EMIRI",
       "country": "Ryueiryu Ryuhokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Emiri",
+      "lastName": "Iwamoto"
     },
     {
       "id": "iwatani-azuki-jpn",
       "displayName": "IWATANI AZUKI",
       "country": "Iwatani",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Azuki",
+      "lastName": "Iwatani"
     },
     {
       "id": "jahanshahi-sajedeh-iri",
       "displayName": "JAHANSHAHI SAJEDEH",
       "country": "Islamic Republic Of Iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Sajedeh",
+      "lastName": "Jahanshahi"
     },
     {
       "id": "jamal-hadiseh-iri",
       "displayName": "JAMAL HADISEH",
       "country": "Iran Karate Team",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Hadiseh",
+      "lastName": "Jamal"
     },
     {
       "id": "team-japan-jpn",
@@ -4381,19 +4639,25 @@
       "id": "juettner-jasmin-ger",
       "displayName": "JUETTNER JASMIN",
       "country": "Germany",
-      "countryCode": "GER"
+      "countryCode": "GER",
+      "firstName": "Jasmin",
+      "lastName": "Juettner"
     },
     {
       "id": "kamal-hasan-kuw",
       "displayName": "KAMAL HASAN",
       "country": "Kuwait",
-      "countryCode": "KUW"
+      "countryCode": "KUW",
+      "firstName": "Hasan",
+      "lastName": "Kamal"
     },
     {
       "id": "kapsalis-panagiotis-gre",
       "displayName": "KAPSALIS PANAGIOTIS",
       "country": "Greece",
-      "countryCode": "GRE"
+      "countryCode": "GRE",
+      "firstName": "Panagiotis",
+      "lastName": "Kapsalis"
     },
     {
       "id": "team-karate-do-biel-bienne-sui",
@@ -4405,7 +4669,9 @@
       "id": "karlsson-mia-swe",
       "displayName": "KARLSSON MIA",
       "country": "Sweden",
-      "countryCode": "SWE"
+      "countryCode": "SWE",
+      "firstName": "Mia",
+      "lastName": "Karlsson"
     },
     {
       "id": "team-kata-equipo-peru-damas-almarza-romani-salcedo-hermoza-per",
@@ -4429,91 +4695,121 @@
       "id": "kateshov-madi-kaz",
       "displayName": "KATESHOV MADI",
       "country": "Kazakhstan",
-      "countryCode": "KAZ"
+      "countryCode": "KAZ",
+      "firstName": "Madi",
+      "lastName": "Kateshov"
     },
     {
       "id": "kato-kurumi-jpn",
       "displayName": "KATO KURUMI",
       "country": "Kato",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kurumi",
+      "lastName": "Kato"
     },
     {
       "id": "kaynar-furkan-tur",
       "displayName": "KAYNAR FURKAN",
       "country": "Turkye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Furkan",
+      "lastName": "Kaynar"
     },
     {
       "id": "ken-okamoto-jpn",
       "displayName": "KEN OKAMOTO",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ken",
+      "lastName": "Okamoto"
     },
     {
       "id": "kennaway-madelyn-usa",
       "displayName": "KENNAWAY MADELYN",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Madelyn",
+      "lastName": "Kennaway"
     },
     {
       "id": "khamis-jana-egy",
       "displayName": "KHAMIS JANA",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Jana",
+      "lastName": "Khamis"
     },
     {
       "id": "khamis-jana1-egy",
       "displayName": "KHAMIS JANA1",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Jana",
+      "lastName": "Khamis"
     },
     {
       "id": "khurtsilava-lia-geo",
       "displayName": "KHURTSILAVA LIA",
       "country": "Georgia",
-      "countryCode": "GEO"
+      "countryCode": "GEO",
+      "firstName": "Lia",
+      "lastName": "Khurtsilava"
     },
     {
       "id": "kikuchi-ryonosuke-jpn",
       "displayName": "KIKUCHI RYONOSUKE",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryonosuke",
+      "lastName": "Kikuchi"
     },
     {
       "id": "kiri-mishima-jpn",
       "displayName": "KIRI MISHIMA",
       "country": "Kiri",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Mishima",
+      "lastName": "Kiri"
     },
     {
       "id": "kitaguchi-kao-jpn",
       "displayName": "KITAGUCHI KAO",
       "country": "Japan Karatedo Federation Shitokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kao",
+      "lastName": "Kitaguchi"
     },
     {
       "id": "kiyuna-ryo-jpn",
       "displayName": "KIYUNA RYO",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryo",
+      "lastName": "Kiyuna"
     },
     {
       "id": "klemz-thomas-fra",
       "displayName": "KLEMZ THOMAS",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Thomas",
+      "lastName": "Klemz"
     },
     {
       "id": "knight-harrison-aus",
       "displayName": "KNIGHT HARRISON",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Harrison",
+      "lastName": "Knight"
     },
     {
       "id": "kokumai-sakura-usa",
       "displayName": "KOKUMAI SAKURA",
       "country": "United States of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Sakura",
+      "lastName": "Kokumai"
     },
     {
       "id": "team-kokushikan-univ-jpn",
@@ -4543,49 +4839,65 @@
       "id": "kwong-jessica-usa",
       "displayName": "KWONG JESSICA",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Jessica",
+      "lastName": "Kwong"
     },
     {
       "id": "laos-loo-claudia-can",
       "displayName": "LAOS-LOO CLAUDIA",
       "country": "Canada",
-      "countryCode": "CAN"
+      "countryCode": "CAN",
+      "firstName": "Claudia",
+      "lastName": "Laos-Loo"
     },
     {
       "id": "lau-mo-sheung-grace-hkg",
       "displayName": "LAU MO SHEUNG GRACE",
       "country": "Hong Kong, China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Grace",
+      "lastName": "Lau Mo Sheung"
     },
     {
       "id": "lehner-tamara-aut",
       "displayName": "LEHNER TAMARA",
       "country": "Austria",
-      "countryCode": "AUT"
+      "countryCode": "AUT",
+      "firstName": "Tamara",
+      "lastName": "Lehner"
     },
     {
       "id": "lo-sum-man-hkg",
       "displayName": "LO SUM MAN",
       "country": "Hong Kong China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Sum Man",
+      "lastName": "Lo"
     },
     {
       "id": "lopez-pintado-maria-esp",
       "displayName": "LOPEZ PINTADO MARIA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Maria",
+      "lastName": "Lopez Pintado"
     },
     {
       "id": "lovelly-anne-robberth-mas",
       "displayName": "LOVELLY ANNE ROBBERTH",
       "country": "Malaysia",
-      "countryCode": "MAS"
+      "countryCode": "MAS",
+      "firstName": "Lovelly Anne",
+      "lastName": "Robberth"
     },
     {
       "id": "lueck-aidan-randall-ger",
       "displayName": "LUECK AIDAN RANDALL",
       "country": "Germany",
-      "countryCode": "GER"
+      "countryCode": "GER",
+      "firstName": "Aidan Randall",
+      "lastName": "Lueck"
     },
     {
       "id": "team-lv-bremen-ger",
@@ -4603,13 +4915,17 @@
       "id": "machida-yasuhiro-jpn",
       "displayName": "MACHIDA YASUHIRO",
       "country": "Seinounyu",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Yasuhiro",
+      "lastName": "Machida"
     },
     {
       "id": "madrid-tapia-rodrigo-alejandro-usa",
       "displayName": "MADRID TAPIA RODRIGO ALEJANDRO",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Rodrigo Alejandro",
+      "lastName": "Madrid Tapia"
     },
     {
       "id": "team-malaysia-mas",
@@ -4627,49 +4943,65 @@
       "id": "manca-chiara-bel",
       "displayName": "MANCA CHIARA",
       "country": "Belgium",
-      "countryCode": "BEL"
+      "countryCode": "BEL",
+      "firstName": "Chiara",
+      "lastName": "Manca"
     },
     {
       "id": "manzana-diaz-alejandro-esp",
       "displayName": "MANZANA DIAZ ALEJANDRO",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Alejandro",
+      "lastName": "Manzana Diaz"
     },
     {
       "id": "markesinis-lamprinos-marios-gre",
       "displayName": "MARKESINIS LAMPRINOS MARIOS",
       "country": "Greece",
-      "countryCode": "GRE"
+      "countryCode": "GRE",
+      "firstName": "Marios",
+      "lastName": "Markesinis Lamprinos"
     },
     {
       "id": "marques-rita-por",
       "displayName": "MARQUES RITA",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Rita",
+      "lastName": "Marques"
     },
     {
       "id": "martin-montenegro-ivan-esp",
       "displayName": "MARTIN MONTENEGRO IVAN",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Ivan",
+      "lastName": "Martin Montenegro"
     },
     {
       "id": "martin-romero-raul-esp",
       "displayName": "MARTIN ROMERO RAUL",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Raul",
+      "lastName": "Martin Romero"
     },
     {
       "id": "marzella-sekar-damayanti-ina",
       "displayName": "MARZELLA SEKAR DAMAYANTI",
       "country": "Indonesia",
-      "countryCode": "INA"
+      "countryCode": "INA",
+      "firstName": "Sekar Damayanti",
+      "lastName": "Marzella"
     },
     {
       "id": "medina-david-santiago-col",
       "displayName": "MEDINA DAVID SANTIAGO",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "David Santiago",
+      "lastName": "Medina"
     },
     {
       "id": "mesic-mina-srb",
@@ -4681,7 +5013,9 @@
       "id": "mesina-fuentes-kevin-chi",
       "displayName": "MESINA FUENTES KEVIN",
       "country": "Chile",
-      "countryCode": "CHI"
+      "countryCode": "CHI",
+      "firstName": "Kevin",
+      "lastName": "Mesina Fuentes"
     },
     {
       "id": "team-mexico-mex",
@@ -4699,91 +5033,121 @@
       "id": "mijac-vladimir-mne",
       "displayName": "MIJAC VLADIMIR",
       "country": "Montenegro",
-      "countryCode": "MNE"
+      "countryCode": "MNE",
+      "firstName": "Vladimir",
+      "lastName": "Mijac"
     },
     {
       "id": "miko-fukuoka-jpn",
       "displayName": "MIKO FUKUOKA",
       "country": "Tenri",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Miko",
+      "lastName": "Fukuoka"
     },
     {
       "id": "milic-jovana-mne",
       "displayName": "MILIC JOVANA",
       "country": "Montenegro",
-      "countryCode": "MNE"
+      "countryCode": "MNE",
+      "firstName": "Jovana",
+      "lastName": "Milic"
     },
     {
       "id": "minamoto-aira-jpn",
       "displayName": "MINAMOTO AIRA",
       "country": "Doshisha University",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Aira",
+      "lastName": "Minamoto"
     },
     {
       "id": "mishima-kiri-jpn",
       "displayName": "MISHIMA KIRI",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kiri",
+      "lastName": "Mishima"
     },
     {
       "id": "miskova-veronika-cze",
       "displayName": "MISKOVA VERONIKA",
       "country": "Czech Repuplic",
-      "countryCode": "CZE"
+      "countryCode": "CZE",
+      "firstName": "Veronika",
+      "lastName": "Miskova"
     },
     {
       "id": "miura-gonzalo-per",
       "displayName": "MIURA GONZALO",
       "country": "Peru",
-      "countryCode": "PER"
+      "countryCode": "PER",
+      "firstName": "Gonzalo",
+      "lastName": "Miura"
     },
     {
       "id": "mladezic-bojana-srb",
       "displayName": "MLADEZIC BOJANA",
       "country": "Serbia",
-      "countryCode": "SRB"
+      "countryCode": "SRB",
+      "firstName": "Bojana",
+      "lastName": "Mladezic"
     },
     {
       "id": "modi-alexandru-nicolas-rou",
       "displayName": "MODI ALEXANDRU NICOLAS",
       "country": "Romania",
-      "countryCode": "ROU"
+      "countryCode": "ROU",
+      "firstName": "Alexandru Nicolas",
+      "lastName": "Modi"
     },
     {
       "id": "mohamed-zeyad-egy",
       "displayName": "MOHAMED ZEYAD",
       "country": "Elghobashy",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Zeyad",
+      "lastName": "Mohamed"
     },
     {
       "id": "mohamed-zeyad-mohamed-egy",
       "displayName": "MOHAMED ZEYAD MOHAMED",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Zeyad Mohamed",
+      "lastName": "Mohamed"
     },
     {
       "id": "mondoloni-angelique-ncl",
       "displayName": "MONDOLONI ANGELIQUE",
       "country": "New Caledonia",
-      "countryCode": "NCL"
+      "countryCode": "NCL",
+      "firstName": "Angelique",
+      "lastName": "Mondoloni"
     },
     {
       "id": "monge-urena-maria-valeria-crc",
       "displayName": "MONGE URENA MARIA VALERIA",
       "country": "Costa Rica",
-      "countryCode": "CRC"
+      "countryCode": "CRC",
+      "firstName": "Maria Valeria",
+      "lastName": "Monge Urena"
     },
     {
       "id": "monoi-sena-jpn",
       "displayName": "MONOI SENA",
       "country": "Monoi",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Sena",
+      "lastName": "Monoi"
     },
     {
       "id": "montarello-enzo-fra",
       "displayName": "MONTARELLO ENZO",
       "country": "Aass Kartate Sarcelles",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Enzo",
+      "lastName": "Montarello"
     },
     {
       "id": "team-montenegro-mne",
@@ -4819,19 +5183,25 @@
       "id": "moore-ayano-usa",
       "displayName": "MOORE AYANO",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Ayano",
+      "lastName": "Moore"
     },
     {
       "id": "morales-ozuna-gema-esp",
       "displayName": "MORALES OZUNA GEMA",
       "country": "Karate Ciudad De Roma",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Gema",
+      "lastName": "Morales Ozuna"
     },
     {
       "id": "morin-lea-can",
       "displayName": "MORIN LEA",
       "country": "Canada",
-      "countryCode": "CAN"
+      "countryCode": "CAN",
+      "firstName": "Lea",
+      "lastName": "Morin"
     },
     {
       "id": "team-morocco-mar",
@@ -4861,115 +5231,153 @@
       "id": "moscatelli-samuele-ita",
       "displayName": "MOSCATELLI SAMUELE",
       "country": "Asd Club Arti Orientali Cantu",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Samuele",
+      "lastName": "Moscatelli"
     },
     {
       "id": "mota-nicole-bra",
       "displayName": "MOTA NICOLE",
       "country": "Brazil",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Nicole",
+      "lastName": "Mota"
     },
     {
       "id": "moto-kazumasa-jpn",
       "displayName": "MOTO KAZUMASA",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kazumasa",
+      "lastName": "Moto"
     },
     {
       "id": "moto-ryuji-jpn",
       "displayName": "MOTO RYUJI",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryuji",
+      "lastName": "Moto"
     },
     {
       "id": "motojima-shoei-jpn",
       "displayName": "MOTOJIMA SHOEI",
       "country": "Gunma",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Shoei",
+      "lastName": "Motojima"
     },
     {
       "id": "mousa-habiba-egy",
       "displayName": "MOUSA HABIBA",
       "country": "Mousa",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Habiba",
+      "lastName": "Mousa"
     },
     {
       "id": "murayama-honoka-jpn",
       "displayName": "MURAYAMA HONOKA",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Honoka",
+      "lastName": "Murayama"
     },
     {
       "id": "mustafa-yousif-irq",
       "displayName": "MUSTAFA YOUSIF",
       "country": "Iraq",
-      "countryCode": "IRQ"
+      "countryCode": "IRQ",
+      "firstName": "Yousif",
+      "lastName": "Mustafa"
     },
     {
       "id": "nagy-botond-hun",
       "displayName": "NAGY BOTOND",
       "country": "Hungary",
-      "countryCode": "HUN"
+      "countryCode": "HUN",
+      "firstName": "Botond",
+      "lastName": "Nagy"
     },
     {
       "id": "nakaji-hisami-jpn",
       "displayName": "NAKAJI HISAMI",
       "country": "Chubugakuin",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Hisami",
+      "lastName": "Nakaji"
     },
     {
       "id": "nendai-kairi-jpn",
       "displayName": "NENDAI KAIRI",
       "country": "Doshisha University",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kairi",
+      "lastName": "Nendai"
     },
     {
       "id": "neto-artur-por",
       "displayName": "NETO ARTUR",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Artur",
+      "lastName": "Neto"
     },
     {
       "id": "ngo-ha-thi-can",
       "displayName": "NGO HA THI",
       "country": "Canada",
-      "countryCode": "CAN"
+      "countryCode": "CAN",
+      "firstName": "Thi",
+      "lastName": "Ngo Ha"
     },
     {
       "id": "ngoan-franck-fra",
       "displayName": "NGOAN FRANCK",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Franck",
+      "lastName": "Ngoan"
     },
     {
       "id": "nguyen-duc-anh-vie",
       "displayName": "NGUYEN DUC ANH",
       "country": "Vietnam",
-      "countryCode": "VIE"
+      "countryCode": "VIE",
+      "firstName": "Duc Anh",
+      "lastName": "Nguyen"
     },
     {
       "id": "nguyen-ngoc-tram-vie",
       "displayName": "NGUYEN NGOC TRAM",
       "country": "Vietnam",
-      "countryCode": "VIE"
+      "countryCode": "VIE",
+      "firstName": "Ngoc Tram",
+      "lastName": "Nguyen"
     },
     {
       "id": "nishiyama-kakeru-jpn",
       "displayName": "NISHIYAMA KAKERU",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kakeru",
+      "lastName": "Nishiyama"
     },
     {
       "id": "noel-manic-can",
       "displayName": "NOEL MANIC",
       "country": "Canada",
-      "countryCode": "CAN"
+      "countryCode": "CAN",
+      "firstName": "Manic",
+      "lastName": "Noel"
     },
     {
       "id": "nopre-jeremy-laurence-phi",
       "displayName": "NOPRE JEREMY LAURENCE",
       "country": "Philippines",
-      "countryCode": "PHI"
+      "countryCode": "PHI",
+      "firstName": "Jeremy Laurence",
+      "lastName": "Nopre"
     },
     {
       "id": "team-north-macedonia-mkd",
@@ -4981,37 +5389,49 @@
       "id": "ocana-layla-jesse-pur",
       "displayName": "OCANA LAYLA JESSE",
       "country": "Puerto Rico",
-      "countryCode": "PUR"
+      "countryCode": "PUR",
+      "firstName": "Layla Jesse",
+      "lastName": "Ocana"
     },
     {
       "id": "ohata-kotaro-jpn",
       "displayName": "OHATA KOTARO",
       "country": "Ohata",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kotaro",
+      "lastName": "Ohata"
     },
     {
       "id": "ohuchi-mirisa-jpn",
       "displayName": "OHUCHI MIRISA",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Mirisa",
+      "lastName": "Ohuchi"
     },
     {
       "id": "okumura-soshi-jpn",
       "displayName": "OKUMURA SOSHI",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Soshi",
+      "lastName": "Okumura"
     },
     {
       "id": "oligino-diana-ven",
       "displayName": "OLIGINO DIANA",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Diana",
+      "lastName": "Oligino"
     },
     {
       "id": "oligino-diana-valentina-ven",
       "displayName": "OLIGINO DIANA VALENTINA",
       "country": "Negishi Sosei Kai",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Diana Valentina",
+      "lastName": "Oligino"
     },
     {
       "id": "team-olympic-marbella-esp",
@@ -5023,85 +5443,113 @@
       "id": "ono-hikaru-jpn",
       "displayName": "ONO HIKARU",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Hikaru",
+      "lastName": "Ono"
     },
     {
       "id": "ono-maho-jpn",
       "displayName": "ONO MAHO",
       "country": "Japan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Maho",
+      "lastName": "Ono"
     },
     {
       "id": "opaka-anisa-temakai-sol",
       "displayName": "OPAKA ANISA TEMAKAI",
       "country": "Solomon Islands",
-      "countryCode": "SOL"
+      "countryCode": "SOL",
+      "firstName": "Anisa Temakai",
+      "lastName": "Opaka"
     },
     {
       "id": "orbe-cristina-ecu",
       "displayName": "ORBE CRISTINA",
       "country": "Ecuador",
-      "countryCode": "ECU"
+      "countryCode": "ECU",
+      "firstName": "Cristina",
+      "lastName": "Orbe"
     },
     {
       "id": "ortiz-aquino-jeffersont-ven",
       "displayName": "ORTIZ AQUINO JEFFERSONT",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Jeffersont",
+      "lastName": "Ortiz Aquino"
     },
     {
       "id": "oshiguchi-syota-jpn",
       "displayName": "OSHIGUCHI SYOTA",
       "country": "Oshiguchi　Syota",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Syota",
+      "lastName": "Oshiguchi"
     },
     {
       "id": "otsuki-eiji-jpn",
       "displayName": "OTSUKI EIJI",
       "country": "Eiji",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Eiji",
+      "lastName": "Otsuki"
     },
     {
       "id": "ozdemir-enes-tur",
       "displayName": "OZDEMIR ENES",
       "country": "Türkiye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Enes",
+      "lastName": "Ozdemir"
     },
     {
       "id": "paez-joaquin-ecu",
       "displayName": "PAEZ JOAQUIN",
       "country": "Ecuador",
-      "countryCode": "ECU"
+      "countryCode": "ECU",
+      "firstName": "Joaquin",
+      "lastName": "Paez"
     },
     {
       "id": "pagot-alexander-swe",
       "displayName": "PAGOT ALEXANDER",
       "country": "Sweden",
-      "countryCode": "SWE"
+      "countryCode": "SWE",
+      "firstName": "Alexander",
+      "lastName": "Pagot"
     },
     {
       "id": "panagia-giuseppe-ita",
       "displayName": "PANAGIA GIUSEPPE",
       "country": "Panagia",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Giuseppe",
+      "lastName": "Panagia"
     },
     {
       "id": "pappalardo-vincenzo-ita",
       "displayName": "PAPPALARDO VINCENZO",
       "country": "Pappalardo",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Vincenzo",
+      "lastName": "Pappalardo"
     },
     {
       "id": "parlak-ozan-tur",
       "displayName": "PARLAK OZAN",
       "country": "Turkiye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Ozan",
+      "lastName": "Parlak"
     },
     {
       "id": "peltier-tom-fra",
       "displayName": "PELTIER TOM",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Tom",
+      "lastName": "Peltier"
     },
     {
       "id": "team-peoples-republic-of-china-chn",
@@ -5113,7 +5561,9 @@
       "id": "perez-de-abreu-ricardo-ven",
       "displayName": "PEREZ DE ABREU RICARDO",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Ricardo",
+      "lastName": "Perez de Abreu"
     },
     {
       "id": "team-peru-per",
@@ -5143,13 +5593,17 @@
       "id": "pezzetti-michela-ita",
       "displayName": "PEZZETTI MICHELA",
       "country": "Gruppo Sportivo Fiamme Oro",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Michela",
+      "lastName": "Pezzetti"
     },
     {
       "id": "pham-truong-giang-vie",
       "displayName": "PHAM TRUONG GIANG",
       "country": "Vietnam",
-      "countryCode": "VIE"
+      "countryCode": "VIE",
+      "firstName": "Truong Giang",
+      "lastName": "Pham"
     },
     {
       "id": "team-philippines-phi",
@@ -5167,13 +5621,17 @@
       "id": "pieri-laura-fra",
       "displayName": "PIERI LAURA",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Laura",
+      "lastName": "Pieri"
     },
     {
       "id": "pinheiro-pedro-usa",
       "displayName": "PINHEIRO PEDRO",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Pedro",
+      "lastName": "Pinheiro"
     },
     {
       "id": "team-poland-pol",
@@ -5185,7 +5643,9 @@
       "id": "polsinelli-guido-ita",
       "displayName": "POLSINELLI GUIDO",
       "country": "Italy",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Guido",
+      "lastName": "Polsinelli"
     },
     {
       "id": "team-portugal-por",
@@ -5245,79 +5705,105 @@
       "id": "puthea-srey-nuch-cam",
       "displayName": "PUTHEA SREY NUCH",
       "country": "Cambodia",
-      "countryCode": "CAM"
+      "countryCode": "CAM",
+      "firstName": "Srey Nuch",
+      "lastName": "Puthea"
     },
     {
       "id": "quintero-capdevila-damian-hugo-esp",
       "displayName": "QUINTERO CAPDEVILA DAMIAN HUGO",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Damian Hugo",
+      "lastName": "Quintero Capdevila"
     },
     {
       "id": "quiroz-castillo-yaneth-mex",
       "displayName": "QUIROZ CASTILLO YANETH",
       "country": "Mexico",
-      "countryCode": "MEX"
+      "countryCode": "MEX",
+      "firstName": "Yaneth",
+      "lastName": "Quiroz Castillo"
     },
     {
       "id": "raafat-jana-egy",
       "displayName": "RAAFAT JANA",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Jana",
+      "lastName": "Raafat"
     },
     {
       "id": "radulovic-biserka-mne",
       "displayName": "RADULOVIC BISERKA",
       "country": "Montenegro",
-      "countryCode": "MNE"
+      "countryCode": "MNE",
+      "firstName": "Biserka",
+      "lastName": "Radulovic"
     },
     {
       "id": "rainone-rylee-usa",
       "displayName": "RAINONE RYLEE",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Rylee",
+      "lastName": "Rainone"
     },
     {
       "id": "ramadhan-hazel-ina",
       "displayName": "RAMADHAN HAZEL",
       "country": "Pengurus Pusat Institut Karate-Do Indonesia",
-      "countryCode": "INA"
+      "countryCode": "INA",
+      "firstName": "Hazel",
+      "lastName": "Ramadhan"
     },
     {
       "id": "reina-utsunomiya-jpn",
       "displayName": "REINA UTSUNOMIYA",
       "country": "Reina",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Utsunomiya",
+      "lastName": "Reina"
     },
     {
       "id": "relic-matija-cro",
       "displayName": "RELIC MATIJA",
       "country": "Croatia",
-      "countryCode": "CRO"
+      "countryCode": "CRO",
+      "firstName": "Matija",
+      "lastName": "Relic"
     },
     {
       "id": "rodriguez-encabo-lidia-esp",
       "displayName": "RODRIGUEZ ENCABO LIDIA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Lidia",
+      "lastName": "Rodriguez Encabo"
     },
     {
       "id": "rodriguez-hunter-usa",
       "displayName": "RODRIGUEZ HUNTER",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Hunter",
+      "lastName": "Rodriguez"
     },
     {
       "id": "roversi-elena-ita",
       "displayName": "ROVERSI ELENA",
       "country": "Asd Master Rapid Skf Cbl",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Elena",
+      "lastName": "Roversi"
     },
     {
       "id": "roy-rubio-raquel-esp",
       "displayName": "ROY RUBIO RAQUEL",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Raquel",
+      "lastName": "Roy Rubio"
     },
     {
       "id": "team-russian-federation-brantov-degtyarev-german-rus",
@@ -5347,49 +5833,65 @@
       "id": "sadeghi-dastak-fatemeh-iri",
       "displayName": "SADEGHI DASTAK FATEMEH",
       "country": "Islamic Republic Of Iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Fatemeh",
+      "lastName": "Sadeghi Dastak"
     },
     {
       "id": "salcedo-hermoza-saida-karlen-per",
       "displayName": "SALCEDO HERMOZA SAIDA KARLEN",
       "country": "Peru",
-      "countryCode": "PER"
+      "countryCode": "PER",
+      "firstName": "Saida Karlen",
+      "lastName": "Salcedo Hermoza"
     },
     {
       "id": "sampieri-cassandra-fra",
       "displayName": "SAMPIERI CASSANDRA",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Cassandra",
+      "lastName": "Sampieri"
     },
     {
       "id": "san-francisco-jerez-maria-esp",
       "displayName": "SAN FRANCISCO JEREZ MARIA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Maria",
+      "lastName": "San Francisco Jerez"
     },
     {
       "id": "sanchez-jaime-sandra-esp",
       "displayName": "SANCHEZ JAIME SANDRA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Sandra",
+      "lastName": "Sanchez Jaime"
     },
     {
       "id": "sanft-keira-aus",
       "displayName": "SANFT KEIRA",
       "country": "Australia",
-      "countryCode": "AUS"
+      "countryCode": "AUS",
+      "firstName": "Keira",
+      "lastName": "Sanft"
     },
     {
       "id": "sato-kotomi-jpn",
       "displayName": "SATO KOTOMI",
       "country": "Teikyo",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kotomi",
+      "lastName": "Sato"
     },
     {
       "id": "sato-yuki-jpn",
       "displayName": "SATO YUKI",
       "country": "Japan Karatedo Federation Shitokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Yuki",
+      "lastName": "Sato"
     },
     {
       "id": "team-saudi-arabia-ksa",
@@ -5407,13 +5909,17 @@
       "id": "savoy-medero-sabrina-esp",
       "displayName": "SAVOY MEDERO SABRINA",
       "country": "Spain",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Sabrina",
+      "lastName": "Savoy Medero"
     },
     {
       "id": "sedek-shahd-egy",
       "displayName": "SEDEK SHAHD",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Shahd",
+      "lastName": "Sedek"
     },
     {
       "id": "team-serbia-srb",
@@ -5425,55 +5931,73 @@
       "id": "severan-lea-fra",
       "displayName": "SEVERAN LEA",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Lea",
+      "lastName": "Severan"
     },
     {
       "id": "sewidan-nourhan-egy",
       "displayName": "SEWIDAN NOURHAN",
       "country": "Egypt",
-      "countryCode": "EGY"
+      "countryCode": "EGY",
+      "firstName": "Nourhan",
+      "lastName": "Sewidan"
     },
     {
       "id": "shimizu-kiyou-jpn",
       "displayName": "SHIMIZU KIYOU",
       "country": "Japan Mikihouse",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Kiyou",
+      "lastName": "Shimizu"
     },
     {
       "id": "shimizu-natsuki-jpn",
       "displayName": "SHIMIZU NATSUKI",
       "country": "Ogkjapan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Natsuki",
+      "lastName": "Shimizu"
     },
     {
       "id": "shimohara-kaitlyn-usa",
       "displayName": "SHIMOHARA KAITLYN",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Kaitlyn",
+      "lastName": "Shimohara"
     },
     {
       "id": "shimomura-seren-jpn",
       "displayName": "SHIMOMURA SEREN",
       "country": "Ryueiryu Ryuhokai",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Seren",
+      "lastName": "Shimomura"
     },
     {
       "id": "siebert-rita-ger",
       "displayName": "SIEBERT RITA",
       "country": "Germany",
-      "countryCode": "GER"
+      "countryCode": "GER",
+      "firstName": "Rita",
+      "lastName": "Siebert"
     },
     {
       "id": "sigalova-vladlena-kaz",
       "displayName": "SIGALOVA VLADLENA",
       "country": "Kazakhstan",
-      "countryCode": "KAZ"
+      "countryCode": "KAZ",
+      "firstName": "Vladlena",
+      "lastName": "Sigalova"
     },
     {
       "id": "sinha-suromita-ind",
       "displayName": "SINHA SUROMITA",
       "country": "India",
-      "countryCode": "IND"
+      "countryCode": "IND",
+      "firstName": "Suromita",
+      "lastName": "Sinha"
     },
     {
       "id": "team-skb-elite-epinay-sous-senart-fra",
@@ -5503,31 +6027,41 @@
       "id": "smorguner-ilja-ger",
       "displayName": "SMORGUNER ILJA",
       "country": "Germany",
-      "countryCode": "GER"
+      "countryCode": "GER",
+      "firstName": "Ilja",
+      "lastName": "Smorguner"
     },
     {
       "id": "sofuoglu-ali-tur",
       "displayName": "SOFUOGLU ALI",
       "country": "Turkey",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Ali",
+      "lastName": "Sofuoglu"
     },
     {
       "id": "soldano-sara-ita",
       "displayName": "SOLDANO SARA",
       "country": "Asd Dojo Matsumura Taranto",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Sara",
+      "lastName": "Soldano"
     },
     {
       "id": "soteriou-vryonis-cyp",
       "displayName": "SOTERIOU VRYONIS",
       "country": "Cyprus",
-      "countryCode": "CYP"
+      "countryCode": "CYP",
+      "firstName": "Vryonis",
+      "lastName": "Soteriou"
     },
     {
       "id": "sou-soi-lam-mac",
       "displayName": "SOU SOI LAM",
       "country": "Macau",
-      "countryCode": "MAC"
+      "countryCode": "MAC",
+      "firstName": "Soi Lam",
+      "lastName": "Sou"
     },
     {
       "id": "team-spain-esp",
@@ -5689,31 +6223,41 @@
       "id": "stowell-mason-usa",
       "displayName": "STOWELL MASON",
       "country": "United States",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Mason",
+      "lastName": "Stowell"
     },
     {
       "id": "subota-uros-srb",
       "displayName": "SUBOTA UROS",
       "country": "Serbia",
-      "countryCode": "SRB"
+      "countryCode": "SRB",
+      "firstName": "Uros",
+      "lastName": "Subota"
     },
     {
       "id": "szolar-pavol-svk",
       "displayName": "SZOLAR PAVOL",
       "country": "Slovakia",
-      "countryCode": "SVK"
+      "countryCode": "SVK",
+      "firstName": "Pavol",
+      "lastName": "Szolar"
     },
     {
       "id": "taily-helvetia-fra",
       "displayName": "TAILY HELVETIA",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Helvetia",
+      "lastName": "Taily"
     },
     {
       "id": "takao-ryuki-jpn",
       "displayName": "TAKAO RYUKI",
       "country": "Takao",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryuki",
+      "lastName": "Takao"
     },
     {
       "id": "tamborlani-matteo-cze",
@@ -5725,19 +6269,25 @@
       "id": "tang-yu-hin-hkg",
       "displayName": "TANG YU HIN",
       "country": "Hong Kong China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Yu Hin",
+      "lastName": "Tang"
     },
     {
       "id": "tano-keito-jpn",
       "displayName": "TANO KEITO",
       "country": "Kate Tano",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Keito",
+      "lastName": "Tano"
     },
     {
       "id": "tao-yiwei-chn",
       "displayName": "TAO YIWEI",
       "country": "China",
-      "countryCode": "CHN"
+      "countryCode": "CHN",
+      "firstName": "Yiwei",
+      "lastName": "Tao"
     },
     {
       "id": "team-team-everaldo-icara-bra",
@@ -5749,7 +6299,9 @@
       "id": "terananon-ramitar-tha",
       "displayName": "TERANANON RAMITAR",
       "country": "Thailand",
-      "countryCode": "THA"
+      "countryCode": "THA",
+      "firstName": "Ramitar",
+      "lastName": "Terananon"
     },
     {
       "id": "team-thailand-tha",
@@ -5761,55 +6313,73 @@
       "id": "thing-sanu-maya-nep",
       "displayName": "THING SANU MAYA",
       "country": "Nepal",
-      "countryCode": "NEP"
+      "countryCode": "NEP",
+      "firstName": "Maya",
+      "lastName": "Thing Sanu"
     },
     {
       "id": "torres-gutierrez-ariel-usa",
       "displayName": "TORRES GUTIERREZ ARIEL",
       "country": "United States of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Ariel",
+      "lastName": "Torres Gutierrez"
     },
     {
       "id": "tozaki-gakuji-usa",
       "displayName": "TOZAKI GAKUJI",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Gakuji",
+      "lastName": "Tozaki"
     },
     {
       "id": "tozaki-taishi-usa",
       "displayName": "TOZAKI TAISHI",
       "country": "Usa National Karate-Do Federation",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Taishi",
+      "lastName": "Tozaki"
     },
     {
       "id": "tran-fabien-fra",
       "displayName": "TRAN FABIEN",
       "country": "France",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Fabien",
+      "lastName": "Tran"
     },
     {
       "id": "trebejo-jhon-per",
       "displayName": "TREBEJO JHON",
       "country": "Peru",
-      "countryCode": "PER"
+      "countryCode": "PER",
+      "firstName": "Jhon",
+      "lastName": "Trebejo"
     },
     {
       "id": "tung-yee-yin-hkg",
       "displayName": "TUNG YEE YIN",
       "country": "Hong Kong China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Yee Yin",
+      "lastName": "Tung"
     },
     {
       "id": "turcu-diana-mihaela-rou",
       "displayName": "TURCU DIANA MIHAELA",
       "country": "Romania",
-      "countryCode": "ROU"
+      "countryCode": "ROU",
+      "firstName": "Diana Mihaela",
+      "lastName": "Turcu"
     },
     {
       "id": "turemen-damla-su-tur",
       "displayName": "TUREMEN DAMLA SU",
       "country": "Turkiye",
-      "countryCode": "TUR"
+      "countryCode": "TUR",
+      "firstName": "Damla Su",
+      "lastName": "Turemen"
     },
     {
       "id": "team-turk-telekom-tur",
@@ -5941,7 +6511,9 @@
       "id": "ujihara-yuki-sui",
       "displayName": "UJIHARA YUKI",
       "country": "Swiss Karate Federation Nationalteam",
-      "countryCode": "SUI"
+      "countryCode": "SUI",
+      "firstName": "Yuki",
+      "lastName": "Ujihara"
     },
     {
       "id": "team-ukraine-khyl-maslo-prychyna-ukr",
@@ -5959,7 +6531,9 @@
       "id": "urdaneta-alberto-chi",
       "displayName": "URDANETA ALBERTO",
       "country": "Chile",
-      "countryCode": "CHI"
+      "countryCode": "CHI",
+      "firstName": "Alberto",
+      "lastName": "Urdaneta"
     },
     {
       "id": "team-uruguay-de-baeremaecker-romero-santos-uru",
@@ -5971,7 +6545,9 @@
       "id": "valdez-sagastegui-alberto-mex",
       "displayName": "VALDEZ SAGASTEGUI ALBERTO",
       "country": "Mexico",
-      "countryCode": "MEX"
+      "countryCode": "MEX",
+      "firstName": "Alberto",
+      "lastName": "Valdez Sagastegui"
     },
     {
       "id": "team-venezuela-ven",
@@ -5983,13 +6559,17 @@
       "id": "vieira-joao-por",
       "displayName": "VIEIRA JOAO",
       "country": "Portugal",
-      "countryCode": "POR"
+      "countryCode": "POR",
+      "firstName": "Joao",
+      "lastName": "Vieira"
     },
     {
       "id": "viera-hernandez-mayra-emily-mex",
       "displayName": "VIERA HERNANDEZ MAYRA EMILY",
       "country": "Mexico",
-      "countryCode": "MEX"
+      "countryCode": "MEX",
+      "firstName": "Mayra Emily",
+      "lastName": "Viera Hernandez"
     },
     {
       "id": "team-vietnam-vie",
@@ -6001,133 +6581,177 @@
       "id": "villalta-luis-ven",
       "displayName": "VILLALTA LUIS",
       "country": "Venezuela",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Luis",
+      "lastName": "Villalta"
     },
     {
       "id": "vlai-jessica-ger",
       "displayName": "VLAI JESSICA",
       "country": "Germany",
-      "countryCode": "GER"
+      "countryCode": "GER",
+      "firstName": "Jessica",
+      "lastName": "Vlai"
     },
     {
       "id": "vu-anthony-swe",
       "displayName": "VU ANTHONY",
       "country": "Sweden",
-      "countryCode": "SWE"
+      "countryCode": "SWE",
+      "firstName": "Anthony",
+      "lastName": "Vu"
     },
     {
       "id": "watanabe-yuto-jpn",
       "displayName": "WATANABE YUTO",
       "country": "Doshisha University",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Yuto",
+      "lastName": "Watanabe"
     },
     {
       "id": "wong-alfaro-mariano-fabricio-per",
       "displayName": "WONG ALFARO MARIANO FABRICIO",
       "country": "Peru",
-      "countryCode": "PER"
+      "countryCode": "PER",
+      "firstName": "Mariano Fabricio",
+      "lastName": "Wong Alfaro"
     },
     {
       "id": "wong-sze-man-hkg",
       "displayName": "WONG SZE MAN",
       "country": "Hong Kong China",
-      "countryCode": "HKG"
+      "countryCode": "HKG",
+      "firstName": "Sze Man",
+      "lastName": "Wong"
     },
     {
       "id": "wysocka-emilia-pol",
       "displayName": "WYSOCKA EMILIA",
       "country": "Poland",
-      "countryCode": "POL"
+      "countryCode": "POL",
+      "firstName": "Emilia",
+      "lastName": "Wysocka"
     },
     {
       "id": "xenou-georgia-archontia-gre",
       "displayName": "XENOU GEORGIA-ARCHONTIA",
       "country": "Greece",
-      "countryCode": "GRE"
+      "countryCode": "GRE",
+      "firstName": "Georgia-Archontia",
+      "lastName": "Xenou"
     },
     {
       "id": "yamada-nodoka-jpn",
       "displayName": "YAMADA NODOKA",
       "country": "Keio University",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Nodoka",
+      "lastName": "Yamada"
     },
     {
       "id": "yang-kangwei-chn",
       "displayName": "YANG KANGWEI",
       "country": "China",
-      "countryCode": "CHN"
+      "countryCode": "CHN",
+      "firstName": "Kangwei",
+      "lastName": "Yang"
     },
     {
       "id": "yoneyama-yusuke-jpn",
       "displayName": "YONEYAMA YUSUKE",
       "country": "Kokushikan",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Yusuke",
+      "lastName": "Yoneyama"
     },
     {
       "id": "yoshizawa-reece-usa",
       "displayName": "YOSHIZAWA REECE",
       "country": "United States Of America",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Reece",
+      "lastName": "Yoshizawa"
     },
     {
       "id": "zambrano-fernando-ven",
       "displayName": "ZAMBRANO FERNANDO",
       "country": "Negishi Sosei Kai",
-      "countryCode": "VEN"
+      "countryCode": "VEN",
+      "firstName": "Fernando",
+      "lastName": "Zambrano"
     },
     {
       "id": "zand-ali-iri",
       "displayName": "ZAND ALI",
       "country": "Islamic Republic Of Iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Ali",
+      "lastName": "Zand"
     },
     {
       "id": "zapata-machado-valentina-col",
       "displayName": "ZAPATA MACHADO VALENTINA",
       "country": "Colombia",
-      "countryCode": "COL"
+      "countryCode": "COL",
+      "firstName": "Valentina",
+      "lastName": "Zapata Machado"
     },
     {
       "id": "zare-lakeh-dizaji-matin-iri",
       "displayName": "ZARE LAKEH DIZAJI MATIN",
       "country": "Islamic Republic Of Iran",
-      "countryCode": "IRI"
+      "countryCode": "IRI",
+      "firstName": "Matin",
+      "lastName": "Zare Lakeh Dizaji"
     },
     {
       "id": "zervou-nikoleta-gre",
       "displayName": "ZERVOU NIKOLETA",
       "country": "Greece",
-      "countryCode": "GRE"
+      "countryCode": "GRE",
+      "firstName": "Nikoleta",
+      "lastName": "Zervou"
     },
     {
       "id": "zheng-qianqu-chn",
       "displayName": "ZHENG QIANQU",
       "country": "China",
-      "countryCode": "CHN"
+      "countryCode": "CHN",
+      "firstName": "Qianqu",
+      "lastName": "Zheng"
     },
     {
       "id": "ziad-youcef-alg",
       "displayName": "ZIAD YOUCEF",
       "country": "Algeria",
-      "countryCode": "ALG"
+      "countryCode": "ALG",
+      "firstName": "Youcef",
+      "lastName": "Ziad"
     },
     {
       "id": "zlabek-jakub-cze",
       "displayName": "ZLABEK JAKUB",
       "country": "Czech Repuplic",
-      "countryCode": "CZE"
+      "countryCode": "CZE",
+      "firstName": "Jakub",
+      "lastName": "Zlabek"
     },
     {
       "id": "zoechling-florian-aut",
       "displayName": "ZOECHLING FLORIAN",
       "country": "Austria",
-      "countryCode": "AUT"
+      "countryCode": "AUT",
+      "firstName": "Florian",
+      "lastName": "Zoechling"
     },
     {
       "id": "exam-scordo-sandy-fra",
       "displayName": "SCORDO SANDY",
       "country": "FRA",
-      "countryCode": "FRA"
+      "countryCode": "FRA",
+      "firstName": "Sandy",
+      "lastName": "Scordo"
     },
     {
       "id": "exam-madrid-equipo-esp",
@@ -6189,19 +6813,25 @@
       "id": "exam-kiyuna-ryo-jpn",
       "displayName": "KIYUNA RYO",
       "country": "JPN",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryo",
+      "lastName": "Kiyuna"
     },
     {
       "id": "exam-shimbaba-issei-jpn",
       "displayName": "SHIMBABA ISSEI",
       "country": "JPN",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Issei",
+      "lastName": "Shimbaba"
     },
     {
       "id": "exam-tozaki-gakuji-usa",
       "displayName": "TOZAKI GAKUJI",
       "country": "USA",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Gakuji",
+      "lastName": "Tozaki"
     },
     {
       "id": "exam-cadete-a-venecia-2024",
@@ -6227,19 +6857,25 @@
       "id": "exam-quintero-damian-esp",
       "displayName": "QUINTERO DAMIAN",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Damian",
+      "lastName": "Quintero"
     },
     {
       "id": "exam-d-onofrio-terryana-ita",
       "displayName": "D'ONOFRIO TERRYANA",
       "country": "ITA",
-      "countryCode": "ITA"
+      "countryCode": "ITA",
+      "firstName": "Terryana",
+      "lastName": "D'Onofrio"
     },
     {
       "id": "exam-garcia-lozano-paola-esp",
       "displayName": "GARCIA LOZANO PAOLA",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Paola",
+      "lastName": "Garcia Lozano"
     },
     {
       "id": "exam-khamis-egy",
@@ -6257,25 +6893,33 @@
       "id": "exam-estados-unidos-usa",
       "displayName": "ESTADOS UNIDOS",
       "country": "USA",
-      "countryCode": "USA"
+      "countryCode": "USA",
+      "firstName": "Unidos",
+      "lastName": "Estados"
     },
     {
       "id": "exam-martin-yaiza-esp",
       "displayName": "MARTIN YAIZA",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Yaiza",
+      "lastName": "Martin"
     },
     {
       "id": "exam-moto-ryuji-jpn",
       "displayName": "MOTO RYUJI",
       "country": "JPN",
-      "countryCode": "JPN"
+      "countryCode": "JPN",
+      "firstName": "Ryuji",
+      "lastName": "Moto"
     },
     {
       "id": "exam-martin-raul-esp",
       "displayName": "MARTIN RAUL",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Raul",
+      "lastName": "Martin"
     },
     {
       "id": "exam-por-confirmar",
@@ -6288,25 +6932,33 @@
       "id": "exam-yanguez-vicente-esp",
       "displayName": "YANGUEZ VICENTE",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Vicente",
+      "lastName": "Yanguez"
     },
     {
       "id": "exam-ahmadov-eldar-aze",
       "displayName": "AHMADOV ELDAR",
       "country": "AZE",
-      "countryCode": "AZE"
+      "countryCode": "AZE",
+      "firstName": "Eldar",
+      "lastName": "Ahmadov"
     },
     {
       "id": "exam-morales-gema-esp",
       "displayName": "MORALES GEMA",
       "country": "ESP",
-      "countryCode": "ESP"
+      "countryCode": "ESP",
+      "firstName": "Gema",
+      "lastName": "Morales"
     },
     {
       "id": "exam-mota-nicole-bra",
       "displayName": "MOTA NICOLE",
       "country": "BRA",
-      "countryCode": "BRA"
+      "countryCode": "BRA",
+      "firstName": "Nicole",
+      "lastName": "Mota"
     }
   ],
   "videos": [
