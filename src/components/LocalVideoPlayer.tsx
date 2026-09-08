@@ -50,6 +50,7 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     setRate: (r: number) => { rateRef.current = r; if (videoRef.current) applyRate(videoRef.current, r); },
   }));
 
+  const loadedSrcRef = useRef<string | null>(null);
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
@@ -82,7 +83,10 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
     v.addEventListener('pause', onPause);
     const onErr = () => cbRef.current.onError?.(0);
     v.addEventListener('error', onErr);
-    v.load();
+    // mismo archivo ya cargado (p. ej. AKA -> AO): saltar directo al tiempo nuevo sin recargar
+    const sameSrc = loadedSrcRef.current === src && v.readyState >= 1;
+    if (sameSrc) onLoaded();
+    else { loadedSrcRef.current = src; v.load(); }
     return () => {
       v.removeEventListener('loadedmetadata', onLoaded);
       v.removeEventListener('timeupdate', onTime);
