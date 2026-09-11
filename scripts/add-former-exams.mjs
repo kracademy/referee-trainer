@@ -59,7 +59,7 @@ const ROWS = [
     aka: { name: 'BRASIL', cc: 'BRA', kata: 'Papuren' },
     ao: { name: 'NAMIBIA', cc: 'NAM', kata: 'Gojushiho Sho' },
     winner: 'AKA', cat: 'senior-male-kata',
-    note: 'Sin vídeo. Kata de AO anotado con duda ("Gojushiho Sho?"). Atletas y categoría por confirmar.',
+    note: 'Candidato (SportData): Mundial Senior Madrid 2018, kata masculino ronda 1, NAKAPANDI MICHAEL PANDULENI (NAM) vs SOUZA SANTOS WILLIAMES (BRA), 5-0 Brasil. Único cruce Brasil–Namibia en kata senior que consta en SportData; katas sin confirmar. Vídeo: retransmisión WKF del Mundial de Madrid 2018.',
   },
   {
     apps: [null, null, 8, 9, null],
