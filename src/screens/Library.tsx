@@ -1,4 +1,5 @@
 import { athleteName } from '../logic/names';
+import ReviewToggle from '../components/ReviewToggle';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCatalog } from '../logic/useCatalog';
@@ -152,6 +153,7 @@ export default function Library() {
           </p>
           {p.notes && <p className="muted" style={{ marginBottom: 0 }}>{p.notes}</p>}
           {p.userNote && <p style={{ marginBottom: 0 }}>📝 {p.userNote}</p>}
+          <div style={{ marginTop: 10 }}><ReviewToggle perf={p} /></div>
           {p.examAppearances && p.examAppearances.length > 0 && (
             <p className="muted" style={{ marginBottom: 0 }}>
               🎓 Exámenes: {p.examAppearances.map((a) => `${a.exam} (#${a.order})`).join(' · ')}

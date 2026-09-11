@@ -21,24 +21,24 @@ export default function KumiteHome() {
       </div>
 
       <div className="home-grid">
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kumite/combates')}>
           <span className="ic" style={{ color: '#007aff' }}>{TI.film}</span>
           <div className="v">{trainable.length}</div>
           <div className="l">Clips para entrenar</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kumite/estadisticas')}>
           <span className="ic" style={{ color: '#34c759' }}>{TI.target}</span>
           <div className={`v${attempts.length === 0 ? ' na' : ''}`}>
             {attempts.length === 0 ? '—' : `${Math.round((correct / attempts.length) * 100)}%`}
           </div>
           <div className="l">Aciertos ({attempts.length})</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kumite/polemicas')}>
           <span className="ic" style={{ color: '#ff9500' }}>{TI.scale}</span>
           <div className={`v${polemics === 0 ? ' na' : ''}`}>{polemics}</div>
           <div className="l">Polémicas</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kumite/biblioteca')}>
           <span className="ic" style={{ color: '#ff3b30' }}>{TI.duo}</span>
           <div className={`v${bouts === 0 ? ' na' : ''}`}>{bouts}</div>
           <div className="l">Combates</div>

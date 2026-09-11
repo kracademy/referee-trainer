@@ -137,6 +137,10 @@ export interface Performance {
   examAppearances?: { exam: string; order: number }[];
   /** Vídeo distinto para la actuación de AO (en exámenes a veces cada atleta viene de un vídeo). */
   aoVideoId?: string;
+  /** Marcado por el usuario para la lista de repaso (igualado, discrepo de los jueces, quiero verlo con otros...). */
+  review?: boolean;
+  reviewNote?: string;
+  reviewAt?: string;
 
   status: CatalogStatus;
   sportDataUrl?: string;

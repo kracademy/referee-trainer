@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useCatalog } from '../logic/useCatalog';
-import { accuracy, currentStreak, pendingErrors } from '../logic/stats';
+import { accuracy, currentStreak, markedForReview, pendingErrors } from '../logic/stats';
 import { TI } from '../components/TileIcons';
 
 export default function Home() {
@@ -11,6 +11,8 @@ export default function Home() {
   const firstAttempts = attempts.filter((a) => a.isFirstAttempt);
   const errors = pendingErrors(performances, attemptsByPerf);
   const acc = accuracy(firstAttempts);
+  const marked = markedForReview(performances);
+  const review = errors.length + marked.length;
 
   return (
     <div className="screen-fill">
@@ -20,22 +22,22 @@ export default function Home() {
       </div>
 
       <div className="home-grid">
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kata/estadisticas')}>
           <span className="ic" style={{ color: '#ff9500' }}>{TI.flame}</span>
           <div className="v">{currentStreak(attempts)}</div>
           <div className="l">Tu racha</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kata/estadisticas')}>
           <span className="ic" style={{ color: '#007aff' }}>{TI.target}</span>
           <div className={`v${acc == null ? ' na' : ''}`}>{acc == null ? '—' : `${acc}%`}</div>
           <div className="l">Precisión 1er intento</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kata/biblioteca')}>
           <span className="ic" style={{ color: '#34c759' }}>{TI.clapper}</span>
           <div className="v">{ready.length}</div>
           <div className="l">Actuaciones listas</div>
         </div>
-        <div className="stat-tile">
+        <div className="stat-tile tap" role="button" onClick={() => nav('/kata/errores?tab=fallados')}>
           <span className="ic" style={{ color: '#ff3b30' }}>{TI.alert}</span>
           <div className={`v${errors.length === 0 ? ' na' : ''}`}>{errors.length}</div>
           <div className="l">Errores pendientes</div>
@@ -45,8 +47,14 @@ export default function Home() {
       <button className="btn-primary" onClick={() => nav('/kata/entrenar')}>
         ENTRENAR
       </button>
-      <button className="btn-secondary" onClick={() => nav('/kata/errores')} disabled={errors.length === 0}>
-        Repasar errores {errors.length > 0 ? `(${errors.length})` : ''}
+      <button
+        className="btn-secondary"
+        onClick={() => nav(errors.length > 0 ? '/kata/errores?tab=fallados' : '/kata/errores?tab=marcados')}
+        disabled={review === 0}
+      >
+        Repaso
+        {errors.length > 0 ? ` · ${errors.length} fallado${errors.length !== 1 ? 's' : ''}` : ''}
+        {marked.length > 0 ? ` · ${marked.length} marcado${marked.length !== 1 ? 's' : ''}` : ''}
       </button>
 
       {ready.length === 0 && (

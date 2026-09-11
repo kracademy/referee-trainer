@@ -57,6 +57,12 @@ export const TI = {
       <path d="M5.4 7.2 3 13.2c1 1 3.8 1 4.8 0zM18.6 7.2l-2.4 6c1 1 3.8 1 4.8 0z" />
     </svg>
   ),
+  /** marcador de página (repaso) */
+  bookmark: (
+    <svg {...base}>
+      <path d="M7 4.5h10a1 1 0 0 1 1 1V20l-6-3.6L6 20V5.5a1 1 0 0 1 1-1z" />
+    </svg>
+  ),
   /** dos personas (combates) */
   duo: (
     <svg {...base}>

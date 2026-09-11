@@ -140,6 +140,8 @@ button:disabled { opacity: 0.35; cursor: default; }
   justify-content: center;
   gap: 4px;
 }
+.stat-tile.tap { cursor: pointer; transition: transform 0.12s ease, opacity 0.12s ease; -webkit-tap-highlight-color: transparent; }
+.stat-tile.tap:active { transform: scale(0.96); opacity: 0.8; }
 .stat-tile .ic { line-height: 0; margin-bottom: 2px; }
 .stat-tile .ic svg { display: block; }
 .stat-tile .v {
@@ -510,3 +512,15 @@ a { color: var(--blue); text-decoration: none; }
 }
 .comp-header .name { font-weight: 700; font-size: 1.02rem; }
 .comp-header .year { color: var(--label-2); font-size: 0.85rem; }
+
+/* Botón de repaso (marcar/desmarcar) */
+.review-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 12px; border-radius: 14px; font-weight: 700; font-size: 0.9rem;
+  background: var(--bg-elevated); color: var(--label-2);
+}
+.review-btn svg { width: 20px; height: 20px; }
+.review-btn.on { background: rgba(0, 122, 255, 0.12); color: var(--blue); }
+.review-btn.on svg { fill: currentColor; }
+.review-note { width: 100%; margin-top: 8px; padding: 10px 12px; border-radius: 12px; border: 0; background: var(--bg-elevated); font: inherit; font-size: 0.9rem; }
+.seg { display: flex; gap: 8px; margin-bottom: 12px; }

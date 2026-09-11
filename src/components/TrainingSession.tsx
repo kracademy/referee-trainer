@@ -5,6 +5,7 @@ import type { OfficialResultType, Performance, Winner } from '../db/types';
 import { isCloseResult, officialAverage } from '../db/types';
 import YouTubePlayer, { type YouTubePlayerHandle } from './YouTubePlayer';
 import LocalVideoPlayer from './LocalVideoPlayer';
+import ReviewToggle from './ReviewToggle';
 import { findLocalVideo } from '../logic/localVideos';
 import type { CatalogData } from '../logic/useCatalog';
 import { roundLabel } from '../logic/format';
@@ -378,6 +379,8 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
               ⚖️ <b>Resultado ajustado</b>{perf.judgeVotes ? ` (${perf.judgeVotes.aka}–${perf.judgeVotes.ao})` : ''} — no te ralles si votaste distinto: aquí también dudaron los jueces.
             </div>
           )}
+
+          <ReviewToggle perf={perf} />
 
           <div className="card">
             <div className="muted">

@@ -83,6 +83,9 @@ export async function syncDataset(): Promise<void> {
         closeResult: perf.closeResult ?? (samePair ? existing?.closeResult : undefined),
         userNote: perf.userNote ?? (samePair ? existing?.userNote : undefined),
         formerExam: perf.formerExam ?? (samePair ? existing?.formerExam : undefined),
+        review: samePair ? existing?.review : undefined,
+        reviewNote: samePair ? existing?.reviewNote : undefined,
+        reviewAt: samePair ? existing?.reviewAt : undefined,
       };
       // campos que solo cura el dataset (no hay edición local): se toman tal cual
       merged.examAppearances = perf.examAppearances;

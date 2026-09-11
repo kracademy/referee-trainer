@@ -67,6 +67,11 @@ export function monthlyEvolution(attempts: Attempt[]): { month: string; pct: num
     .map(([month, list]) => ({ month, pct: accuracy(list) ?? 0, n: list.length }));
 }
 
+/** Performances marcadas por el usuario para repasar, las más recientes primero. */
+export function markedForReview(performances: Performance[]): Performance[] {
+  return performances.filter((p) => p.review).sort((a, b) => (b.reviewAt ?? '').localeCompare(a.reviewAt ?? ''));
+}
+
 /** Performances con primer intento fallado y aún no aprendidas, para "Mis errores". */
 export function pendingErrors(performances: Performance[], attemptsByPerf: Map<string, Attempt[]>): Performance[] {
   return performances
