@@ -109,7 +109,7 @@ const ROWS = [
     aka: { name: 'SHIMBABA ISSEI', cc: 'JPN', kata: 'Suparinpei', video: 'DM_SntM0zrc' },
     ao: { name: 'QUINTERO DAMIAN', cc: 'ESP', kata: 'Chatanyara Kushanku', video: 'DM_SntM0zrc' },
     winner: 'AKA', cat: 'senior-male-kata',
-    note: 'Vídeo posiblemente no disponible. Identificación de los atletas por confirmar.',
+    note: 'Karate1 Premier League Berlin 2018 (15-sep-2018), semifinal masculina. El combate se repitió por irregularidad de procedimiento (misma sala/jueces que en rondas previas); Shimbaba ganó 3-2 las dos veces. Vídeo original de YouTube no disponible: buscar la retransmisión del WKF de Berlin 2018.',
   },
   {
     apps: [7, null, null, null, null],
