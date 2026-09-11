@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T17:27:39.811Z",
+  "generatedAt": "2026-09-11T16:10:43.744Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -12178,11 +12178,19 @@
       "kataAoNumber": 8,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 43.2,
       "officialScoreAo": 43.4,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "SA2seRdB6dw",
+      "startSeconds": 2885,
+      "endSeconds": 3387,
+      "akaStartSeconds": 2885,
+      "akaEndSeconds": 3153,
+      "aoStartSeconds": 3184,
+      "aoEndSeconds": 3387,
+      "closeResult": true
     },
     {
       "id": "karate1-premier-league-antalya-2024_senior-female-kata_bronze_1",
@@ -12198,11 +12206,18 @@
       "kataAoNumber": 68,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 40.7,
       "officialScoreAo": 41.7,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "N3Dos4LyZk0",
+      "startSeconds": 5523,
+      "endSeconds": 5974,
+      "akaStartSeconds": 5523,
+      "akaEndSeconds": 5738,
+      "aoStartSeconds": 5771,
+      "aoEndSeconds": 5974
     },
     {
       "id": "karate1-premier-league-antalya-2024_senior-female-kata_bronze_2",
@@ -12218,11 +12233,18 @@
       "kataAoNumber": 8,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 41.4,
       "officialScoreAo": 42.7,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "N3Dos4LyZk0",
+      "startSeconds": 6294,
+      "endSeconds": 6708,
+      "akaStartSeconds": 6294,
+      "akaEndSeconds": 6477,
+      "aoStartSeconds": 6514,
+      "aoEndSeconds": 6708
     },
     {
       "id": "karate1-premier-league-antalya-2024_senior-male-kata_final",
@@ -12238,11 +12260,18 @@
       "kataAoNumber": 9,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 43.7,
       "officialScoreAo": 45.7,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "SA2seRdB6dw",
+      "startSeconds": 6598,
+      "endSeconds": 6999,
+      "akaStartSeconds": 6598,
+      "akaEndSeconds": 6751,
+      "aoStartSeconds": 6791,
+      "aoEndSeconds": 6999
     },
     {
       "id": "karate1-premier-league-antalya-2024_senior-male-kata_bronze_1",
@@ -12258,11 +12287,18 @@
       "kataAoNumber": 1,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 42.2,
       "officialScoreAo": 43.6,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "N3Dos4LyZk0",
+      "startSeconds": 12124,
+      "endSeconds": 12548,
+      "akaStartSeconds": 12124,
+      "akaEndSeconds": 12390,
+      "aoStartSeconds": 12418,
+      "aoEndSeconds": 12548
     },
     {
       "id": "karate1-premier-league-cairo-2024_senior-female-kata_final",
@@ -20063,11 +20099,19 @@
       "kataAoNumber": 99,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=844&ver_info_action=catauslist",
       "officialScoreAka": 42.2,
       "officialScoreAo": 42.2,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "N3Dos4LyZk0",
+      "startSeconds": 12864,
+      "endSeconds": 13156,
+      "akaStartSeconds": 12864,
+      "akaEndSeconds": 12981,
+      "aoStartSeconds": 13013,
+      "aoEndSeconds": 13156,
+      "closeResult": true
     },
     {
       "id": "ekf-senior-championships-2024-zadar_senior-female-kata_final",
