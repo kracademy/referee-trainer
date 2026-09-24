@@ -1,5 +1,5 @@
 import { db } from '../db/db';
-import type { Athlete, Attempt, Category, Competition, Performance, Video } from '../db/types';
+import type { Athlete, Attempt, Category, Competition, Performance, ScoutAthlete, ScoutKata, Video } from '../db/types';
 
 export interface BackupFile {
   schemaVersion: number;
@@ -11,6 +11,9 @@ export interface BackupFile {
   videos: Video[];
   performances: Performance[];
   attempts: Attempt[];
+  /** Club Karate Swing (opcional: copias antiguas no lo traen). */
+  scoutAthletes?: ScoutAthlete[];
+  scoutKatas?: ScoutKata[];
 }
 
 export async function exportBackup(): Promise<BackupFile> {
@@ -24,12 +27,16 @@ export async function exportBackup(): Promise<BackupFile> {
     videos: await db.videos.toArray(),
     performances: await db.performances.toArray(),
     attempts: await db.attempts.toArray(),
+    scoutAthletes: await db.scoutAthletes.toArray(),
+    scoutKatas: await db.scoutKatas.toArray(),
   };
 }
 
 export async function importBackup(data: BackupFile): Promise<void> {
   if (data.app !== 'kracademy-kata-trainer') throw new Error('El archivo no es un backup de esta app');
-  await db.transaction('rw', [db.competitions, db.categories, db.athletes, db.videos, db.performances, db.attempts], async () => {
+  await db.transaction('rw', [db.competitions, db.categories, db.athletes, db.videos, db.performances, db.attempts, db.scoutAthletes, db.scoutKatas], async () => {
+    await db.scoutAthletes.bulkPut(data.scoutAthletes ?? []);
+    await db.scoutKatas.bulkPut(data.scoutKatas ?? []);
     await db.competitions.bulkPut(data.competitions ?? []);
     await db.categories.bulkPut(data.categories ?? []);
     await db.athletes.bulkPut(data.athletes ?? []);

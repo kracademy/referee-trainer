@@ -19,6 +19,17 @@ export function parseTime(text: string): number | undefined {
   return parts.reduce((acc, p) => acc * 60 + p, 0);
 }
 
+/** Segundo de inicio de un enlace de YouTube (?t=754, &t=12m34s, ?start=754). */
+export function extractYouTubeStart(url: string): number | undefined {
+  const m = url.match(/[?&#](?:t|start)=([\dhms]+)/i);
+  if (!m) return undefined;
+  const v = m[1].toLowerCase();
+  if (/^\d+s?$/.test(v)) return parseInt(v, 10);
+  const h = v.match(/(\d+)h/)?.[1], mi = v.match(/(\d+)m/)?.[1], s = v.match(/(\d+)s/)?.[1];
+  const total = (+(h ?? 0)) * 3600 + (+(mi ?? 0)) * 60 + (+(s ?? 0));
+  return total || undefined;
+}
+
 export function extractYouTubeId(url: string): string | undefined {
   const t = url.trim();
   if (/^[\w-]{11}$/.test(t)) return t;

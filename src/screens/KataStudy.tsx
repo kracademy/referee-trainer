@@ -6,6 +6,7 @@ import YouTubePlayer from '../components/YouTubePlayer';
 import LocalVideoPlayer from '../components/LocalVideoPlayer';
 import { findLocalVideo } from '../logic/localVideos';
 import type { Performance } from '../db/types';
+import ScoutSection from './ScoutSection';
 
 /** Una ejecución concreta de un kata: atleta + lado + clip. */
 interface Execution {
@@ -33,7 +34,10 @@ export default function KataStudy() {
   const data = useCatalog();
   const { performances, compById, categoryById, athleteById } = data;
   const [q, setQ] = useState('');
-  const [fmt, setFmt] = useState<'INDIVIDUAL' | 'TEAM'>('INDIVIDUAL');
+  const [fmt, setFmt] = useState<'INDIVIDUAL' | 'TEAM' | 'SWING'>(() => {
+    try { return (sessionStorage.getItem('study-tab') as 'SWING' | null) ?? 'INDIVIDUAL'; } catch { return 'INDIVIDUAL'; }
+  });
+  useEffect(() => { try { sessionStorage.setItem('study-tab', fmt); } catch { /* sin almacenamiento */ } }, [fmt]);
   const [selectedKata, setSelectedKata] = useState<string | null>(null);
   const [playing, setPlaying] = useState<Execution | null>(null);
   const [playerKey, setPlayerKey] = useState(0);
@@ -91,6 +95,13 @@ export default function KataStudy() {
     }
     return [...m.entries()].sort((a, b) => b[1].total - a[1].total || a[0].localeCompare(b[0]));
   }, [executions]);
+
+  // katas conocidos del catálogo (individual y equipos) para autocompletar en Club Karate Swing
+  const allKataNames = useMemo(() => {
+    const s = new Set<string>();
+    for (const p of performances) { if (p.kataAka) s.add(p.kataAka); if (p.kataAo) s.add(p.kataAo); }
+    return [...s];
+  }, [performances]);
 
   const filteredKatas = kataStats.filter(([k]) => !q || k.toLowerCase().includes(q.toLowerCase()));
 
@@ -181,17 +192,28 @@ export default function KataStudy() {
     );
   }
 
-  return (
+  const header = (
     <>
       <h1>Estudio de katas</h1>
-      <div className="row" style={{ marginBottom: 10 }}>
+      <div className="row study-tabs" style={{ marginBottom: 10 }}>
         <button className={`chip${fmt === 'INDIVIDUAL' ? ' sel' : ''}`} onClick={() => { setFmt('INDIVIDUAL'); setSelectedKata(null); }}>
           Individual
         </button>
         <button className={`chip${fmt === 'TEAM' ? ' sel' : ''}`} onClick={() => { setFmt('TEAM'); setSelectedKata(null); }}>
           Equipos
         </button>
+        <button className={`chip swing${fmt === 'SWING' ? ' sel' : ''}`} onClick={() => { setFmt('SWING'); setSelectedKata(null); }}>
+          Club Karate Swing
+        </button>
       </div>
+    </>
+  );
+
+  if (fmt === 'SWING') return <ScoutSection header={header} kataNames={allKataNames} />;
+
+  return (
+    <>
+      {header}
       <input type="text" placeholder="Buscar kata… p. ej. Ohan Dai" value={q} onChange={(e) => setQ(e.target.value)} />
       <h2>{filteredKatas.length} katas</h2>
       {filteredKatas.map(([kata, s]) => (

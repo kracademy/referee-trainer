@@ -372,3 +372,38 @@ export interface KumiteDatasetFile {
   generatedAt: string;
   clips: KumiteClip[];
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Club Karate Swing: scouting personal de rivales. Solo local (IndexedDB + copia
+// de seguridad): nunca entra en Entrenar, Biblioteca, Stats ni en el dataset público.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface ScoutAthlete {
+  id: string;
+  name: string;
+  club?: string;
+  country?: string;
+  notes?: string;
+  createdAt: string;
+}
+
+export interface ScoutKata {
+  id: string;
+  athleteId: string;
+  kata: string;
+  /** Vídeo de YouTube (id de 11 caracteres). */
+  videoId?: string;
+  /** Enlace original (sirve también para vídeos que no son de YouTube). */
+  url?: string;
+  /** Segundos dentro del vídeo. */
+  startSeconds?: number;
+  endSeconds?: number;
+  competition?: string;
+  /** YYYY-MM-DD */
+  date?: string;
+  round?: string;
+  result?: 'WIN' | 'LOSS';
+  score?: string;
+  notes?: string;
+  createdAt: string;
+}

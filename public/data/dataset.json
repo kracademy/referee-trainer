@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T16:10:43.744Z",
+  "generatedAt": "2026-09-24T13:00:24.629Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -4768,8 +4768,8 @@
       "displayName": "KIRI MISHIMA",
       "country": "Kiri",
       "countryCode": "JPN",
-      "firstName": "Mishima",
-      "lastName": "Kiri"
+      "firstName": "Kiri",
+      "lastName": "Mishima"
     },
     {
       "id": "kitaguchi-kao-jpn",
@@ -11858,11 +11858,18 @@
       "kataAoNumber": 8,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=818&ver_info_action=catauslist",
       "officialScoreAka": 43,
       "officialScoreAo": 40.4,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "8aYBjFka3Y4",
+      "startSeconds": 316,
+      "endSeconds": 871,
+      "akaStartSeconds": 316,
+      "akaEndSeconds": 624,
+      "aoStartSeconds": 666,
+      "aoEndSeconds": 871
     },
     {
       "id": "karate1-series-a-athens-2024_senior-female-kata_bronze_1",
@@ -11898,11 +11905,18 @@
       "kataAoNumber": 9,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=818&ver_info_action=catauslist",
       "officialScoreAka": 42.2,
       "officialScoreAo": 40.4,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "8aYBjFka3Y4",
+      "startSeconds": 1061,
+      "endSeconds": 1482,
+      "akaStartSeconds": 1061,
+      "akaEndSeconds": 1225,
+      "aoStartSeconds": 1281,
+      "aoEndSeconds": 1482
     },
     {
       "id": "karate1-series-a-athens-2024_senior-male-kata_bronze_1",
@@ -11958,11 +11972,19 @@
       "kataAoNumber": 68,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 43.6,
       "officialScoreAo": 44,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "n0pxb1AXoiA",
+      "startSeconds": 2868,
+      "endSeconds": 3294,
+      "akaStartSeconds": 2868,
+      "akaEndSeconds": 3053,
+      "aoStartSeconds": 3080,
+      "aoEndSeconds": 3294,
+      "closeResult": true
     },
     {
       "id": "karate1-premier-league-paris-2024_senior-female-kata_bronze_1",
@@ -11978,11 +12000,18 @@
       "kataAoNumber": 68,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 41.9,
       "officialScoreAo": 43.5,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "_yAdj2_vZ18",
+      "startSeconds": 5610,
+      "endSeconds": 6046,
+      "akaStartSeconds": 5610,
+      "akaEndSeconds": 5800,
+      "aoStartSeconds": 5838,
+      "aoEndSeconds": 6046
     },
     {
       "id": "karate1-premier-league-paris-2024_senior-female-kata_bronze_2",
@@ -11998,11 +12027,18 @@
       "kataAoNumber": 68,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 41,
       "officialScoreAo": 43.6,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "_yAdj2_vZ18",
+      "startSeconds": 6281,
+      "endSeconds": 6657,
+      "akaStartSeconds": 6281,
+      "akaEndSeconds": 6452,
+      "aoStartSeconds": 6485,
+      "aoEndSeconds": 6657
     },
     {
       "id": "karate1-premier-league-paris-2024_senior-male-kata_final",
@@ -12018,11 +12054,18 @@
       "kataAoNumber": 68,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 43.6,
       "officialScoreAo": 45.1,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "n0pxb1AXoiA",
+      "startSeconds": 6049,
+      "endSeconds": 6421,
+      "akaStartSeconds": 6049,
+      "akaEndSeconds": 6148,
+      "aoStartSeconds": 6182,
+      "aoEndSeconds": 6421
     },
     {
       "id": "karate1-premier-league-paris-2024_senior-male-kata_bronze_1",
@@ -12038,11 +12081,18 @@
       "kataAoNumber": 1,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 43.1,
       "officialScoreAo": 44.2,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "_yAdj2_vZ18",
+      "startSeconds": 12529,
+      "endSeconds": 12870,
+      "akaStartSeconds": 12529,
+      "akaEndSeconds": 12714,
+      "aoStartSeconds": 12747,
+      "aoEndSeconds": 12870
     },
     {
       "id": "karate1-premier-league-paris-2024_senior-male-kata_bronze_2",
@@ -12058,11 +12108,18 @@
       "kataAoNumber": 21,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=823&ver_info_action=catauslist",
       "officialScoreAka": 43.4,
       "officialScoreAo": 44.9,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "_yAdj2_vZ18",
+      "startSeconds": 13118,
+      "endSeconds": 13502,
+      "akaStartSeconds": 13118,
+      "akaEndSeconds": 13296,
+      "aoStartSeconds": 13328,
+      "aoEndSeconds": 13502
     },
     {
       "id": "karate1-series-a-larnaca-2024_senior-female-kata_final",
@@ -12078,11 +12135,18 @@
       "kataAoNumber": 9,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=829&ver_info_action=catauslist",
       "officialScoreAka": 40.1,
       "officialScoreAo": 42.8,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "GPYedXLYBis",
+      "startSeconds": 108,
+      "endSeconds": 523,
+      "akaStartSeconds": 108,
+      "akaEndSeconds": 303,
+      "aoStartSeconds": 332,
+      "aoEndSeconds": 523
     },
     {
       "id": "karate1-series-a-larnaca-2024_senior-female-kata_bronze_1",
@@ -12118,11 +12182,19 @@
       "kataAoNumber": 68,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=829&ver_info_action=catauslist",
       "officialScoreAka": 42.4,
       "officialScoreAo": 42.3,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "GPYedXLYBis",
+      "startSeconds": 754,
+      "endSeconds": 1186,
+      "akaStartSeconds": 754,
+      "akaEndSeconds": 928,
+      "aoStartSeconds": 955,
+      "aoEndSeconds": 1186,
+      "closeResult": true
     },
     {
       "id": "karate1-series-a-larnaca-2024_senior-male-kata_bronze_1",
@@ -17902,11 +17974,18 @@
       "kataAoNumber": 47,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=818&ver_info_action=catauslist",
       "officialScoreAka": 39.3,
       "officialScoreAo": 40.3,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "8aYBjFka3Y4",
+      "startSeconds": 8928,
+      "endSeconds": 9526,
+      "akaStartSeconds": 8928,
+      "akaEndSeconds": 9209,
+      "aoStartSeconds": 9271,
+      "aoEndSeconds": 9526
     },
     {
       "id": "karate1-series-a-athens-2024_senior-female-team-kata_bronze_1",
@@ -17962,11 +18041,18 @@
       "kataAoNumber": 41,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=818&ver_info_action=catauslist",
       "officialScoreAka": 40.2,
       "officialScoreAo": 41.5,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "8aYBjFka3Y4",
+      "startSeconds": 9709,
+      "endSeconds": 10253,
+      "akaStartSeconds": 9709,
+      "akaEndSeconds": 9958,
+      "aoStartSeconds": 10000,
+      "aoEndSeconds": 10253
     },
     {
       "id": "karate1-series-a-athens-2024_senior-male-team-kata_bronze_1",
@@ -18022,11 +18108,18 @@
       "kataAoNumber": 99,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=829&ver_info_action=catauslist",
       "officialScoreAka": 41.9,
       "officialScoreAo": 38,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "GPYedXLYBis",
+      "startSeconds": 9243,
+      "endSeconds": 9835,
+      "akaStartSeconds": 9243,
+      "akaEndSeconds": 9527,
+      "aoStartSeconds": 9571,
+      "aoEndSeconds": 9835
     },
     {
       "id": "karate1-series-a-larnaca-2024_senior-female-team-kata_bronze_1",
@@ -18062,11 +18155,18 @@
       "kataAoNumber": 41,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=829&ver_info_action=catauslist",
       "officialScoreAka": 44.4,
       "officialScoreAo": 41.4,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "GPYedXLYBis",
+      "startSeconds": 10051,
+      "endSeconds": 10659,
+      "akaStartSeconds": 10051,
+      "akaEndSeconds": 10345,
+      "aoStartSeconds": 10393,
+      "aoEndSeconds": 10659
     },
     {
       "id": "karate1-series-a-larnaca-2024_senior-male-team-kata_bronze_1",
