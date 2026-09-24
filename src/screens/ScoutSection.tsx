@@ -611,6 +611,15 @@ function KataForm({
       <button className="btn-primary" onClick={save}>GUARDAR</button>
       <button className="btn-secondary" onClick={onCancel}>Cancelar</button>
       {kata && <button className="btn-secondary danger" onClick={remove}>Eliminar kata</button>}
+      {kata && (kata.sourceUrl || kata.videoId) && (
+        <div className="card scout-links">
+          {kata.sourceUrl && <a href={kata.sourceUrl} target="_blank" rel="noreferrer">Hoja de resultados ↗</a>}
+          {kata.videoId && (
+            <a href={`https://www.youtube.com/watch?v=${kata.videoId}&t=${Math.floor(kata.startSeconds ?? 0)}s`} target="_blank" rel="noreferrer">Ver en YouTube ↗</a>
+          )}
+          {kata.videoId && <div className="muted">Vídeo local: <code>{kata.id}.mp4</code></div>}
+        </div>
+      )}
     </>
   );
 }
@@ -629,7 +638,6 @@ function KataPlayer({
   const ytRef = useRef<YouTubePlayerHandle>(null);
   const [ytPlaying, setYtPlaying] = useState(false);
   const crop = kata.camera ? CAMERA_RECTS[kata.camera] : undefined;
-  const setCamera = (c?: Camera) => db.scoutKatas.update(kata.id, { camera: c, updatedAt: new Date().toISOString() });
   // vídeo local: clip "<id>.mp4" (empieza en el inicio del kata) o vídeo completo "<videoId>.mp4"
   const [local, setLocal] = useState<{ url: string; offset: number } | null | undefined>(undefined);
   useEffect(() => {
@@ -675,7 +683,6 @@ function KataPlayer({
         </div>
       )}
       {local === null && kata.videoId && crop && <CropBar player={ytRef} playing={ytPlaying} start={kata.startSeconds} />}
-      {(kata.videoId || local) && <CameraPicker value={kata.camera} onChange={setCamera} />}
       {local === null && !kata.videoId && kata.url && (
         <div className="card center">
           <a href={kata.url} target="_blank" rel="noreferrer">Abrir vídeo ↗</a>
@@ -689,35 +696,42 @@ function KataPlayer({
         </div>
       )}
       {local === undefined && <div className="player-wrap" />}
-      {local && <p className="muted center" style={{ margin: '6px 0 0' }}>🎞 Vídeo local</p>}
-      {(kata.videoId || local) && (
-        <button className="btn-secondary" style={{ marginTop: 10 }} onClick={() => setPlayerKey((k) => k + 1)}>↻ Recargar vídeo</button>
+      {local === null && kata.videoId && (
+        <button className="scout-reload" onClick={() => setPlayerKey((k) => k + 1)}>↻ Recargar vídeo</button>
       )}
 
-      <div className="card perf-item" style={{ marginTop: 12 }}>
-        <div className="who">
-          {kata.side && <span style={{ color: kata.side === 'AKA' ? 'var(--aka)' : 'var(--ao)', fontWeight: 800 }}>{kata.side} </span>}
-          {kata.kata} <ResultBadge r={kata.result} />
+      <div className="card scout-sheet">
+        <div className="scout-sheet-top">
+          {kata.side && <span className={`scout-side ${kata.side === 'AKA' ? 'aka' : 'ao'}`}>{kata.side}</span>}
+          <ResultBadge r={kata.result} />
         </div>
-        {kataMeta(kata) && <div className="meta">{kataMeta(kata)}</div>}
-        {kata.place && <div className="meta">{kata.place}</div>}
-        {(kata.score || kata.judges?.length) && (
-          <div className="meta">{athlete.name}: <b>{kata.score ?? '—'}</b> <Judges js={kata.judges} /></div>
-        )}
-        {kata.opponent && (
-          <div className="meta">
-            {kata.opponent}{kata.opponentClub ? ` (${kata.opponentClub})` : ''}{kata.opponentKata ? ` · ${kata.opponentKata}` : ''}: <b>{kata.opponentScore ?? '—'}</b> <Judges js={kata.opponentJudges} />
+        {kata.competition && <div className="scout-sheet-comp">{kata.competition}</div>}
+        <div className="meta">
+          {[fmtDate(kata.date), kata.place, kata.category?.replace(/^Kata\s+/i, ''), kata.round].filter(Boolean).join(' · ')}
+        </div>
+        {(kata.score || kata.opponent) && (
+          <div className="scout-vs">
+            <div className={`scout-vs-row${kata.result === 'WIN' ? ' win' : ''}`}>
+              <div className="who-col">
+                <div className="name">{athlete.name}</div>
+                <div className="sub">{kata.kata}</div>
+                <Judges js={kata.judges} />
+              </div>
+              <div className="total">{kata.score ?? '—'}</div>
+            </div>
+            {kata.opponent && (
+              <div className={`scout-vs-row${kata.result === 'LOSS' ? ' win' : ''}`}>
+                <div className="who-col">
+                  <div className="name">{kata.opponent}{kata.opponentClub ? <span className="club"> {kata.opponentClub}</span> : null}</div>
+                  {kata.opponentKata && <div className="sub">{kata.opponentKata}</div>}
+                  <Judges js={kata.opponentJudges} />
+                </div>
+                <div className="total">{kata.opponentScore ?? '—'}</div>
+              </div>
+            )}
           </div>
         )}
-        {range && <div className="meta">Tramo {range}</div>}
-        {kata.sourceUrl && <div className="meta"><a href={kata.sourceUrl} target="_blank" rel="noreferrer">Hoja de resultados ↗</a></div>}
-        {kata.notes && <div>📝 {kata.notes}</div>}
-        {kata.videoId && (
-          <div className="meta">
-            <a href={`https://www.youtube.com/watch?v=${kata.videoId}&t=${Math.floor(kata.startSeconds ?? 0)}s`} target="_blank" rel="noreferrer">YouTube ↗</a>
-            {' · '}vídeo local: <code>{kata.id}.mp4</code>
-          </div>
-        )}
+        {kata.notes && <div className="scout-note">📝 {kata.notes}</div>}
       </div>
       <button className="btn-primary" onClick={onBack}>← {athlete.name.toUpperCase()}</button>
     </>
