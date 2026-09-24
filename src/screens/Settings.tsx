@@ -57,7 +57,9 @@ export default function Settings() {
       // cuántos encuentros quedan enlazados a un vídeo local
       const nombres = new Set((await listLocalVideos()).map((v) => v.name.replace(/\.(mp4|m4v|mov|webm)$/i, '')));
       const enlazados = perfs.filter((p) => p.videoId && (nombres.has(p.id) || nombres.has(p.videoId))).length;
+      const swing = (await db.scoutKatas.toArray()).filter((k) => nombres.has(k.id) || (k.videoId && nombres.has(k.videoId))).length;
       let m = `✅ ${importados} vídeo${importados !== 1 ? 's' : ''} nuevo${importados !== 1 ? 's' : ''} · ${enlazados} encuentros enlazados en total.`;
+      if (swing) m += ` Club Karate Swing: ${swing} kata${swing !== 1 ? 's' : ''} con vídeo local.`;
       if (omitidos) m += ` ${omitidos} ya estaba${omitidos !== 1 ? 'n' : ''} (omitido${omitidos !== 1 ? 's' : ''}).`;
       if (fallidos.length) m += ` ❌ ${fallidos.length} con error: ${fallidos.slice(0, 3).join('; ')}${fallidos.length > 3 ? '…' : ''}`;
       if (sinCorrespondencia.length) {

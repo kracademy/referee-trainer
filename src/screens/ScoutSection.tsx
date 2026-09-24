@@ -6,7 +6,7 @@ import { exportScout, importScout } from '../logic/scout';
 import { downloadJson } from '../logic/backup';
 import YouTubePlayer, { type YouTubePlayerHandle } from '../components/YouTubePlayer';
 import LocalVideoPlayer from '../components/LocalVideoPlayer';
-import { findLocalVideo } from '../logic/localVideos';
+import { findLocalVideo, listLocalVideos } from '../logic/localVideos';
 import { extractYouTubeId, extractYouTubeStart, fmtTime, parseTime } from '../logic/format';
 import { CAMERA_LABELS, CAMERA_RECTS, type Camera } from '../logic/crop';
 
@@ -113,6 +113,12 @@ interface Props {
 export default function ScoutSection({ header, kataNames }: Props) {
   const athletes = useLiveQuery(() => db.scoutAthletes.toArray(), []) ?? [];
   const katas = useLiveQuery(() => db.scoutKatas.toArray(), []) ?? [];
+  const [localNames, setLocalNames] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    listLocalVideos()
+      .then((vs) => setLocalNames(new Set(vs.map((v) => v.name.replace(/\.(mp4|m4v|mov|webm)$/i, '')))))
+      .catch(() => undefined);
+  }, []);
   const [view, setView] = useState<View>({ k: 'list' });
 
   const katasBy = useMemo(() => {
@@ -181,6 +187,7 @@ export default function ScoutSection({ header, kataNames }: Props) {
       <AthleteDetail
         athlete={a}
         katas={katasBy.get(a.id) ?? []}
+        localNames={localNames}
         onBack={() => setView({ k: 'list' })}
         onEdit={() => setView({ k: 'athleteForm', id: a.id })}
         onAddKata={() => setView({ k: 'kataForm', athleteId: a.id })}
@@ -288,10 +295,11 @@ function AthleteList({
 // ─── Ficha del competidor ───────────────────────────────────────────────────
 
 function AthleteDetail({
-  athlete, katas, onBack, onEdit, onAddKata, onPlay,
+  athlete, katas, localNames, onBack, onEdit, onAddKata, onPlay,
 }: {
   athlete: ScoutAthlete;
   katas: ScoutKata[];
+  localNames: Set<string>;
   onBack: () => void;
   onEdit: () => void;
   onAddKata: () => void;
@@ -344,7 +352,13 @@ function AthleteDetail({
           {kataMeta(k) && <div className="meta">{kataMeta(k)}</div>}
           {vsLine(k) && <div className="meta">{vsLine(k)}{k.opponentKata ? ` (${k.opponentKata})` : ''}</div>}
           {k.notes && <div className="meta">📝 {k.notes}</div>}
-          {!k.videoId && !k.url && <div className="meta"><span className="badge nodata">Sin vídeo</span></div>}
+          <div className="meta">
+            {localNames.has(k.id) || (k.videoId && localNames.has(k.videoId))
+              ? <span className="badge ready">🎞 Local</span>
+              : k.videoId ? <span className="badge round">YouTube</span>
+              : k.url ? <span className="badge round">Enlace</span>
+              : <span className="badge nodata">Sin vídeo</span>}
+          </div>
         </div>
       ))}
     </>
