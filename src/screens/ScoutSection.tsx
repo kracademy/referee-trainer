@@ -64,7 +64,7 @@ function CameraPicker({ value, onChange }: { value?: Camera; onChange: (c?: Came
   return (
     <div className="cam-picker" role="group" aria-label="Cámara">
       <button className={`chip${!value ? ' sel' : ''}`} onClick={() => onChange(undefined)}>Completo</button>
-      {cells.map(([c, x, y]) => (
+      {cells.map(([c]) => (
         <button key={c} className={`chip cam${value === c ? ' sel' : ''}`} onClick={() => onChange(c)} title={CAMERA_LABELS[c]} aria-label={CAMERA_LABELS[c]}>
           <svg width="26" height="16" viewBox="0 0 24 15" aria-hidden="true">
             {cells.map(([c2, x2, y2]) => (
