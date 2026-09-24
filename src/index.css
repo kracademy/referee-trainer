@@ -534,3 +534,7 @@ a { color: var(--blue); text-decoration: none; }
 .study-tabs .chip { white-space: nowrap; }
 .study-tabs .chip.swing { flex: 1.5; }
 input[type='date'] { min-height: 46px; }
+
+.scout-judges { display: inline-flex; gap: 4px; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.scout-judges .ok { background: rgba(52, 199, 89, 0.15); color: #248a3d; border-radius: 5px; padding: 0 4px; font-weight: 700; }
+.scout-judges .off { color: var(--label-3); padding: 0 2px; text-decoration: line-through; }

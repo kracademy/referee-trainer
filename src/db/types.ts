@@ -385,6 +385,7 @@ export interface ScoutAthlete {
   country?: string;
   notes?: string;
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface ScoutKata {
@@ -404,6 +405,29 @@ export interface ScoutKata {
   round?: string;
   result?: 'WIN' | 'LOSS';
   score?: string;
+  /** Categoría (p. ej. "Kata Junior Masc") y lugar del campeonato. */
+  category?: string;
+  place?: string;
+  /** Cinturón con el que salió. */
+  side?: 'AKA' | 'AO';
+  opponent?: string;
+  opponentClub?: string;
+  opponentKata?: string;
+  opponentScore?: string;
+  /** Notas de los jueces; `ok` = cuenta para el total (las extremas se descartan). */
+  judges?: { v: string; ok: boolean }[];
+  opponentJudges?: { v: string; ok: boolean }[];
+  /** Hoja de resultados de donde sale el dato. */
+  sourceUrl?: string;
   notes?: string;
   createdAt: string;
+  updatedAt?: string;
+}
+
+/** Archivo de intercambio del apartado Club Karate Swing (importar / exportar). */
+export interface ScoutFile {
+  app: 'kracademy-club-swing';
+  exportedAt: string;
+  athletes: ScoutAthlete[];
+  katas: ScoutKata[];
 }

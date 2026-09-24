@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db/db';
-import type { ScoutAthlete, ScoutKata } from '../db/types';
+import type { ScoutAthlete, ScoutFile, ScoutKata } from '../db/types';
+import { exportScout, importScout } from '../logic/scout';
+import { downloadJson } from '../logic/backup';
 import YouTubePlayer, { type YouTubePlayerHandle } from '../components/YouTubePlayer';
 import LocalVideoPlayer from '../components/LocalVideoPlayer';
 import { findLocalVideo } from '../logic/localVideos';
@@ -34,7 +36,31 @@ const byRecent = (a: ScoutKata, b: ScoutKata) =>
   (b.date ?? '').localeCompare(a.date ?? '') || b.createdAt.localeCompare(a.createdAt);
 
 function kataMeta(k: ScoutKata): string {
-  return [fmtDate(k.date), k.competition, k.round, k.score].filter(Boolean).join(' · ');
+  return [fmtDate(k.date), k.competition, k.category, k.round].filter(Boolean).join(' · ');
+}
+
+/** "vs Rival (CAT) · 22.3 – 20.6" */
+function vsLine(k: ScoutKata): string {
+  const who = k.opponent ? `vs ${k.opponent}${k.opponentClub ? ` (${k.opponentClub})` : ''}` : '';
+  const sc = k.score || k.opponentScore ? `${k.score ?? '—'} – ${k.opponentScore ?? '—'}` : '';
+  return [who, sc].filter(Boolean).join(' · ');
+}
+
+function Judges({ js }: { js?: { v: string; ok: boolean }[] }) {
+  if (!js?.length) return null;
+  return (
+    <span className="scout-judges">
+      {js.map((j, i) => <span key={i} className={j.ok ? 'ok' : 'off'}>{j.v}</span>)}
+    </span>
+  );
+}
+
+const NO_KATA = 'Sin registrar';
+
+/** Búsqueda en YouTube con competición, nombre y kata. */
+function ytSearch(k: ScoutKata, athleteName: string): string {
+  const q = [k.competition, athleteName, k.kata !== NO_KATA ? k.kata : '', k.category?.replace(/^Kata\s*/i, '')].filter(Boolean).join(' ');
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;
 }
 
 function ResultBadge({ r }: { r?: ScoutKata['result'] }) {
@@ -152,6 +178,23 @@ function AthleteList({
   onAdd: () => void;
 }) {
   const [q, setQ] = useState('');
+  const [msg, setMsg] = useState('');
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  async function doExport() {
+    const data = await exportScout();
+    downloadJson(data, `club-karate-swing-${new Date().toISOString().slice(0, 10)}.json`);
+    setMsg(`Exportados ${data.athletes.length} competidores y ${data.katas.length} katas.`);
+  }
+  async function doImport(f: File) {
+    try {
+      const r = await importScout(JSON.parse(await f.text()) as ScoutFile);
+      setMsg(`Importados ${r.athletes} competidores y ${r.katas} katas (${r.nuevos} nuevos).`);
+    } catch (e) {
+      setMsg(`No se ha podido importar: ${e instanceof Error ? e.message : e}`);
+    }
+  }
+
   const list = athletes
     .filter((a) => !q || `${a.name} ${a.club ?? ''} ${a.country ?? ''}`.toLowerCase().includes(q.toLowerCase()))
     .sort((a, b) => {
@@ -176,7 +219,7 @@ function AthleteList({
       {list.map((a) => {
         const ks = katasBy.get(a.id) ?? [];
         const counts = new Map<string, number>();
-        for (const k of ks) counts.set(k.kata, (counts.get(k.kata) ?? 0) + 1);
+        for (const k of ks) if (k.kata !== NO_KATA) counts.set(k.kata, (counts.get(k.kata) ?? 0) + 1);
         const rep = [...counts.entries()].sort((x, y) => y[1] - x[1]).slice(0, 6);
         const last = ks[0];
         return (
@@ -185,7 +228,7 @@ function AthleteList({
             {(a.club || a.country) && <div className="meta">{[a.club, a.country].filter(Boolean).join(' · ')}</div>}
             <div className="meta">
               {ks.length} kata{ks.length !== 1 ? 's' : ''}
-              {last && kataMeta(last) ? ` · último: ${last.kata}, ${kataMeta(last)}` : ''}
+              {last ? ` · último: ${[fmtDate(last.date), last.competition].filter(Boolean).join(', ')}` : ''}
             </div>
             {rep.length > 0 && (
               <div className="scout-rep">
@@ -197,6 +240,13 @@ function AthleteList({
           </div>
         );
       })}
+
+      <div className="row" style={{ marginTop: 18 }}>
+        <button className="btn-secondary" style={{ flex: 1, margin: 0 }} onClick={() => fileRef.current?.click()}>Importar</button>
+        <button className="btn-secondary" style={{ flex: 1, margin: 0 }} onClick={doExport} disabled={!athletes.length}>Exportar</button>
+      </div>
+      <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; if (f) doImport(f); }} />
+      {msg && <p className="muted center">{msg}</p>}
     </>
   );
 }
@@ -215,7 +265,7 @@ function AthleteDetail({
 }) {
   const [filter, setFilter] = useState<string | null>(null);
   const counts = new Map<string, number>();
-  for (const k of katas) counts.set(k.kata, (counts.get(k.kata) ?? 0) + 1);
+  for (const k of katas) if (k.kata !== NO_KATA) counts.set(k.kata, (counts.get(k.kata) ?? 0) + 1);
   const rep = [...counts.entries()].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
   const list = filter ? katas.filter((k) => k.kata === filter) : katas;
   const wins = katas.filter((k) => k.result === 'WIN').length;
@@ -258,8 +308,9 @@ function AthleteDetail({
         <div className="card perf-item" key={k.id} onClick={() => onPlay(k.id)} style={{ cursor: 'pointer' }}>
           <div className="who">{k.kata} <ResultBadge r={k.result} /></div>
           {kataMeta(k) && <div className="meta">{kataMeta(k)}</div>}
+          {vsLine(k) && <div className="meta">{vsLine(k)}{k.opponentKata ? ` (${k.opponentKata})` : ''}</div>}
           {k.notes && <div className="meta">📝 {k.notes}</div>}
-          {!k.videoId && !k.url && <div className="meta">Sin vídeo</div>}
+          {!k.videoId && !k.url && <div className="meta"><span className="badge nodata">Sin vídeo</span></div>}
         </div>
       ))}
     </>
@@ -297,6 +348,7 @@ function AthleteForm({
       country: country.trim() || undefined,
       notes: notes.trim() || undefined,
       createdAt: athlete?.createdAt ?? new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
     });
     onDone(id);
   }
@@ -353,6 +405,10 @@ function KataForm({
   const [round, setRound] = useState(kata?.round ?? '');
   const [result, setResult] = useState<ScoutKata['result']>(kata?.result);
   const [score, setScore] = useState(kata?.score ?? '');
+  const [category, setCategory] = useState(kata?.category ?? '');
+  const [opponent, setOpponent] = useState(kata?.opponent ?? '');
+  const [opponentKata, setOpponentKata] = useState(kata?.opponentKata ?? '');
+  const [opponentScore, setOpponentScore] = useState(kata?.opponentScore ?? '');
   const [notes, setNotes] = useState(kata?.notes ?? '');
   const [msg, setMsg] = useState('');
   const playerRef = useRef<YouTubePlayerHandle>(null);
@@ -391,8 +447,14 @@ function KataForm({
     }
     const u = url.trim();
     await db.scoutKatas.put({
+      ...kata,
       id,
       athleteId: athlete.id,
+      category: category.trim() || undefined,
+      opponent: opponent.trim() || undefined,
+      opponentKata: opponentKata.trim() || undefined,
+      opponentScore: opponentScore.trim() || undefined,
+      updatedAt: new Date().toISOString(),
       kata: k,
       videoId: videoId,
       url: u || undefined,
@@ -429,6 +491,11 @@ function KataForm({
         </div>
       )}
       {url.trim() && !videoId && <p className="muted" style={{ margin: '6px 0 0' }}>Enlace externo: se abrirá aparte.</p>}
+      {!url.trim() && (
+        <p style={{ margin: '6px 0 0' }}>
+          <a href={ytSearch({ ...(kata ?? { id: '', athleteId: athlete.id, createdAt: '' }), kata: name || NO_KATA, competition: competition || kata?.competition } as ScoutKata, athlete.name)} target="_blank" rel="noreferrer">Buscar en YouTube ↗</a>
+        </p>
+      )}
 
       <div className="grid2" style={{ marginTop: 10 }}>
         <div>
@@ -451,6 +518,9 @@ function KataForm({
       <input type="text" list="scout-competitions" value={competition} onChange={(e) => setCompetition(e.target.value)} placeholder="p. ej. Campeonato de España Sub-21 2026" />
       <datalist id="scout-competitions">{competitions.map((c) => <option key={c} value={c} />)}</datalist>
 
+      <label className="field-label">Categoría</label>
+      <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="p. ej. Kata Junior Masc" />
+
       <div className="grid2">
         <div>
           <label className="field-label">Fecha</label>
@@ -467,7 +537,14 @@ function KataForm({
         <button className={`chip${result === 'WIN' ? ' sel' : ''}`} onClick={() => setResult(result === 'WIN' ? undefined : 'WIN')}>Ganó</button>
         <button className={`chip${result === 'LOSS' ? ' sel' : ''}`} onClick={() => setResult(result === 'LOSS' ? undefined : 'LOSS')}>Perdió</button>
       </div>
-      <input type="text" value={score} onChange={(e) => setScore(e.target.value)} placeholder="Puntuación o votos (opcional): 40.2 · 3-2" style={{ marginTop: 8 }} />
+      <input type="text" value={score} onChange={(e) => setScore(e.target.value)} placeholder="Su puntuación (opcional): 22.3 · 3-2" style={{ marginTop: 8 }} />
+
+      <label className="field-label">Rival</label>
+      <input type="text" value={opponent} onChange={(e) => setOpponent(e.target.value)} placeholder="Nombre (opcional)" />
+      <div className="grid2" style={{ marginTop: 8 }}>
+        <input type="text" list="scout-kata-names" value={opponentKata} onChange={(e) => setOpponentKata(e.target.value)} placeholder="Su kata" />
+        <input type="text" value={opponentScore} onChange={(e) => setOpponentScore(e.target.value)} placeholder="Su puntuación" />
+      </div>
 
       <label className="field-label">Notas</label>
       <textarea rows={3} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Qué destacar, errores, ritmo…" />
@@ -540,7 +617,12 @@ function KataPlayer({
           {range && <div className="muted" style={{ marginTop: 4 }}>Del {range.replace(' – ', ' al ')}</div>}
         </div>
       )}
-      {local === null && !kata.videoId && !kata.url && <div className="card muted">Sin vídeo.</div>}
+      {local === null && !kata.videoId && !kata.url && (
+        <div className="card center">
+          <button className="btn-primary" style={{ margin: 0 }} onClick={onEdit}>+ AÑADIR VÍDEO</button>
+          <p style={{ margin: '10px 0 0' }}><a href={ytSearch(kata, athlete.name)} target="_blank" rel="noreferrer">Buscar en YouTube ↗</a></p>
+        </div>
+      )}
       {local === undefined && <div className="player-wrap" />}
       {local && <p className="muted center" style={{ margin: '6px 0 0' }}>🎞 Vídeo local</p>}
       {(kata.videoId || local) && (
@@ -548,9 +630,22 @@ function KataPlayer({
       )}
 
       <div className="card perf-item" style={{ marginTop: 12 }}>
-        <div className="who">{kata.kata} <ResultBadge r={kata.result} /></div>
+        <div className="who">
+          {kata.side && <span style={{ color: kata.side === 'AKA' ? 'var(--aka)' : 'var(--ao)', fontWeight: 800 }}>{kata.side} </span>}
+          {kata.kata} <ResultBadge r={kata.result} />
+        </div>
         {kataMeta(kata) && <div className="meta">{kataMeta(kata)}</div>}
+        {kata.place && <div className="meta">{kata.place}</div>}
+        {(kata.score || kata.judges?.length) && (
+          <div className="meta">{athlete.name}: <b>{kata.score ?? '—'}</b> <Judges js={kata.judges} /></div>
+        )}
+        {kata.opponent && (
+          <div className="meta">
+            {kata.opponent}{kata.opponentClub ? ` (${kata.opponentClub})` : ''}{kata.opponentKata ? ` · ${kata.opponentKata}` : ''}: <b>{kata.opponentScore ?? '—'}</b> <Judges js={kata.opponentJudges} />
+          </div>
+        )}
         {range && <div className="meta">Tramo {range}</div>}
+        {kata.sourceUrl && <div className="meta"><a href={kata.sourceUrl} target="_blank" rel="noreferrer">Hoja de resultados ↗</a></div>}
         {kata.notes && <div>📝 {kata.notes}</div>}
         {kata.videoId && (
           <div className="meta">
