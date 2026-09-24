@@ -1,4 +1,5 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import { cropStyle, type CropRect } from '../logic/crop';
 
 declare global {
   interface Window {
@@ -47,6 +48,8 @@ interface Props {
   onError?: (code: number) => void;
   /** true cuando el vídeo está reproduciéndose de verdad (para botones play/pausa propios). */
   onPlayingChange?: (playing: boolean) => void;
+  /** Muestra solo un recuadro del fotograma (vídeos en mosaico). */
+  crop?: CropRect;
 }
 
 /**
@@ -54,7 +57,7 @@ interface Props {
  * Además del parámetro `end` nativo, hace polling de getCurrentTime como red de seguridad.
  */
 const YouTubePlayer = forwardRef<YouTubePlayerHandle, Props>(function YouTubePlayer(
-  { videoId, startSeconds, endSeconds, autoplay = true, controls = true, playbackRate, onEnded, onError, onPlayingChange },
+  { videoId, startSeconds, endSeconds, autoplay = true, controls = true, playbackRate, onEnded, onError, onPlayingChange, crop },
   ref,
 ) {
   const holderRef = useRef<HTMLDivElement>(null);
@@ -143,7 +146,7 @@ const YouTubePlayer = forwardRef<YouTubePlayerHandle, Props>(function YouTubePla
     };
   }, [videoId, startSeconds, autoplay]);
 
-  return <div className="yt-holder" ref={holderRef} />;
+  return <div className="yt-holder" ref={holderRef} style={cropStyle(crop)} />;
 });
 
 export default YouTubePlayer;

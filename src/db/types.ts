@@ -410,6 +410,8 @@ export interface ScoutKata {
   place?: string;
   /** Cinturón con el que salió. */
   side?: 'AKA' | 'AO';
+  /** Cámara del mosaico 2×2 donde sale (vídeos RFEK con cuatro tatamis). Sin valor = vídeo completo. */
+  camera?: 'TL' | 'TR' | 'BL' | 'BR';
   opponent?: string;
   opponentClub?: string;
   opponentKata?: string;

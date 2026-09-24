@@ -8,6 +8,7 @@ import YouTubePlayer, { type YouTubePlayerHandle } from '../components/YouTubePl
 import LocalVideoPlayer from '../components/LocalVideoPlayer';
 import { findLocalVideo } from '../logic/localVideos';
 import { extractYouTubeId, extractYouTubeStart, fmtTime, parseTime } from '../logic/format';
+import { CAMERA_LABELS, CAMERA_RECTS, type Camera } from '../logic/crop';
 
 /**
  * Club Karate Swing: scouting personal de rivales (competidores y sus katas).
@@ -56,6 +57,39 @@ function Judges({ js }: { js?: { v: string; ok: boolean }[] }) {
 }
 
 const NO_KATA = 'Sin registrar';
+
+/** Selector de cámara: vídeo completo o uno de los cuatro recuadros del mosaico. */
+function CameraPicker({ value, onChange }: { value?: Camera; onChange: (c?: Camera) => void }) {
+  const cells: [Camera, number, number][] = [['TL', 1, 1], ['TR', 12, 1], ['BL', 1, 8], ['BR', 12, 8]];
+  return (
+    <div className="cam-picker" role="group" aria-label="Cámara">
+      <button className={`chip${!value ? ' sel' : ''}`} onClick={() => onChange(undefined)}>Completo</button>
+      {cells.map(([c, x, y]) => (
+        <button key={c} className={`chip cam${value === c ? ' sel' : ''}`} onClick={() => onChange(c)} title={CAMERA_LABELS[c]} aria-label={CAMERA_LABELS[c]}>
+          <svg width="26" height="16" viewBox="0 0 24 15" aria-hidden="true">
+            {cells.map(([c2, x2, y2]) => (
+              <rect key={c2} x={x2} y={y2} width="10" height="6" rx="1.2" fill={c2 === c ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.1" />
+            ))}
+          </svg>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Controles propios para YouTube recortado (los nativos quedan fuera del recuadro). */
+function CropBar({ player, playing, start }: { player: React.RefObject<YouTubePlayerHandle | null>; playing: boolean; start?: number }) {
+  const jump = (d: number) => { const t = player.current?.getCurrentTime(); if (t != null) player.current?.seekTo(Math.max(0, t + d)); };
+  return (
+    <div className="crop-bar">
+      <button onClick={() => player.current?.seekTo(start ?? 0)} aria-label="Al inicio del tramo">⏮</button>
+      <button onClick={() => jump(-5)} aria-label="Atrás 5 segundos">−5 s</button>
+      <button className="main" onClick={() => (playing ? player.current?.pause() : player.current?.play())} aria-label={playing ? 'Pausa' : 'Reproducir'}>{playing ? '⏸' : '▶︎'}</button>
+      <button onClick={() => jump(5)} aria-label="Adelante 5 segundos">+5 s</button>
+      <button onClick={() => jump(1)} aria-label="Adelante 1 segundo">+1 s</button>
+    </div>
+  );
+}
 
 /** Búsqueda en YouTube con competición, nombre y kata. */
 function ytSearch(k: ScoutKata, athleteName: string): string {
@@ -409,6 +443,8 @@ function KataForm({
   const [opponent, setOpponent] = useState(kata?.opponent ?? '');
   const [opponentKata, setOpponentKata] = useState(kata?.opponentKata ?? '');
   const [opponentScore, setOpponentScore] = useState(kata?.opponentScore ?? '');
+  const [camera, setCamera] = useState<Camera | undefined>(kata?.camera);
+  const [formPlaying, setFormPlaying] = useState(false);
   const [notes, setNotes] = useState(kata?.notes ?? '');
   const [msg, setMsg] = useState('');
   const playerRef = useRef<YouTubePlayerHandle>(null);
@@ -454,6 +490,7 @@ function KataForm({
       opponent: opponent.trim() || undefined,
       opponentKata: opponentKata.trim() || undefined,
       opponentScore: opponentScore.trim() || undefined,
+      camera,
       updatedAt: new Date().toISOString(),
       kata: k,
       videoId: videoId,
@@ -487,8 +524,15 @@ function KataForm({
       <input type="url" value={url} onChange={(e) => onUrl(e.target.value)} placeholder="Enlace de YouTube" />
       {videoId && (
         <div className="player-wrap" style={{ marginTop: 8 }}>
-          <YouTubePlayer key={videoId} ref={playerRef} videoId={videoId} startSeconds={playerStart} autoplay={false} controls={true} />
+          <YouTubePlayer key={videoId} ref={playerRef} videoId={videoId} startSeconds={playerStart} autoplay={false} controls={true} crop={camera ? CAMERA_RECTS[camera] : undefined} onPlayingChange={setFormPlaying} />
         </div>
+      )}
+      {videoId && camera && <CropBar player={playerRef} playing={formPlaying} start={parseTime(startTxt)} />}
+      {videoId && (
+        <>
+          <label className="field-label">Cámara</label>
+          <CameraPicker value={camera} onChange={setCamera} />
+        </>
       )}
       {url.trim() && !videoId && <p className="muted" style={{ margin: '6px 0 0' }}>Enlace externo: se abrirá aparte.</p>}
       {!url.trim() && (
@@ -568,6 +612,10 @@ function KataPlayer({
   onEdit: () => void;
 }) {
   const [playerKey, setPlayerKey] = useState(0);
+  const ytRef = useRef<YouTubePlayerHandle>(null);
+  const [ytPlaying, setYtPlaying] = useState(false);
+  const crop = kata.camera ? CAMERA_RECTS[kata.camera] : undefined;
+  const setCamera = (c?: Camera) => db.scoutKatas.update(kata.id, { camera: c, updatedAt: new Date().toISOString() });
   // vídeo local: clip "<id>.mp4" (empieza en el inicio del kata) o vídeo completo "<videoId>.mp4"
   const [local, setLocal] = useState<{ url: string; offset: number } | null | undefined>(undefined);
   useEffect(() => {
@@ -604,13 +652,16 @@ function KataPlayer({
           startSeconds={kata.startSeconds != null ? Math.max(0, kata.startSeconds - local.offset) : undefined}
           endSeconds={kata.endSeconds != null ? kata.endSeconds - local.offset : undefined}
           controls={true}
+          crop={crop}
         />
       )}
       {local === null && kata.videoId && (
         <div className="player-wrap">
-          <YouTubePlayer key={playerKey} videoId={kata.videoId} startSeconds={kata.startSeconds} endSeconds={kata.endSeconds} controls={true} />
+          <YouTubePlayer key={playerKey} ref={ytRef} videoId={kata.videoId} startSeconds={kata.startSeconds} endSeconds={kata.endSeconds} controls={true} crop={crop} onPlayingChange={setYtPlaying} />
         </div>
       )}
+      {local === null && kata.videoId && crop && <CropBar player={ytRef} playing={ytPlaying} start={kata.startSeconds} />}
+      {(kata.videoId || local) && <CameraPicker value={kata.camera} onChange={setCamera} />}
       {local === null && !kata.videoId && kata.url && (
         <div className="card center">
           <a href={kata.url} target="_blank" rel="noreferrer">Abrir vídeo ↗</a>

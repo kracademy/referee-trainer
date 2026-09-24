@@ -538,3 +538,11 @@ input[type='date'] { min-height: 46px; }
 .scout-judges { display: inline-flex; gap: 4px; margin-left: 4px; font-variant-numeric: tabular-nums; }
 .scout-judges .ok { background: rgba(52, 199, 89, 0.15); color: #248a3d; border-radius: 5px; padding: 0 4px; font-weight: 700; }
 .scout-judges .off { color: var(--label-3); padding: 0 2px; text-decoration: line-through; }
+
+/* Recorte de cámara (vídeos en mosaico 2×2) */
+.cam-picker { display: flex; gap: 6px; margin-top: 8px; }
+.cam-picker .chip { flex: 1; padding: 8px 4px; display: flex; align-items: center; justify-content: center; }
+.cam-picker .chip.cam svg { display: block; }
+.crop-bar { display: flex; gap: 6px; margin-top: 8px; }
+.crop-bar button { flex: 1; padding: 10px 4px; border-radius: 12px; background: var(--bg-elevated); color: var(--label); font-weight: 700; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.crop-bar button.main { background: var(--blue); color: #fff; }

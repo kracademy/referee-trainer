@@ -1,4 +1,5 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import { cropStyle, type CropRect } from '../logic/crop';
 import type { YouTubePlayerHandle } from './YouTubePlayer';
 
 interface Props {
@@ -11,6 +12,8 @@ interface Props {
   onEnded?: () => void;
   onError?: (code: number) => void;
   onPlayingChange?: (playing: boolean) => void;
+  /** Muestra solo un recuadro del fotograma (vídeos en mosaico). */
+  crop?: CropRect;
 }
 
 const mmss = (s: number) => {
@@ -25,7 +28,7 @@ const mmss = (s: number) => {
  * (la barra nativa enseñaría el archivo entero).
  */
 const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVideoPlayer(
-  { src, startSeconds, endSeconds, autoplay = true, controls = true, playbackRate = 1, onEnded, onError, onPlayingChange },
+  { src, startSeconds, endSeconds, autoplay = true, controls = true, playbackRate = 1, onEnded, onError, onPlayingChange, crop },
   ref,
 ) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -152,7 +155,7 @@ const LocalVideoPlayer = forwardRef<YouTubePlayerHandle, Props>(function LocalVi
       controls={false}
       playsInline
       preload="auto"
-      style={{ objectFit: 'contain', background: '#000' }}
+      style={{ objectFit: crop ? 'fill' : 'contain', background: '#000', ...cropStyle(crop) }}
       onClick={controls ? togglePlay : undefined}
     />
   );
