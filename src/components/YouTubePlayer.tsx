@@ -1,5 +1,9 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
-import { cropStyle, type CropRect } from '../logic/crop';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import type { CropRect } from '../logic/crop';
+
+/** Tamaño interno del reproductor recortado: YouTube elige la calidad por este tamaño (1080p). */
+const HD_W = 1920;
+const HD_H = 1080;
 
 declare global {
   interface Window {
@@ -146,7 +150,34 @@ const YouTubePlayer = forwardRef<YouTubePlayerHandle, Props>(function YouTubePla
     };
   }, [videoId, startSeconds, autoplay]);
 
-  return <div className="yt-holder" ref={holderRef} style={cropStyle(crop)} />;
+  // Recorte: el reproductor se pinta SIEMPRE a 1920×1080 y se escala para que el recuadro llene
+  // el marco. Así YouTube sirve 1080p aunque el marco sea pequeño (iPhone).
+  const [boxW, setBoxW] = useState(0);
+  useEffect(() => {
+    if (!crop) return;
+    const box = holderRef.current?.parentElement;
+    if (!box) return;
+    const ro = new ResizeObserver(() => setBoxW(box.clientWidth));
+    ro.observe(box);
+    setBoxW(box.clientWidth);
+    return () => ro.disconnect();
+  }, [crop]);
+  const style = crop && boxW
+    ? {
+        position: 'absolute' as const,
+        left: 0,
+        top: 0,
+        right: 'auto',
+        bottom: 'auto',
+        width: HD_W,
+        height: HD_H,
+        maxWidth: 'none',
+        transformOrigin: '0 0',
+        transform: `scale(${boxW / (crop.w * HD_W)}) translate(${-crop.x * HD_W}px, ${-crop.y * HD_H}px)`,
+      }
+    : undefined;
+
+  return <div className="yt-holder" ref={holderRef} style={style} />;
 });
 
 export default YouTubePlayer;
