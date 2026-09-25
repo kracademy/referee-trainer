@@ -571,3 +571,21 @@ input[type='date'] { min-height: 46px; }
 .cam-picker-wrap { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
 .cam-picker-wrap .cam-picker { margin-top: 0; }
 .cam-picker-label { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; color: var(--label-2); }
+
+/* Club Karate Swing: resumen del competidor */
+.card.scout-summary { margin-top: 12px; }
+.scout-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; }
+.scout-stats div { display: flex; flex-direction: column; }
+.scout-stats b { font-size: 1.35rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.scout-stats b.w { color: #248a3d; }
+.scout-stats b.l { color: var(--aka); }
+.scout-stats span { font-size: 0.62rem; font-weight: 600; color: var(--label-2); text-transform: uppercase; letter-spacing: 0.02em; }
+.scout-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+.scout-table th { font-size: 0.64rem; font-weight: 700; color: var(--label-2); text-transform: uppercase; letter-spacing: 0.03em; text-align: center; padding: 0 2px 6px; }
+.scout-table th:first-child, .scout-table td.k { text-align: left; }
+.scout-table td { text-align: center; padding: 8px 3px; border-top: 0.5px solid rgba(0, 0, 0, 0.08); cursor: pointer; white-space: nowrap; }
+.scout-table td.k { white-space: normal; width: 100%; }
+.scout-table th { white-space: nowrap; }
+.scout-table td.k { font-weight: 600; }
+.scout-table tr.sel td { background: rgba(0, 122, 255, 0.1); color: var(--blue); }
+.scout-legend { margin: 10px 0 0; font-size: 0.72rem; color: var(--label-3); line-height: 1.35; }

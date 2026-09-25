@@ -58,6 +58,57 @@ function Judges({ js }: { js?: { v: string; ok: boolean }[] }) {
 
 const NO_KATA = 'Sin registrar';
 
+/** Orden de la ronda dentro de un campeonato (para saber con qué kata abrió). */
+function roundOrder(r?: string): number {
+  const t = (r ?? '').toLowerCase();
+  if (/1\/64/.test(t)) return 1;
+  if (/1\/32/.test(t)) return 2;
+  if (/1\/16/.test(t)) return 3;
+  if (/1\/8/.test(t)) return 4;
+  if (/1\/4|cuartos/.test(t)) return 5;
+  if (/1\/2|semi/.test(t)) return 6;
+  if (/repesca|bronce/.test(t)) return 7;
+  if (/final/.test(t)) return 8;
+  return 0;
+}
+/** Combates por medalla: final y repescas/bronces. */
+const isMedalRound = (r?: string) => /final|repesca|bronce/i.test(r ?? '') && !/1\/\d|semi|cuartos/i.test(r ?? '');
+
+interface KataSummary { kata: string; n: number; opener: number; medal: number; w: number; l: number }
+
+/** Resumen por kata: veces, cuántas abrió un campeonato, cuántas en final/repesca y balance. */
+function summarize(katas: ScoutKata[]) {
+  const groups = new Map<string, ScoutKata[]>();
+  for (const k of katas) {
+    const key = `${k.competition ?? ''}|${k.category ?? ''}|${k.date ?? ''}`;
+    (groups.get(key) ?? groups.set(key, []).get(key)!).push(k);
+  }
+  const openers = new Set<string>();
+  for (const g of groups.values()) {
+    const ranked = g.filter((k) => roundOrder(k.round) > 0);
+    if (!ranked.length) continue;
+    const min = Math.min(...ranked.map((k) => roundOrder(k.round)));
+    for (const k of ranked) if (roundOrder(k.round) === min) openers.add(k.id);
+  }
+  const by = new Map<string, KataSummary>();
+  for (const k of katas) {
+    if (k.kata === NO_KATA) continue;
+    const e = by.get(k.kata) ?? { kata: k.kata, n: 0, opener: 0, medal: 0, w: 0, l: 0 };
+    e.n++;
+    if (openers.has(k.id)) e.opener++;
+    if (isMedalRound(k.round)) e.medal++;
+    if (k.result === 'WIN') e.w++;
+    if (k.result === 'LOSS') e.l++;
+    by.set(k.kata, e);
+  }
+  const rows = [...by.values()].sort((a, b) => b.n - a.n || b.medal - a.medal || a.kata.localeCompare(b.kata));
+  return {
+    rows,
+    competitions: groups.size,
+    unknown: katas.filter((k) => k.kata === NO_KATA).length,
+  };
+}
+
 /** Selector de cámara: vídeo completo o un recuadro del mosaico (de 4 o de 3 tatamis). */
 function CameraPicker({ value, onChange }: { value?: Camera; onChange: (c?: Camera) => void }) {
   const quad: [Camera, number, number][] = [['TL', 1, 1], ['TR', 12, 1], ['BL', 1, 8], ['BR', 12, 8]];
@@ -317,9 +368,7 @@ function AthleteDetail({
   onPlay: (id: string) => void;
 }) {
   const [filter, setFilter] = useState<string | null>(null);
-  const counts = new Map<string, number>();
-  for (const k of katas) if (k.kata !== NO_KATA) counts.set(k.kata, (counts.get(k.kata) ?? 0) + 1);
-  const rep = [...counts.entries()].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
+  const sum = useMemo(() => summarize(katas), [katas]);
   const list = filter ? katas.filter((k) => k.kata === filter) : katas;
   const wins = katas.filter((k) => k.result === 'WIN').length;
   const losses = katas.filter((k) => k.result === 'LOSS').length;
@@ -336,22 +385,38 @@ function AthleteDetail({
       {athlete.notes && <div className="card">📝 {athlete.notes}</div>}
       <button className="btn-secondary" onClick={onBack}>← Competidores</button>
 
-      <h2>Repertorio</h2>
-      {rep.length === 0 ? (
+      {katas.length === 0 ? (
         <div className="card muted">Aún no hay katas de {athlete.name}.</div>
       ) : (
-        <>
-          <div className="scout-rep" style={{ marginBottom: 6 }}>
-            {rep.map(([k, n]) => (
-              <button key={k} className={`chip scout-chip${filter === k ? ' sel' : ''}`} onClick={() => setFilter(filter === k ? null : k)}>
-                {k}{n > 1 ? ` ×${n}` : ''}
-              </button>
-            ))}
+        <div className="card scout-summary">
+          <div className="scout-stats">
+            <div><b>{katas.length}</b><span>katas</span></div>
+            <div><b>{sum.competitions}</b><span>campeonato{sum.competitions !== 1 ? 's' : ''}</span></div>
+            <div><b className="w">{wins}</b><span>ganados</span></div>
+            <div><b className="l">{losses}</b><span>perdidos</span></div>
           </div>
-          {(wins > 0 || losses > 0) && (
-            <p className="muted" style={{ margin: '4px 0 0' }}>{wins} ganado{wins !== 1 ? 's' : ''} · {losses} perdido{losses !== 1 ? 's' : ''}</p>
+          {sum.rows.length > 0 && (
+            <table className="scout-table">
+              <thead>
+                <tr><th>Kata</th><th title="Veces que lo ha hecho">Veces</th><th title="Katas con los que abrió un campeonato">1ª ronda</th><th title="Final y repescas (combates por medalla)">Medalla</th><th title="Ganados–perdidos con ese kata">G–P</th></tr>
+              </thead>
+              <tbody>
+                {sum.rows.map((r) => (
+                  <tr key={r.kata} className={filter === r.kata ? 'sel' : ''} onClick={() => setFilter(filter === r.kata ? null : r.kata)}>
+                    <td className="k">{r.kata}</td>
+                    <td>{r.n}</td>
+                    <td>{r.opener || '·'}</td>
+                    <td>{r.medal || '·'}</td>
+                    <td>{r.w}–{r.l}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           )}
-        </>
+          {sum.rows.length > 0 && (
+            <p className="scout-legend">1ª ronda: kata con el que abrió el campeonato · Medalla: final o repesca{sum.unknown > 0 ? ` · +${sum.unknown} sin kata registrado` : ''}</p>
+          )}
+        </div>
       )}
 
       <button className="btn-primary" onClick={onAddKata}>+ AÑADIR KATA</button>
