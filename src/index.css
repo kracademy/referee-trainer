@@ -568,3 +568,6 @@ input[type='date'] { min-height: 46px; }
 .card.scout-links { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; font-size: 0.9rem; }
 .card.scout-links code { font-size: 0.78rem; word-break: break-all; }
 .card.scout-sheet .meta { font-size: 0.82rem; color: var(--label-2); }
+.cam-picker-wrap { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.cam-picker-wrap .cam-picker { margin-top: 0; }
+.cam-picker-label { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; color: var(--label-2); }

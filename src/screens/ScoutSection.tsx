@@ -58,21 +58,32 @@ function Judges({ js }: { js?: { v: string; ok: boolean }[] }) {
 
 const NO_KATA = 'Sin registrar';
 
-/** Selector de cámara: vídeo completo o uno de los cuatro recuadros del mosaico. */
+/** Selector de cámara: vídeo completo o un recuadro del mosaico (de 4 o de 3 tatamis). */
 function CameraPicker({ value, onChange }: { value?: Camera; onChange: (c?: Camera) => void }) {
-  const cells: [Camera, number, number][] = [['TL', 1, 1], ['TR', 12, 1], ['BL', 1, 8], ['BR', 12, 8]];
-  return (
-    <div className="cam-picker" role="group" aria-label="Cámara">
-      <button className={`chip${!value ? ' sel' : ''}`} onClick={() => onChange(undefined)}>Completo</button>
-      {cells.map(([c]) => (
-        <button key={c} className={`chip cam${value === c ? ' sel' : ''}`} onClick={() => onChange(c)} title={CAMERA_LABELS[c]} aria-label={CAMERA_LABELS[c]}>
-          <svg width="26" height="16" viewBox="0 0 24 15" aria-hidden="true">
-            {cells.map(([c2, x2, y2]) => (
-              <rect key={c2} x={x2} y={y2} width="10" height="6" rx="1.2" fill={c2 === c ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.1" />
-            ))}
-          </svg>
-        </button>
+  const quad: [Camera, number, number][] = [['TL', 1, 1], ['TR', 12, 1], ['BL', 1, 8], ['BR', 12, 8]];
+  const tri: [Camera, number, number][] = [['T3', 7, 1], ['BL3', 1, 8], ['BR3', 13, 8]];
+  const icon = (cells: [Camera, number, number][], sel: Camera) => (
+    <svg width="26" height="16" viewBox="0 0 24 15" aria-hidden="true">
+      {cells.map(([c, x, y]) => (
+        <rect key={c} x={x} y={y} width="10" height="6" rx="1.2" fill={c === sel ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.1" />
       ))}
+    </svg>
+  );
+  const btn = (cells: [Camera, number, number][], c: Camera) => (
+    <button key={c} className={`chip cam${value === c ? ' sel' : ''}`} onClick={() => onChange(c)} title={CAMERA_LABELS[c]} aria-label={CAMERA_LABELS[c]}>
+      {icon(cells, c)}
+    </button>
+  );
+  return (
+    <div className="cam-picker-wrap" role="group" aria-label="Cámara">
+      <div className="cam-picker">
+        <button className={`chip${!value ? ' sel' : ''}`} onClick={() => onChange(undefined)}>Completo</button>
+        {quad.map(([c]) => btn(quad, c))}
+      </div>
+      <div className="cam-picker">
+        <span className="cam-picker-label">3 cámaras</span>
+        {tri.map(([c]) => btn(tri, c))}
+      </div>
     </div>
   );
 }
