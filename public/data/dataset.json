@@ -7007,8 +7007,8 @@
       "lastName": "Mota"
     },
     {
-      "id": "exam-espana-equipo-femenino-esp",
-      "displayName": "ESPAÑA (EQUIPO FEMENINO)",
+      "id": "exam-espana-morales-ozuna-rodriguez-encabo-roy-rubio-esp",
+      "displayName": "ESPAÑA (MORALES OZUNA, RODRIGUEZ ENCABO, ROY RUBIO)",
       "country": "ESP",
       "countryCode": "ESP"
     },
@@ -23965,7 +23965,7 @@
       "competitionId": "former-exams-ekf-wkf",
       "categoryId": "senior-female-team-kata",
       "roundType": "OTHER",
-      "akaAthleteId": "exam-espana-equipo-femenino-esp",
+      "akaAthleteId": "exam-espana-morales-ozuna-rodriguez-encabo-roy-rubio-esp",
       "aoAthleteId": "exam-equipo-finalista-premier-league-rabat",
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
@@ -23975,7 +23975,7 @@
           "exam": "WKF 26 Fujairah"
         }
       ],
-      "notes": "AKA: equipo femenino de España del 31º Campeonato Mediterráneo (Guadalajara 2025). En SportData España llevó dos equipos: B ganó a Macedonia del Norte (Papuren 23.0–21.8) y en la final A ganó a B (Unsu 24.2 vs Anan 23.9). AO: equipo de la final femenina de la Premier League de Rabat; las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData, por confirmar.",
+      "notes": "AKA: equipo femenino de España con Gema Morales, Lidia Rodríguez y Raquel Roy (no era el del Mediterráneo). Desde 2024 SportData no lista los componentes de los equipos, así que no se puede confirmar el campeonato. Combates de España femenino con vídeo en la app anteriores al examen (feb 2026), todos con Anan: final Series A Larnaca 2024 (41.9), final EKF Zadar 2024 (42.8 vs Italia), bronce Mundial por equipos Pamplona 2024 (43.4 vs Italia), final EKF Yerevan 2025 (43.4 vs Portugal). AO: equipo de la final femenina de la Premier League de Rabat, por confirmar (las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData).",
       "status": "VIDEO_MISSING"
     },
     {

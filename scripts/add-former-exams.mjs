@@ -143,10 +143,10 @@ const ROWS = [
   // ── Examen WKF Fujairah 2026 (curso de árbitros, oct 2026). Orden de las preguntas desconocido. ──
   {
     apps: [null, null, null, null, null, 0],
-    aka: { name: 'ESPAÑA (EQUIPO FEMENINO)', cc: 'ESP' },
+    aka: { name: 'ESPAÑA (MORALES OZUNA, RODRIGUEZ ENCABO, ROY RUBIO)', cc: 'ESP' },
     ao: { name: 'EQUIPO FINALISTA (PREMIER LEAGUE RABAT)' },
     winner: 'AKA', cat: 'senior-female-team-kata',
-    note: 'AKA: equipo femenino de España del 31º Campeonato Mediterráneo (Guadalajara 2025). En SportData España llevó dos equipos: B ganó a Macedonia del Norte (Papuren 23.0–21.8) y en la final A ganó a B (Unsu 24.2 vs Anan 23.9). AO: equipo de la final femenina de la Premier League de Rabat; las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData, por confirmar.',
+    note: "AKA: equipo femenino de España con Gema Morales, Lidia Rodríguez y Raquel Roy (no era el del Mediterráneo). Desde 2024 SportData no lista los componentes de los equipos, así que no se puede confirmar el campeonato. Combates de España femenino con vídeo en la app anteriores al examen (feb 2026), todos con Anan: final Series A Larnaca 2024 (41.9), final EKF Zadar 2024 (42.8 vs Italia), bronce Mundial por equipos Pamplona 2024 (43.4 vs Italia), final EKF Yerevan 2025 (43.4 vs Portugal). AO: equipo de la final femenina de la Premier League de Rabat, por confirmar (las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData).",
   },
   {
     apps: [null, null, null, null, null, 0],
