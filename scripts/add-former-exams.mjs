@@ -150,10 +150,10 @@ const ROWS = [
   },
   {
     apps: [null, null, null, null, null, 0],
-    aka: { name: 'TAILY HELVETIA', cc: 'FRA' },
-    ao: { name: "D'ONOFRIO TERRYANA", cc: 'ITA' },
+    aka: { name: 'TAILY HELVETIA', cc: 'FRA', kata: 'Unsu' },
+    ao: { name: "D'ONOFRIO TERRYANA", cc: 'ITA', kata: 'Papuren' },
     winner: 'AO', cat: 'senior-female-kata',
-    note: "Examen de febrero de 2026: candidatos anteriores, siempre gana D'Onofrio. 1) Final del Europeo EKF Yerevan 2025 (mayo 2025): Taily Gankaku 41.6 vs D'Onofrio Chibana no Kushanku 42.1, ya en la app con vídeo. 2) Mundial El Cairo 2025 (27-30 nov 2025), 1ª ronda del cuadro de ganadores de pool (octavos): Taily Gankaku 39.2 vs D'Onofrio Papuren 41.4. 3) Premier League Rabat 2025 (30 may 2025), liguilla del Pool 1 con Xenou y Lo Sum Man: Taily Unsu 38.5 vs D'Onofrio Papuren 40.1. Descartados: Mediterráneo 2025 (confirmado que no) y Rabat 2026 (posterior al examen).",
+    note: "Premier League Rabat 2025 (30 may 2025), liguilla del Pool 1 femenino (con Xenou y Lo Sum Man), emisión WKF del viernes, tatami 1. Taily Unsu 38.5 vs D'Onofrio Papuren 40.1. Otros cruces anteriores al examen: final EKF Yerevan 2025 y octavos del Mundial El Cairo 2025.",
   },
   {
     apps: [null, null, null, null, null, 0],
