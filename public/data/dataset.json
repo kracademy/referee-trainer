@@ -23983,10 +23983,10 @@
       "competitionId": "former-exams-ekf-wkf",
       "categoryId": "senior-female-kata",
       "roundType": "OTHER",
-      "akaAthleteId": "exam-d-onofrio-terryana-ita",
-      "aoAthleteId": "exam-taily-helvetia-fra",
-      "officialWinner": "AKA",
-      "officialResultType": "AKA_WINS",
+      "akaAthleteId": "exam-taily-helvetia-fra",
+      "aoAthleteId": "exam-d-onofrio-terryana-ita",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
       "formerExam": true,
       "examAppearances": [
         {
