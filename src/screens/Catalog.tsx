@@ -28,6 +28,8 @@ export default function Catalog() {
   const [akaFin, setAkaFin] = useState('');
   const [aoIni, setAoIni] = useState('');
   const [aoFin, setAoFin] = useState('');
+  const [aoUrl, setAoUrl] = useState('');
+  const [aoVideo, setAoVideo] = useState<string | undefined>();
   const [ajustado, setAjustado] = useState(false);
   const [nota, setNota] = useState('');
   const [msg, setMsg] = useState('');
@@ -41,6 +43,7 @@ export default function Catalog() {
   }, [selectedId]);
   const hasLocal = (p: Performance) => localNames.has(p.id) || (p.videoId != null && localNames.has(p.videoId));
   const playerRef = useRef<YouTubePlayerHandle>(null);
+  const aoPlayerRef = useRef<YouTubePlayerHandle>(null);
 
   // formulario "añadir encuentro" (exámenes EKF/WKF u otros bouts fuera del dataset)
   const [adding, setAdding] = useState(false);
@@ -153,6 +156,8 @@ export default function Catalog() {
     setAkaFin(p?.akaEndSeconds != null ? fmtTime(p.akaEndSeconds) : '');
     setAoIni(p?.aoStartSeconds != null ? fmtTime(p.aoStartSeconds) : '');
     setAoFin(p?.aoEndSeconds != null ? fmtTime(p.aoEndSeconds) : '');
+    setAoVideo(p?.aoVideoId);
+    setAoUrl(p?.aoVideoId ? `https://www.youtube.com/watch?v=${p.aoVideoId}` : '');
     setAjustado(p?.closeResult ?? false);
     setNota(p?.userNote ?? '');
     setMsg('');
@@ -166,18 +171,30 @@ export default function Catalog() {
     setMsg('');
   }
 
-  function mark(setter: (v: string) => void, pauseAfter = false) {
-    const t = playerRef.current?.getCurrentTime();
+  function mark(setter: (v: string) => void, pauseAfter = false, ref = playerRef) {
+    const t = ref.current?.getCurrentTime();
     if (t == null) { setMsg('El reproductor aún no está listo.'); return; }
     setter(fmtTime(t));
-    if (pauseAfter) playerRef.current?.pause();
+    if (pauseAfter) ref.current?.pause();
+    setMsg('');
+  }
+
+  function applyAoUrl() {
+    const raw = aoUrl.trim();
+    if (!raw) { setAoVideo(undefined); return; }
+    const id = extractYouTubeId(raw);
+    if (!id) { setMsg('URL de YouTube de AO no reconocida.'); return; }
+    setAoVideo(id);
+    setAoUrl(`https://www.youtube.com/watch?v=${id}`);
     setMsg('');
   }
 
   async function save() {
     if (!perf) return;
-    const start = parseTime(startTxt);
-    const end = parseTime(endTxt);
+    const aoOwn = aoVideo && aoVideo !== videoId ? aoVideo : undefined;
+    // con AO en otro vídeo, el tramo del encuentro (vídeo principal) es el de AKA si no se marca aparte
+    const start = parseTime(startTxt) ?? (aoOwn ? parseTime(akaIni) : undefined);
+    const end = parseTime(endTxt) ?? (aoOwn ? parseTime(akaFin) : undefined);
     if (!videoId) { setMsg('Falta el vídeo.'); return; }
     if (start == null || end == null || end <= start) { setMsg('Revisa los timestamps (el fin debe ser posterior al inicio).'); return; }
     await db.videos.put({
@@ -188,6 +205,7 @@ export default function Catalog() {
       lastChecked: new Date().toISOString(),
     });
     const updated = { ...perf, videoId, startSeconds: start, endSeconds: end };
+    if (aoOwn) updated.aoVideoId = aoOwn; else delete updated.aoVideoId;
     // puntuaciones oficiales vistas en el vídeo (opcional)
     const nAka = parseFloat(offAka.replace(',', '.'));
     const nAo = parseFloat(offAo.replace(',', '.'));
@@ -222,6 +240,7 @@ export default function Catalog() {
         ...(p.officialScoreAka != null ? { officialScoreAka: p.officialScoreAka, officialScoreAo: p.officialScoreAo, judgesCount: p.judgesCount } : {}),
         ...(p.akaStartSeconds != null ? { akaStartSeconds: p.akaStartSeconds, akaEndSeconds: p.akaEndSeconds } : {}),
         ...(p.aoStartSeconds != null ? { aoStartSeconds: p.aoStartSeconds, aoEndSeconds: p.aoEndSeconds } : {}),
+        ...(p.aoVideoId ? { aoVideoId: p.aoVideoId } : {}),
         ...(p.closeResult ? { closeResult: true } : {}),
         ...(p.userNote ? { note: p.userNote } : {}),
         ...(p.formerExam ? { formerExam: true } : {}),
@@ -408,8 +427,8 @@ export default function Catalog() {
               <div className="row" style={{ marginBottom: 8 }}>
                 <button className="btn-secondary" style={{ margin: 0, color: 'var(--aka)' }} onClick={() => mark(setAkaIni)}>🚩 AKA</button>
                 <button className="btn-secondary" style={{ margin: 0, color: 'var(--aka)' }} onClick={() => mark(setAkaFin, true)}>🏁 AKA</button>
-                <button className="btn-secondary" style={{ margin: 0, color: 'var(--ao)' }} onClick={() => mark(setAoIni)}>🚩 AO</button>
-                <button className="btn-secondary" style={{ margin: 0, color: 'var(--ao)' }} onClick={() => mark(setAoFin, true)}>🏁 AO</button>
+                <button className="btn-secondary" style={{ margin: 0, color: 'var(--ao)' }} onClick={() => mark(setAoIni, false, aoVideo ? aoPlayerRef : playerRef)}>🚩 AO</button>
+                <button className="btn-secondary" style={{ margin: 0, color: 'var(--ao)' }} onClick={() => mark(setAoFin, true, aoVideo ? aoPlayerRef : playerRef)}>🏁 AO</button>
               </div>
               <div className="row">
                 <input type="text" placeholder="Inicio AKA" value={akaIni} onChange={(e) => setAkaIni(e.target.value)} />
@@ -417,6 +436,19 @@ export default function Catalog() {
                 <input type="text" placeholder="Inicio AO" value={aoIni} onChange={(e) => setAoIni(e.target.value)} />
                 <input type="text" placeholder="Fin AO" value={aoFin} onChange={(e) => setAoFin(e.target.value)} />
               </div>
+              <label style={{ margin: '12px 0 6px', color: 'var(--ao)' }}>Vídeo de AO (solo si AO sale en otro vídeo)</label>
+              <div className="row">
+                <input type="url" placeholder="https://www.youtube.com/watch?v=…" value={aoUrl} onChange={(e) => setAoUrl(e.target.value)} />
+                <button onClick={applyAoUrl}>Cargar</button>
+              </div>
+              {aoVideo && aoVideo !== videoId && (
+                <>
+                  <div className="player-wrap" style={{ marginTop: 10 }}>
+                    <YouTubePlayer ref={aoPlayerRef} videoId={aoVideo} autoplay={false} />
+                  </div>
+                  <p className="muted" style={{ margin: '6px 0 0' }}>Los botones de AO marcan sobre este vídeo. El de arriba es el de AKA.</p>
+                </>
+              )}
             </div>
             <div className="card" style={{ marginTop: 12 }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: 8, margin: 0, cursor: 'pointer' }}>

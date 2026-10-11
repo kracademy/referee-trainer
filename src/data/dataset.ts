@@ -89,7 +89,7 @@ export async function syncDataset(): Promise<void> {
       };
       // campos que solo cura el dataset (no hay edición local): se toman tal cual
       merged.examAppearances = perf.examAppearances;
-      merged.aoVideoId = perf.aoVideoId;
+      merged.aoVideoId = perf.aoVideoId ?? (keepSub ? existing?.aoVideoId : undefined);
       merged.status = computeStatus(merged);
       await db.performances.put(merged);
     }

@@ -156,7 +156,7 @@ export default function Library() {
           <div style={{ marginTop: 10 }}><ReviewToggle perf={p} /></div>
           {p.examAppearances && p.examAppearances.length > 0 && (
             <p className="muted" style={{ marginBottom: 0 }}>
-              🎓 Exámenes: {p.examAppearances.map((a) => `${a.exam} (#${a.order})`).join(' · ')}
+              🎓 Exámenes: {p.examAppearances.map((a) => (a.order ? `${a.exam} (#${a.order})` : a.exam)).join(' · ')}
             </p>
           )}
         </div>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T13:00:24.629Z",
+  "generatedAt": "2026-10-11T09:02:34.510Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -2828,6 +2828,52 @@
       "tier": 1,
       "source": "Exámenes EKF/WKF recopilados por el usuario",
       "notes": "Encuentros que han salido en exámenes de arbitraje (EKF 25, WKF 25-1, WKF 25-2, EKF 26)."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026",
+      "name": "Karate One Series A - Salzburg 2026",
+      "year": 2026,
+      "dateStart": "2026-10-02",
+      "competitionType": "SERIES_A",
+      "tier": 3,
+      "sportDataEventId": 1187,
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187",
+      "source": "SportData SET Online (extraído 2026-10-11)"
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "name": "UFAK Cadet, Junior & Senior Championships 2026 - Algiers",
+      "year": 2026,
+      "dateStart": "2026-09-06",
+      "competitionType": "CONTINENTAL_CHAMPIONSHIP",
+      "continent": "AFRICA",
+      "tier": 1,
+      "sportDataEventId": 1211,
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211",
+      "source": "SportData SET Online (extraído 2026-10-11)"
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "name": "The 24th Asian Cadet Junior & U21 Championship 2026 - Amman, Jordan",
+      "year": 2026,
+      "dateStart": "2026-09-08",
+      "competitionType": "CONTINENTAL_CHAMPIONSHIP",
+      "continent": "ASIA",
+      "tier": 1,
+      "sportDataEventId": 1204,
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204",
+      "source": "SportData SET Online (extraído 2026-10-11)"
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria",
+      "name": "32nd Mediterranean Championships - 2026 - Alexandria",
+      "year": 2026,
+      "dateStart": "2026-06-17",
+      "competitionType": "OTHER",
+      "tier": 3,
+      "sportDataEventId": 1185,
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185",
+      "source": "SportData SET Online (extraído 2026-10-11)"
     }
   ],
   "categories": [
@@ -6959,6 +7005,459 @@
       "countryCode": "BRA",
       "firstName": "Nicole",
       "lastName": "Mota"
+    },
+    {
+      "id": "exam-espana-equipo-femenino-esp",
+      "displayName": "ESPAÑA (EQUIPO FEMENINO)",
+      "country": "ESP",
+      "countryCode": "ESP"
+    },
+    {
+      "id": "exam-equipo-finalista-premier-league-rabat",
+      "displayName": "EQUIPO FINALISTA (PREMIER LEAGUE RABAT)",
+      "country": "—",
+      "countryCode": "—",
+      "notes": "País por confirmar"
+    },
+    {
+      "id": "exam-taily-helvetia-fra",
+      "displayName": "TAILY HELVETIA",
+      "country": "FRA",
+      "countryCode": "FRA",
+      "firstName": "Helvetia",
+      "lastName": "Taily"
+    },
+    {
+      "id": "exam-hong-kong-competidor-masculino-hkg",
+      "displayName": "HONG KONG (COMPETIDOR MASCULINO)",
+      "country": "HKG",
+      "countryCode": "HKG"
+    },
+    {
+      "id": "exam-nishiyama-kakeru-jpn",
+      "displayName": "NISHIYAMA KAKERU",
+      "country": "JPN",
+      "countryCode": "JPN",
+      "firstName": "Kakeru",
+      "lastName": "Nishiyama"
+    },
+    {
+      "id": "exam-espana-equipo-masculino-esp",
+      "displayName": "ESPAÑA (EQUIPO MASCULINO)",
+      "country": "ESP",
+      "countryCode": "ESP"
+    },
+    {
+      "id": "exam-burkina-faso-equipo-masculino-bur",
+      "displayName": "BURKINA FASO (EQUIPO MASCULINO)",
+      "country": "BUR",
+      "countryCode": "BUR"
+    },
+    {
+      "id": "exam-kiyuna-ryo-joven-jpn",
+      "displayName": "KIYUNA RYO (JOVEN)",
+      "country": "JPN",
+      "countryCode": "JPN"
+    },
+    {
+      "id": "exam-kiyuna-ryo-mayor-jpn",
+      "displayName": "KIYUNA RYO (MAYOR)",
+      "country": "JPN",
+      "countryCode": "JPN"
+    },
+    {
+      "id": "hori-ria-jpn",
+      "displayName": "HORI RIA",
+      "country": "Keio",
+      "countryCode": "JPN",
+      "firstName": "Ria",
+      "lastName": "Hori"
+    },
+    {
+      "id": "mateus-vasco-por",
+      "displayName": "MATEUS VASCO",
+      "country": "Portugal",
+      "countryCode": "POR",
+      "firstName": "Vasco",
+      "lastName": "Mateus"
+    },
+    {
+      "id": "di-rubba-luigi-ita",
+      "displayName": "DI RUBBA LUIGI",
+      "country": "Centro Sportivo Esercito",
+      "countryCode": "ITA",
+      "firstName": "Luigi",
+      "lastName": "Di Rubba"
+    },
+    {
+      "id": "oiwa-kent-aus",
+      "displayName": "OIWA KENT",
+      "country": "Australia",
+      "countryCode": "AUS",
+      "firstName": "Kent",
+      "lastName": "Oiwa"
+    },
+    {
+      "id": "pinheiro-juan-bra",
+      "displayName": "PINHEIRO JUAN",
+      "country": "Brazil",
+      "countryCode": "BRA",
+      "firstName": "Juan",
+      "lastName": "Pinheiro"
+    },
+    {
+      "id": "team-c-t-r-campania-ita",
+      "displayName": "C.T.R. CAMPANIA",
+      "country": "Morgillo",
+      "countryCode": "ITA"
+    },
+    {
+      "id": "team-waseda-university-jpn",
+      "displayName": "WASEDA UNIVERSITY",
+      "country": "Tatsumi",
+      "countryCode": "JPN"
+    },
+    {
+      "id": "kgosikoma-centy-bot",
+      "displayName": "KGOSIKOMA CENTY",
+      "country": "Botswana",
+      "countryCode": "BOT",
+      "firstName": "Centy",
+      "lastName": "Kgosikoma"
+    },
+    {
+      "id": "dahleb-narimene-alg",
+      "displayName": "DAHLEB NARIMENE",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Narimene",
+      "lastName": "Dahleb"
+    },
+    {
+      "id": "van-boom-danica-rsa",
+      "displayName": "VAN BOOM DANICA",
+      "country": "South Africa",
+      "countryCode": "RSA",
+      "firstName": "Danica",
+      "lastName": "Van Boom"
+    },
+    {
+      "id": "ishimwe-sifa-alice-bdi",
+      "displayName": "ISHIMWE SIFA ALICE",
+      "country": "Burundi",
+      "countryCode": "BDI",
+      "firstName": "Alice",
+      "lastName": "Ishimwe Sifa"
+    },
+    {
+      "id": "benmakhlouf-saber-alg",
+      "displayName": "BENMAKHLOUF SABER",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Saber",
+      "lastName": "Benmakhlouf"
+    },
+    {
+      "id": "rchouq-adam-mar",
+      "displayName": "RCHOUQ ADAM",
+      "country": "Morocco",
+      "countryCode": "MAR",
+      "firstName": "Adam",
+      "lastName": "Rchouq"
+    },
+    {
+      "id": "kwitonda-masimango-cod",
+      "displayName": "KWITONDA MASIMANGO",
+      "country": "Democratic Rep Of The Congo",
+      "countryCode": "COD",
+      "firstName": "Masimango",
+      "lastName": "Kwitonda"
+    },
+    {
+      "id": "sanou-samuel-bur",
+      "displayName": "SANOU SAMUEL",
+      "country": "Burkina Faso",
+      "countryCode": "BUR",
+      "firstName": "Samuel",
+      "lastName": "Sanou"
+    },
+    {
+      "id": "alturki-hussin-lba",
+      "displayName": "ALTURKI HUSSIN",
+      "country": "Libya",
+      "countryCode": "LBA",
+      "firstName": "Hussin",
+      "lastName": "Alturki"
+    },
+    {
+      "id": "team-zambia-zam",
+      "displayName": "ZAMBIA",
+      "country": "Zambia",
+      "countryCode": "ZAM"
+    },
+    {
+      "id": "team-egypt-male-kata-team-egy",
+      "displayName": "EGYPT MALE KATA TEAM",
+      "country": "Egypt",
+      "countryCode": "EGY"
+    },
+    {
+      "id": "team-rwanda-rwa",
+      "displayName": "RWANDA",
+      "country": "Rwanda",
+      "countryCode": "RWA"
+    },
+    {
+      "id": "team-south-africa-rsa",
+      "displayName": "SOUTH AFRICA",
+      "country": "South Africa",
+      "countryCode": "RSA"
+    },
+    {
+      "id": "team-democratic-rep-of-the-congo-cod",
+      "displayName": "DEMOCRATIC REP OF THE CONGO",
+      "country": "Democratic Rep Of The Congo",
+      "countryCode": "COD"
+    },
+    {
+      "id": "lesly-carelle-tueno-fotso-cmr",
+      "displayName": "LESLY CARELLE TUENO FOTSO",
+      "country": "Cameroon",
+      "countryCode": "CMR",
+      "firstName": "Lesly Carelle",
+      "lastName": "Tueno Fotso"
+    },
+    {
+      "id": "elshorbagy-alaa-egy",
+      "displayName": "ELSHORBAGY ALAA",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Alaa",
+      "lastName": "Elshorbagy"
+    },
+    {
+      "id": "jagasur-nyska-shreya-rsa",
+      "displayName": "JAGASUR NYSKA SHREYA",
+      "country": "South Africa",
+      "countryCode": "RSA",
+      "firstName": "Shreya",
+      "lastName": "Jagasur Nyska"
+    },
+    {
+      "id": "ikuku-ruvej-cod",
+      "displayName": "IKUKU RUVEJ",
+      "country": "Democratic Rep Of The Congo",
+      "countryCode": "COD",
+      "firstName": "Ruvej",
+      "lastName": "Ikuku"
+    },
+    {
+      "id": "guesmi-douaa-tun",
+      "displayName": "GUESMI DOUAA",
+      "country": "Tunisia",
+      "countryCode": "TUN",
+      "firstName": "Douaa",
+      "lastName": "Guesmi"
+    },
+    {
+      "id": "ghodbane-hibat-allah-alg",
+      "displayName": "GHODBANE HIBAT ALLAH",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Hibat Allah",
+      "lastName": "Ghodbane"
+    },
+    {
+      "id": "chakir-abderrahmane-mar",
+      "displayName": "CHAKIR ABDERRAHMANE",
+      "country": "Morocco",
+      "countryCode": "MAR",
+      "firstName": "Abderrahmane",
+      "lastName": "Chakir"
+    },
+    {
+      "id": "dahy-ali-egy",
+      "displayName": "DAHY ALI",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Ali",
+      "lastName": "Dahy"
+    },
+    {
+      "id": "barry-ismaila-sen",
+      "displayName": "BARRY ISMAILA",
+      "country": "Senegal",
+      "countryCode": "SEN",
+      "firstName": "Ismaila",
+      "lastName": "Barry"
+    },
+    {
+      "id": "elabasi-abdulrahim-lba",
+      "displayName": "ELABASI ABDULRAHIM",
+      "country": "Libya",
+      "countryCode": "LBA",
+      "firstName": "Abdulrahim",
+      "lastName": "Elabasi"
+    },
+    {
+      "id": "loucif-mouhamed-louai-alg",
+      "displayName": "LOUCIF MOUHAMED LOUAI",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Mouhamed Louai",
+      "lastName": "Loucif"
+    },
+    {
+      "id": "daniel-bofelo-bot",
+      "displayName": "DANIEL BOFELO",
+      "country": "Botswana",
+      "countryCode": "BOT",
+      "firstName": "Daniel",
+      "lastName": "Bofelo"
+    },
+    {
+      "id": "baharijavadhesari-ailin-iri",
+      "displayName": "BAHARIJAVADHESARI AILIN",
+      "country": "Iran Karate Federation",
+      "countryCode": "IRI",
+      "firstName": "Ailin",
+      "lastName": "Baharijavadhesari"
+    },
+    {
+      "id": "donny-ivy-olivera-mas",
+      "displayName": "DONNY IVY OLIVERA",
+      "country": "Malaysia",
+      "countryCode": "MAS",
+      "firstName": "Ivy Olivera",
+      "lastName": "Donny"
+    },
+    {
+      "id": "lin-ting-chieh-tpe",
+      "displayName": "LIN TING-CHIEH",
+      "country": "Chinese Taipei",
+      "countryCode": "TPE",
+      "firstName": "Ting-Chieh",
+      "lastName": "Lin"
+    },
+    {
+      "id": "chu-on-kei-mac",
+      "displayName": "CHU ON KEI",
+      "country": "Macau",
+      "countryCode": "MAC",
+      "firstName": "On Kei",
+      "lastName": "Chu"
+    },
+    {
+      "id": "ete-lipin-ind",
+      "displayName": "ETE LIPIN",
+      "country": "India",
+      "countryCode": "IND",
+      "firstName": "Lipin",
+      "lastName": "Ete"
+    },
+    {
+      "id": "rami-fawzi-abu-al-haija-kareem-uae",
+      "displayName": "RAMI FAWZI ABU AL-HAIJA KAREEM",
+      "country": "United Arab Emirates",
+      "countryCode": "UAE",
+      "firstName": "Kareem",
+      "lastName": "Rami Fawzi Abu Al-Haija"
+    },
+    {
+      "id": "wang-yu-tse-tpe",
+      "displayName": "WANG YU-TSE",
+      "country": "Chinese Taipei",
+      "countryCode": "TPE",
+      "firstName": "Yu-Tse",
+      "lastName": "Wang"
+    },
+    {
+      "id": "nadimighasroldasht-alireza-iri",
+      "displayName": "NADIMIGHASROLDASHT ALIREZA",
+      "country": "Iran Karate Federation",
+      "countryCode": "IRI",
+      "firstName": "Alireza",
+      "lastName": "Nadimighasroldasht"
+    },
+    {
+      "id": "alawaisheh-faris-jor",
+      "displayName": "ALAWAISHEH FARIS",
+      "country": "Jordan",
+      "countryCode": "JOR",
+      "firstName": "Faris",
+      "lastName": "Alawaisheh"
+    },
+    {
+      "id": "alsayed-mohammed-ksa",
+      "displayName": "ALSAYED MOHAMMED",
+      "country": "Saudi Arabia",
+      "countryCode": "KSA",
+      "firstName": "Mohammed",
+      "lastName": "Alsayed"
+    },
+    {
+      "id": "vella-jessica-mlt",
+      "displayName": "VELLA JESSICA",
+      "country": "Malta",
+      "countryCode": "MLT",
+      "firstName": "Jessica",
+      "lastName": "Vella"
+    },
+    {
+      "id": "moussa-habiba-egy",
+      "displayName": "MOUSSA HABIBA",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Habiba",
+      "lastName": "Moussa"
+    },
+    {
+      "id": "lougin-israa-trache-alg",
+      "displayName": "LOUGIN ISRAA TRACHE",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Trache",
+      "lastName": "Lougin Israa"
+    },
+    {
+      "id": "shahin-ahmed-egy",
+      "displayName": "SHAHIN AHMED",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Ahmed",
+      "lastName": "Shahin"
+    },
+    {
+      "id": "aboanza-abdulla-egy",
+      "displayName": "ABOANZA ABDULLA",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Abdulla",
+      "lastName": "Aboanza"
+    },
+    {
+      "id": "elsska-mohamed-hamdy-egy",
+      "displayName": "ELSSKA MOHAMED HAMDY",
+      "country": "Egypt",
+      "countryCode": "EGY",
+      "firstName": "Mohamed Hamdy",
+      "lastName": "Elsska"
+    },
+    {
+      "id": "manceri-abderrouf-alg",
+      "displayName": "MANCERI ABDERROUF",
+      "country": "Algeria",
+      "countryCode": "ALG",
+      "firstName": "Abderrouf",
+      "lastName": "Manceri"
+    },
+    {
+      "id": "gregoire-liam-fra",
+      "displayName": "GREGOIRE LIAM",
+      "country": "Annecy Dojo Karaté",
+      "countryCode": "FRA",
+      "firstName": "Liam",
+      "lastName": "Gregoire"
     }
   ],
   "videos": [
@@ -23460,6 +23959,986 @@
       ],
       "notes": "Sin vídeo. Atletas concretos por confirmar.",
       "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "former-exams-ekf-wkf_18",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-espana-equipo-femenino-esp",
+      "aoAthleteId": "exam-equipo-finalista-premier-league-rabat",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        }
+      ],
+      "notes": "AKA: equipo femenino de España del 31º Campeonato Mediterráneo (Guadalajara 2025). En SportData España llevó dos equipos: B ganó a Macedonia del Norte (Papuren 23.0–21.8) y en la final A ganó a B (Unsu 24.2 vs Anan 23.9). AO: equipo de la final femenina de la Premier League de Rabat; las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData, por confirmar.",
+      "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "former-exams-ekf-wkf_19",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-female-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-d-onofrio-terryana-ita",
+      "aoAthleteId": "exam-taily-helvetia-fra",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        }
+      ],
+      "notes": "Cruces en SportData (siempre gana D'Onofrio): Premier League Rabat 2025 (Papuren 40.1 vs Unsu 38.5), Mundial El Cairo 2025 (Papuren 41.4 vs Gankaku 39.2), EKF Yerevan 2025 (Chibana no Kushanku 42.1 vs Gankaku 41.6), final del Mediterráneo Guadalajara 2025 (Suparinpei 25.3 vs Suparinpei 24.4) y bronce de la Premier League Rabat 2026 (Suparinpei 6–1 vs Gankaku). La final del Mediterráneo y el bronce de Rabat 2026 están en la app.",
+      "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "former-exams-ekf-wkf_20",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-hong-kong-competidor-masculino-hkg",
+      "aoAthleteId": "exam-nishiyama-kakeru-jpn",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        }
+      ],
+      "notes": "En SportData (2024–2026) no hay ningún combate de un competidor de Hong Kong contra Nishiyama: emparejamiento montado para el examen con dos vídeos distintos. Competidor de Hong Kong por confirmar.",
+      "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "former-exams-ekf-wkf_21",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-espana-equipo-masculino-esp",
+      "aoAthleteId": "exam-burkina-faso-equipo-masculino-bur",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        }
+      ],
+      "notes": "AKA: equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025); en SportData solo hubo un combate, España A (Paiku 24.1) contra España B (Unsu 23.5). AO: equipo de Burkina Faso, sin rastro en SportData 2024–2026 (solo aparece su equipo femenino en el UFAK 2026). Oriol tiene los dos vídeos.",
+      "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "former-exams-ekf-wkf_22",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-kiyuna-ryo-joven-jpn",
+      "aoAthleteId": "exam-kiyuna-ryo-mayor-jpn",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        }
+      ],
+      "notes": "Encuentro inventado para el examen: Kiyuna de joven contra Kiyuna en una etapa posterior. Sin vídeo, solo para recordarlo.",
+      "status": "VIDEO_MISSING"
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-kata_final",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "hori-ria-jpn",
+      "aoAthleteId": "manca-chiara-bel",
+      "kataAka": "Chatanyara Kushanku",
+      "kataAkaNumber": 8,
+      "kataAo": "Suparinpei",
+      "kataAoNumber": 92,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-kata_bronze_1",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "lehner-tamara-aut",
+      "aoAthleteId": "roversi-elena-ita",
+      "kataAka": "Chibana No Kushanku",
+      "kataAkaNumber": 9,
+      "kataAo": "Chatanyara Kushanku",
+      "kataAoNumber": 8,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 3,
+        "ao": 2
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-kata_bronze_2",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "bui-mai-linh-fra",
+      "aoAthleteId": "fernandes-natacha-por",
+      "kataAka": "Suparinpei",
+      "kataAkaNumber": 92,
+      "kataAo": "Suparinpei",
+      "kataAoNumber": 92,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 4,
+        "ao": 1
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-kata_final",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "mateus-vasco-por",
+      "aoAthleteId": "almosawi-sayed-salman-kuw",
+      "kataAka": "Papuren",
+      "kataAkaNumber": 68,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-kata_bronze_1",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "arnone-federico-ita",
+      "aoAthleteId": "di-rubba-luigi-ita",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-kata_bronze_2",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "oiwa-kent-aus",
+      "aoAthleteId": "pinheiro-juan-bra",
+      "kataAka": "Papuren",
+      "kataAkaNumber": 68,
+      "kataAo": "Suparinpei",
+      "kataAoNumber": 92,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-team-kata_final",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "team-chinese-taipei-tpe",
+      "aoAthleteId": "team-france-fra",
+      "kataAka": "Ohan",
+      "kataAkaNumber": 63,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 3,
+        "ao": 2
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-team-kata_bronze_1",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-hong-kong-china-hkg",
+      "aoAthleteId": "team-portugal-por",
+      "kataAka": "Tomari Bassai",
+      "kataAkaNumber": 97,
+      "kataAo": "Nipaipo",
+      "kataAoNumber": 61,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 3,
+        "ao": 2
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-female-team-kata_bronze_2",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-turkiye-tur",
+      "aoAthleteId": "team-italy-ita",
+      "kataAka": "Ohan",
+      "kataAkaNumber": 63,
+      "kataAo": "Ohan",
+      "kataAoNumber": 63,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-team-kata_final",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "team-kuwait-kuw",
+      "aoAthleteId": "team-c-t-r-campania-ita",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-team-kata_bronze_1",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-waseda-university-jpn",
+      "aoAthleteId": "team-portugal-por",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Seisan",
+      "kataAoNumber": 86,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "karate-one-series-a-salzburg-2026_senior-male-team-kata_bronze_2",
+      "competitionId": "karate-one-series-a-salzburg-2026",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-turkiye-tur",
+      "aoAthleteId": "team-italy-ita",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1187&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 2,
+        "ao": 3
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-female-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-female-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "khamis-jana-egy",
+      "aoAthleteId": "en-nesyry-aya-mar",
+      "kataAka": "Gojushiho Sho",
+      "kataAkaNumber": 21,
+      "kataAo": "Gankaku",
+      "kataAoNumber": 15,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 7,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-female-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-female-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "kgosikoma-centy-bot",
+      "aoAthleteId": "dahleb-narimene-alg",
+      "kataAka": "Gojushiho",
+      "kataAkaNumber": 19,
+      "kataAo": "Gojushiho Dai",
+      "kataAoNumber": 20,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 7
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-female-kata_bronze_2",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-female-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "van-boom-danica-rsa",
+      "aoAthleteId": "ishimwe-sifa-alice-bdi",
+      "kataAka": "Suparinpei",
+      "kataAkaNumber": 92,
+      "kataAo": "Enpi",
+      "kataAoNumber": 12,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 2
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "benmakhlouf-saber-alg",
+      "aoAthleteId": "elghobashy-mostafa-egy",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 2,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 6 jueces. SportData no publica el kata de este combate."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "rchouq-adam-mar",
+      "aoAthleteId": "kwitonda-masimango-cod",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Kanku Sho",
+      "kataAoNumber": 41,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 7,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-kata_bronze_2",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "sanou-samuel-bur",
+      "aoAthleteId": "alturki-hussin-lba",
+      "kataAka": "Chatanyara Kushanku",
+      "kataAkaNumber": 8,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 3,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-female-team-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "team-egypt-female-kata-team-egy",
+      "aoAthleteId": "team-morocco-mar",
+      "kataAka": "Gojushiho Sho",
+      "kataAkaNumber": 21,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 6,
+        "ao": 1
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-female-team-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-zambia-zam",
+      "aoAthleteId": "team-algeria-alg",
+      "kataAka": "Anan",
+      "kataAkaNumber": 1,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 7
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-team-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "team-algeria-alg",
+      "aoAthleteId": "team-morocco-mar",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 6
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces. SportData no publica el kata de este combate."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-team-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-egypt-male-kata-team-egy",
+      "aoAthleteId": "team-rwanda-rwa",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 7,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_senior-male-team-kata_bronze_2",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "senior-male-team-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "team-south-africa-rsa",
+      "aoAthleteId": "team-democratic-rep-of-the-congo-cod",
+      "kataAka": "Kururunfa",
+      "kataAkaNumber": 47,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 7
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-female-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-female-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "lesly-carelle-tueno-fotso-cmr",
+      "aoAthleteId": "elshorbagy-alaa-egy",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Suparinpei",
+      "kataAoNumber": 92,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 7
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-female-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "jagasur-nyska-shreya-rsa",
+      "aoAthleteId": "ikuku-ruvej-cod",
+      "kataAka": "Papuren",
+      "kataAkaNumber": 68,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 7,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-female-kata_bronze_2",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "guesmi-douaa-tun",
+      "aoAthleteId": "ghodbane-hibat-allah-alg",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 6
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces. SportData no publica el kata de este combate."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-male-kata_final",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-male-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "chakir-abderrahmane-mar",
+      "aoAthleteId": "dahy-ali-egy",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Gojushiho Dai",
+      "kataAoNumber": 20,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 7
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-male-kata_bronze_1",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "barry-ismaila-sen",
+      "aoAthleteId": "elabasi-abdulrahim-lba",
+      "kataAka": "Unsu",
+      "kataAkaNumber": 99,
+      "kataAo": "Gojushiho Dai",
+      "kataAoNumber": 20,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 2,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "ufak-cadet-junior-senior-championships-2026-algiers_u21-male-kata_bronze_2",
+      "competitionId": "ufak-cadet-junior-senior-championships-2026-algiers",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "loucif-mouhamed-louai-alg",
+      "aoAthleteId": "daniel-bofelo-bot",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1211&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 7,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 7 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-female-kata_final",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-female-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "baharijavadhesari-ailin-iri",
+      "aoAthleteId": "donny-ivy-olivera-mas",
+      "kataAka": "Gojushiho Sho",
+      "kataAkaNumber": 21,
+      "kataAo": "Chatanyara Kushanku",
+      "kataAoNumber": 8,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-female-kata_bronze_1",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "lin-ting-chieh-tpe",
+      "aoAthleteId": "chu-on-kei-mac",
+      "kataAka": "Kousoukun Sho",
+      "kataAkaNumber": 46,
+      "kataAo": "Chatanyara Kushanku",
+      "kataAoNumber": 8,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-female-kata_bronze_2",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "alandijani-jouri-ksa",
+      "aoAthleteId": "ete-lipin-ind",
+      "kataAka": "Papuren",
+      "kataAkaNumber": 68,
+      "kataAo": "Chibana No Kushanku",
+      "kataAoNumber": 9,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 4,
+        "ao": 1
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-male-kata_final",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-male-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "POOLWINNER_TREE",
+      "akaAthleteId": "rami-fawzi-abu-al-haija-kareem-uae",
+      "aoAthleteId": "hishamadi-muhammad-arif-hafizi-mas",
+      "kataAka": "Kanku Sho",
+      "kataAkaNumber": 41,
+      "kataAo": "Suparinpei",
+      "kataAoNumber": 92,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-male-kata_bronze_1",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "wang-yu-tse-tpe",
+      "aoAthleteId": "nadimighasroldasht-alireza-iri",
+      "kataAka": "Chibana No Kushanku",
+      "kataAkaNumber": 9,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan_u21-male-kata_bronze_2",
+      "competitionId": "the-24th-asian-cadet-junior-u21-championship-2026-amman-jordan",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "alawaisheh-faris-jor",
+      "aoAthleteId": "alsayed-mohammed-ksa",
+      "kataAka": "Gojushiho Sho",
+      "kataAkaNumber": 21,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1204&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 5,
+        "ao": 0
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-female-kata_final",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-female-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "raafat-jana-egy",
+      "aoAthleteId": "elezaby-mariam-egy",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-female-kata_bronze_1",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "vella-jessica-mlt",
+      "aoAthleteId": "moussa-habiba-egy",
+      "kataAka": "Kanku Sho",
+      "kataAkaNumber": 41,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-female-kata_bronze_2",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-female-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "lougin-israa-trache-alg",
+      "aoAthleteId": "khamis-jana-egy",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Gojushiho Dai",
+      "kataAoNumber": 20,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-male-kata_final",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-male-kata",
+      "roundType": "FINAL",
+      "phaseFormat": "ELIMINATION",
+      "akaAthleteId": "dahy-ali-egy",
+      "aoAthleteId": "shahin-ahmed-egy",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Gojushiho Dai",
+      "kataAoNumber": 20,
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 4,
+        "ao": 1
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-male-kata_bronze_1",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_1",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "aboanza-abdulla-egy",
+      "aoAthleteId": "elsska-mohamed-hamdy-egy",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Gojushiho Sho",
+      "kataAoNumber": 21,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 1,
+        "ao": 4
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "32nd-mediterranean-championships-2026-alexandria_u21-male-kata_bronze_2",
+      "competitionId": "32nd-mediterranean-championships-2026-alexandria",
+      "categoryId": "u21-male-kata",
+      "roundType": "BRONZE_2",
+      "phaseFormat": "REPECHAGE",
+      "akaAthleteId": "manceri-abderrouf-alg",
+      "aoAthleteId": "gregoire-liam-fra",
+      "kataAka": "Gojushiho Dai",
+      "kataAkaNumber": 20,
+      "kataAo": "Unsu",
+      "kataAoNumber": 99,
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "status": "VIDEO_MISSING",
+      "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1185&ver_info_action=catauslist",
+      "judgeVotes": {
+        "aka": 0,
+        "ao": 5
+      },
+      "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
     }
   ]
 }

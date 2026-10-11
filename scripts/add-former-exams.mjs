@@ -10,7 +10,8 @@ const datasetPath = join(here, '..', 'public', 'data', 'dataset.json');
 const ds = JSON.parse(readFileSync(datasetPath, 'utf8'));
 
 const COMP_ID = 'former-exams-ekf-wkf';
-const EXAM_LABELS = ['EKF 25', 'WKF 25-1', 'WKF 25-2', 'EKF 26', 'WKF 26-1'];
+const EXAM_LABELS = ['EKF 25', 'WKF 25-1', 'WKF 25-2', 'EKF 26', 'WKF 26-1', 'WKF 26 Fujairah'];
+// `apps[i] === 0` = salió en ese examen pero no sabemos en qué posición
 
 /**
  * Cada fila del documento. `apps` = posición en cada examen (índice = EXAM_LABELS).
@@ -139,6 +140,42 @@ const ROWS = [
     winner: 'AO', cat: 'senior-male-kata',
     note: 'Sin vídeo. Atletas concretos por confirmar.',
   },
+  // ── Examen WKF Fujairah 2026 (curso de árbitros, oct 2026). Orden de las preguntas desconocido. ──
+  {
+    apps: [null, null, null, null, null, 0],
+    aka: { name: 'ESPAÑA (EQUIPO FEMENINO)', cc: 'ESP' },
+    ao: { name: 'EQUIPO FINALISTA (PREMIER LEAGUE RABAT)' },
+    winner: 'AKA', cat: 'senior-female-team-kata',
+    note: 'AKA: equipo femenino de España del 31º Campeonato Mediterráneo (Guadalajara 2025). En SportData España llevó dos equipos: B ganó a Macedonia del Norte (Papuren 23.0–21.8) y en la final A ganó a B (Unsu 24.2 vs Anan 23.9). AO: equipo de la final femenina de la Premier League de Rabat; las Premier League de Rabat 2023, 2025 y 2026 no tienen kata por equipos en SportData, por confirmar.',
+  },
+  {
+    apps: [null, null, null, null, null, 0],
+    aka: { name: "D'ONOFRIO TERRYANA", cc: 'ITA' },
+    ao: { name: 'TAILY HELVETIA', cc: 'FRA' },
+    winner: 'AKA', cat: 'senior-female-kata',
+    note: "Cruces en SportData (siempre gana D'Onofrio): Premier League Rabat 2025 (Papuren 40.1 vs Unsu 38.5), Mundial El Cairo 2025 (Papuren 41.4 vs Gankaku 39.2), EKF Yerevan 2025 (Chibana no Kushanku 42.1 vs Gankaku 41.6), final del Mediterráneo Guadalajara 2025 (Suparinpei 25.3 vs Suparinpei 24.4) y bronce de la Premier League Rabat 2026 (Suparinpei 6–1 vs Gankaku). La final del Mediterráneo y el bronce de Rabat 2026 están en la app.",
+  },
+  {
+    apps: [null, null, null, null, null, 0],
+    aka: { name: 'HONG KONG (COMPETIDOR MASCULINO)', cc: 'HKG' },
+    ao: { name: 'NISHIYAMA KAKERU', cc: 'JPN' },
+    winner: 'AO', cat: 'senior-male-kata',
+    note: 'En SportData (2024–2026) no hay ningún combate de un competidor de Hong Kong contra Nishiyama: emparejamiento montado para el examen con dos vídeos distintos. Competidor de Hong Kong por confirmar.',
+  },
+  {
+    apps: [null, null, null, null, null, 0],
+    aka: { name: 'ESPAÑA (EQUIPO MASCULINO)', cc: 'ESP' },
+    ao: { name: 'BURKINA FASO (EQUIPO MASCULINO)', cc: 'BUR' },
+    winner: 'AKA', cat: 'senior-male-team-kata',
+    note: 'AKA: equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025); en SportData solo hubo un combate, España A (Paiku 24.1) contra España B (Unsu 23.5). AO: equipo de Burkina Faso, sin rastro en SportData 2024–2026 (solo aparece su equipo femenino en el UFAK 2026). Oriol tiene los dos vídeos.',
+  },
+  {
+    apps: [null, null, null, null, null, 0],
+    aka: { name: 'KIYUNA RYO (JOVEN)', cc: 'JPN' },
+    ao: { name: 'KIYUNA RYO (MAYOR)', cc: 'JPN' },
+    winner: 'AO', cat: 'senior-male-kata',
+    note: 'Encuentro inventado para el examen: Kiyuna de joven contra Kiyuna en una etapa posterior. Sin vídeo, solo para recordarlo.',
+  },
 ];
 
 const slug = (s) =>
@@ -174,13 +211,16 @@ const mkAthlete = ({ name, cc }) => {
 };
 
 let added = 0;
+const FORCE = process.argv.includes('--force');
 ROWS.forEach((row, i) => {
   const n = String(i + 1).padStart(2, '0');
   const id = `${COMP_ID}_${n}`;
+  // los encuentros que ya existen conservan lo catalogado (vídeo, tiempos, notas del usuario); --force para regenerarlos
+  if (perfs.has(id) && !FORCE) return;
   const akaId = mkAthlete(row.aka);
   const aoId = mkAthlete(row.ao);
   const examAppearances = row.apps
-    .map((order, idx) => (order ? { exam: EXAM_LABELS[idx], order } : null))
+    .map((order, idx) => (order === 0 ? { exam: EXAM_LABELS[idx] } : order ? { exam: EXAM_LABELS[idx], order } : null))
     .filter(Boolean);
 
   const perf = {

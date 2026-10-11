@@ -13,7 +13,12 @@ const ath = Object.fromEntries(ds.athletes.map((a) => [a.id, a]));
 const nm = (a) => (a ? (a.firstName ? `${a.firstName} ${a.lastName ?? ''}`.trim() : a.displayName) : '?');
 const hms = (s) => { s = Math.max(0, s | 0); return [Math.floor(s / 3600), Math.floor((s % 3600) / 60), s % 60].map((v, i) => (i ? String(v).padStart(2, '0') : v)).join(':'); };
 
-const miss = ds.performances.filter((p) => p.videoId && p.startSeconds != null && p.endSeconds != null && !have.has(p.id) && !have.has(p.videoId));
+const missMain = ds.performances.filter((p) => p.videoId && p.startSeconds != null && p.endSeconds != null && !have.has(p.id) && !have.has(p.videoId));
+// AO en otro vídeo (exámenes): clip propio "<id>_ao.mp4" con el tramo de AO
+const missAo = ds.performances
+  .filter((p) => p.aoVideoId && p.aoVideoId !== p.videoId && p.aoStartSeconds != null && p.aoEndSeconds != null && !have.has(`${p.id}_ao`) && !have.has(p.aoVideoId))
+  .map((p) => ({ ...p, id: `${p.id}_ao`, videoId: p.aoVideoId, startSeconds: p.aoStartSeconds, endSeconds: p.aoEndSeconds, akaAthleteId: p.aoAthleteId, aoOnly: true }));
+const miss = [...missMain, ...missAo];
 let md = `# Vídeos pendientes de descargar (${new Date().toISOString().slice(0, 10)})\n\nCorte = del inicio al fin indicado. Guardar en la carpeta \`videos\` con el nombre exacto.\n`;
 let csv = 'archivo;url;inicio;fin;encuentro\n';
 const byComp = {};
@@ -22,7 +27,7 @@ for (const [cid, ps] of Object.entries(byComp)) {
   md += `\n## ${comps[cid]?.name ?? cid}\n\n| Archivo | Vídeo | Inicio | Fin | Encuentro |\n|---|---|---|---|---|\n`;
   console.log(`\n## ${comps[cid]?.name ?? cid}`);
   for (const p of ps.sort((a, b) => a.videoId.localeCompare(b.videoId) || a.startSeconds - b.startSeconds)) {
-    const who = `${nm(ath[p.akaAthleteId])} vs ${nm(ath[p.aoAthleteId])}`;
+    const who = p.aoOnly ? `solo AO: ${nm(ath[p.aoAthleteId])}` : `${nm(ath[p.akaAthleteId])} vs ${nm(ath[p.aoAthleteId])}`;
     const url = `https://www.youtube.com/watch?v=${p.videoId}&t=${p.startSeconds}s`;
     md += `| ${p.id}.mp4 | [${p.videoId}](${url}) | ${hms(p.startSeconds)} | ${hms(p.endSeconds)} | ${who} |\n`;
     csv += [`${p.id}.mp4`, url, hms(p.startSeconds), hms(p.endSeconds), who].join(';') + '\n';

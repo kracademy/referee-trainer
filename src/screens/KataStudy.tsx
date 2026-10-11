@@ -50,12 +50,14 @@ export default function KataStudy() {
     setLocal(undefined);
     (async () => {
       if (!playing?.perf.videoId) { if (alive) setLocal(null); return; }
-      const clipFile = await findLocalVideo([playing.perf.id]);
-      const file = clipFile ?? (await findLocalVideo([playing.perf.videoId]));
+      // AO en otro vídeo (exámenes): clip "<id>_ao.mp4" o vídeo completo "<aoVideoId>.mp4"
+      const aoOther = playing.side === 'AO' && !!playing.perf.aoVideoId && playing.perf.aoVideoId !== playing.perf.videoId;
+      const clipFile = await findLocalVideo([aoOther ? `${playing.perf.id}_ao` : playing.perf.id]);
+      const file = clipFile ?? (await findLocalVideo([aoOther ? playing.perf.aoVideoId! : playing.perf.videoId]));
       if (!alive) return;
       if (!file) { setLocal(null); return; }
       objUrl = URL.createObjectURL(file);
-      setLocal({ url: objUrl, offset: clipFile ? (playing.perf.startSeconds ?? 0) : 0 });
+      setLocal({ url: objUrl, offset: clipFile ? ((aoOther ? playing.perf.aoStartSeconds : playing.perf.startSeconds) ?? 0) : 0 });
     })();
     return () => { alive = false; if (objUrl) URL.revokeObjectURL(objUrl); };
   }, [playing]);
@@ -138,7 +140,7 @@ export default function KataStudy() {
           <div className="player-wrap">
             <YouTubePlayer
               key={playerKey}
-              videoId={playing.perf.videoId!}
+              videoId={(playing.side === 'AO' && playing.perf.aoVideoId) || playing.perf.videoId!}
               startSeconds={playing.start}
               endSeconds={playing.end}
               controls={true}

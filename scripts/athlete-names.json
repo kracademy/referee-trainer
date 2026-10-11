@@ -46,5 +46,21 @@
   "kiri-mishima-jpn": {
     "firstName": "Kiri",
     "lastName": "Mishima"
+  },
+  "lesly-carelle-tueno-fotso-cmr": {
+    "firstName": "Lesly Carelle",
+    "lastName": "Tueno Fotso"
+  },
+  "ghodbane-hibat-allah-alg": {
+    "firstName": "Hibat Allah",
+    "lastName": "Ghodbane"
+  },
+  "loucif-mouhamed-louai-alg": {
+    "firstName": "Mouhamed Louai",
+    "lastName": "Loucif"
+  },
+  "daniel-bofelo-bot": {
+    "firstName": "Daniel",
+    "lastName": "Bofelo"
   }
 }

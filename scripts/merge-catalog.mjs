@@ -87,6 +87,7 @@ for (const [key, list] of groups) {
     // sub-clips por atleta (autoría del usuario: siempre se aplican)
     if (e.akaStartSeconds != null) { p.akaStartSeconds = e.akaStartSeconds; p.akaEndSeconds = e.akaEndSeconds; }
     if (e.aoStartSeconds != null) { p.aoStartSeconds = e.aoStartSeconds; p.aoEndSeconds = e.aoEndSeconds; }
+    if (e.aoVideoId) p.aoVideoId = e.aoVideoId;
     // resultado ajustado + nota del usuario + former exam
     applyFlags(e, p);
     // puntuaciones oficiales añadidas por el usuario (solo si el dataset no las tiene)

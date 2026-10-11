@@ -134,7 +134,7 @@ export interface Performance {
   /** Encuentro que salió en exámenes EKF/WKF de otros años: entrenable aparte (incluso sin vídeo, de memoria). */
   formerExam?: boolean;
   /** En qué exámenes salió y en qué posición (p. ej. [{exam:'EKF 25', order:6}]). */
-  examAppearances?: { exam: string; order: number }[];
+  examAppearances?: { exam: string; order?: number }[];
   /** Vídeo distinto para la actuación de AO (en exámenes a veces cada atleta viene de un vídeo). */
   aoVideoId?: string;
   /** Marcado por el usuario para la lista de repaso (igualado, discrepo de los jueces, quiero verlo con otros...). */
@@ -209,6 +209,8 @@ export interface CatalogExport {
     akaEndSeconds?: number;
     aoStartSeconds?: number;
     aoEndSeconds?: number;
+    /** Vídeo distinto para la actuación de AO (exámenes montados con dos vídeos). */
+    aoVideoId?: string;
     /** Resultado ajustado marcado a mano + nota que se muestra tras decidir. */
     closeResult?: boolean;
     note?: string;

@@ -86,12 +86,13 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
       if (!perf?.id || !clipVideo) { if (alive) setLocal(null); return; }
       // AO desde otro vídeo (exámenes): solo vale el archivo de ese vídeo, con tiempos absolutos
       const aoOther = clipVideo === perf.aoVideoId && perf.aoVideoId !== perf.videoId;
-      const clipFile = aoOther ? null : await findLocalVideo([perf.id]);
+      // clip propio: "<id>.mp4" (empieza en el inicio del encuentro) o "<id>_ao.mp4" (empieza en el inicio de AO)
+      const clipFile = await findLocalVideo([aoOther ? `${perf.id}_ao` : perf.id]);
       const file = clipFile ?? (await findLocalVideo([clipVideo]));
       if (!alive) return;
       if (!file) { setLocal(null); return; }
       objUrl = URL.createObjectURL(file);
-      setLocal({ url: objUrl, offset: clipFile ? (perf.startSeconds ?? 0) : 0 });
+      setLocal({ url: objUrl, offset: clipFile ? ((aoOther ? perf.aoStartSeconds : perf.startSeconds) ?? 0) : 0 });
     })();
     return () => {
       alive = false;
@@ -253,7 +254,7 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
           {perf.examAppearances && perf.examAppearances.length > 0 && (
             <div className="meta">
               🎓 Salió en {perf.examAppearances.length} examen{perf.examAppearances.length !== 1 ? 'es' : ''}:{' '}
-              {perf.examAppearances.map((a) => `${a.exam} (#${a.order})`).join(' · ')}
+              {perf.examAppearances.map((a) => (a.order ? `${a.exam} (#${a.order})` : a.exam)).join(' · ')}
             </div>
           )}
           <div className="who" style={split && phase === 'playingAo' ? { opacity: 0.45 } : undefined}>
