@@ -153,7 +153,7 @@ const ROWS = [
     aka: { name: "D'ONOFRIO TERRYANA", cc: 'ITA' },
     ao: { name: 'TAILY HELVETIA', cc: 'FRA' },
     winner: 'AKA', cat: 'senior-female-kata',
-    note: "Cruces en SportData (siempre gana D'Onofrio): Premier League Rabat 2025 (Papuren 40.1 vs Unsu 38.5), Mundial El Cairo 2025 (Papuren 41.4 vs Gankaku 39.2), EKF Yerevan 2025 (Chibana no Kushanku 42.1 vs Gankaku 41.6), final del Mediterráneo Guadalajara 2025 (Suparinpei 25.3 vs Suparinpei 24.4) y bronce de la Premier League Rabat 2026 (Suparinpei 6–1 vs Gankaku). La final del Mediterráneo y el bronce de Rabat 2026 están en la app.",
+    note: "Examen de febrero de 2026: candidatos anteriores, siempre gana D'Onofrio. 1) Final del Europeo EKF Yerevan 2025 (mayo 2025): Taily Gankaku 41.6 vs D'Onofrio Chibana no Kushanku 42.1, ya en la app con vídeo. 2) Mundial El Cairo 2025 (27-30 nov 2025), 1ª ronda del cuadro de ganadores de pool (octavos): Taily Gankaku 39.2 vs D'Onofrio Papuren 41.4. 3) Premier League Rabat 2025 (30 may 2025), liguilla del Pool 1 con Xenou y Lo Sum Man: Taily Unsu 38.5 vs D'Onofrio Papuren 40.1. Descartados: Mediterráneo 2025 (confirmado que no) y Rabat 2026 (posterior al examen).",
   },
   {
     apps: [null, null, null, null, null, 0],
