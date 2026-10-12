@@ -147,6 +147,16 @@ export interface Performance {
   notes?: string;
 }
 
+/**
+ * AO tiene clip propio "<id>_ao.mp4": viene de otro vídeo o, en montajes de examen con un solo vídeo,
+ * su tramo queda fuera del tramo del encuentro (que entonces es solo el de AKA).
+ */
+export function aoOwnClip(p: Pick<Performance, 'videoId' | 'aoVideoId' | 'startSeconds' | 'endSeconds' | 'aoStartSeconds'>): boolean {
+  if (p.aoVideoId && p.aoVideoId !== p.videoId) return true;
+  return p.aoStartSeconds != null && p.startSeconds != null && p.endSeconds != null &&
+    (p.aoStartSeconds < p.startSeconds || p.aoStartSeconds >= p.endSeconds);
+}
+
 /** Votos con margen de 1 (4–3, 3–2…): resultado ajustado automático. */
 export function isCloseResult(p: Pick<Performance, 'closeResult' | 'judgeVotes'>): boolean {
   if (p.closeResult) return true;

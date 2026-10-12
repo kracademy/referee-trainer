@@ -14,10 +14,12 @@ const nm = (a) => (a ? (a.firstName ? `${a.firstName} ${a.lastName ?? ''}`.trim(
 const hms = (s) => { s = Math.max(0, s | 0); return [Math.floor(s / 3600), Math.floor((s % 3600) / 60), s % 60].map((v, i) => (i ? String(v).padStart(2, '0') : v)).join(':'); };
 
 const missMain = ds.performances.filter((p) => p.videoId && p.startSeconds != null && p.endSeconds != null && !have.has(p.id) && !have.has(p.videoId));
-// AO en otro vídeo (exámenes): clip propio "<id>_ao.mp4" con el tramo de AO
+// AO con clip propio "<id>_ao.mp4" (exámenes): en otro vídeo o fuera del tramo del encuentro (= aoOwnClip de la app)
+const aoOwnClip = (p) => (p.aoVideoId && p.aoVideoId !== p.videoId) ||
+  (p.aoStartSeconds != null && p.startSeconds != null && p.endSeconds != null && (p.aoStartSeconds < p.startSeconds || p.aoStartSeconds >= p.endSeconds));
 const missAo = ds.performances
-  .filter((p) => p.aoVideoId && p.aoVideoId !== p.videoId && p.aoStartSeconds != null && p.aoEndSeconds != null && !have.has(`${p.id}_ao`) && !have.has(p.aoVideoId))
-  .map((p) => ({ ...p, id: `${p.id}_ao`, videoId: p.aoVideoId, startSeconds: p.aoStartSeconds, endSeconds: p.aoEndSeconds, akaAthleteId: p.aoAthleteId, aoOnly: true }));
+  .filter((p) => aoOwnClip(p) && p.aoStartSeconds != null && p.aoEndSeconds != null && !have.has(`${p.id}_ao`) && !have.has(p.aoVideoId ?? p.videoId))
+  .map((p) => ({ ...p, id: `${p.id}_ao`, videoId: p.aoVideoId ?? p.videoId, startSeconds: p.aoStartSeconds, endSeconds: p.aoEndSeconds, akaAthleteId: p.aoAthleteId, aoOnly: true }));
 const miss = [...missMain, ...missAo];
 let md = `# Vídeos pendientes de descargar (${new Date().toISOString().slice(0, 10)})\n\nCorte = del inicio al fin indicado. Guardar en la carpeta \`videos\` con el nombre exacto.\n`;
 let csv = 'archivo;url;inicio;fin;encuentro\n';

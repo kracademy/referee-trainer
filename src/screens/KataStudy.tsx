@@ -5,7 +5,7 @@ import { roundLabel } from '../logic/format';
 import YouTubePlayer from '../components/YouTubePlayer';
 import LocalVideoPlayer from '../components/LocalVideoPlayer';
 import { findLocalVideo } from '../logic/localVideos';
-import type { Performance } from '../db/types';
+import { aoOwnClip, type Performance } from '../db/types';
 import ScoutSection from './ScoutSection';
 
 /** Una ejecución concreta de un kata: atleta + lado + clip. */
@@ -50,10 +50,10 @@ export default function KataStudy() {
     setLocal(undefined);
     (async () => {
       if (!playing?.perf.videoId) { if (alive) setLocal(null); return; }
-      // AO en otro vídeo (exámenes): clip "<id>_ao.mp4" o vídeo completo "<aoVideoId>.mp4"
-      const aoOther = playing.side === 'AO' && !!playing.perf.aoVideoId && playing.perf.aoVideoId !== playing.perf.videoId;
+      // AO con clip propio (exámenes): "<id>_ao.mp4" o vídeo completo "<aoVideoId>.mp4"
+      const aoOther = playing.side === 'AO' && aoOwnClip(playing.perf);
       const clipFile = await findLocalVideo([aoOther ? `${playing.perf.id}_ao` : playing.perf.id]);
-      const file = clipFile ?? (await findLocalVideo([aoOther ? playing.perf.aoVideoId! : playing.perf.videoId]));
+      const file = clipFile ?? (await findLocalVideo([(aoOther && playing.perf.aoVideoId) || playing.perf.videoId]));
       if (!alive) return;
       if (!file) { setLocal(null); return; }
       objUrl = URL.createObjectURL(file);

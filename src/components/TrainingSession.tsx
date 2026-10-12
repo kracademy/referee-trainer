@@ -2,7 +2,7 @@ import { athleteName } from '../logic/names';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { db, LOCAL_USER_ID } from '../db/db';
 import type { OfficialResultType, Performance, Winner } from '../db/types';
-import { isCloseResult, officialAverage } from '../db/types';
+import { aoOwnClip, isCloseResult, officialAverage } from '../db/types';
 import YouTubePlayer, { type YouTubePlayerHandle } from './YouTubePlayer';
 import LocalVideoPlayer from './LocalVideoPlayer';
 import ReviewToggle from './ReviewToggle';
@@ -70,6 +70,8 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
   const clipEnd = !split ? perf?.endSeconds : onAkaClip ? perf?.akaEndSeconds : perf?.aoEndSeconds;
   // en exámenes, la actuación de AO puede venir de otro vídeo
   const clipVideo = (!onAkaClip && perf?.aoVideoId) || perf?.videoId;
+  // la actuación de AO tiene su propio clip local (otro vídeo o fuera del tramo del encuentro)
+  const onAoOwnClip = !!perf && split && !onAkaClip && aoOwnClip(perf);
 
   // Al pasar a valorar (fin de AKA, decisión, resultado) el vídeo se PARA, sea local o de YouTube
   useEffect(() => {
@@ -84,9 +86,8 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
     setLocal(undefined);
     (async () => {
       if (!perf?.id || !clipVideo) { if (alive) setLocal(null); return; }
-      // AO desde otro vídeo (exámenes): solo vale el archivo de ese vídeo, con tiempos absolutos
-      const aoOther = clipVideo === perf.aoVideoId && perf.aoVideoId !== perf.videoId;
       // clip propio: "<id>.mp4" (empieza en el inicio del encuentro) o "<id>_ao.mp4" (empieza en el inicio de AO)
+      const aoOther = onAoOwnClip;
       const clipFile = await findLocalVideo([aoOther ? `${perf.id}_ao` : perf.id]);
       const file = clipFile ?? (await findLocalVideo([clipVideo]));
       if (!alive) return;
@@ -99,7 +100,7 @@ export default function TrainingSession({ queue, data, onExit }: Props) {
       if (objUrl) URL.revokeObjectURL(objUrl);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [perf?.id, clipVideo]);
+  }, [perf?.id, clipVideo, onAoOwnClip]);
 
   if (!perf) {
     return (

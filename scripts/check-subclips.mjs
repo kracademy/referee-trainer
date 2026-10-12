@@ -26,7 +26,9 @@ for (const p of ds.performances) {
     if (overlap > 0) issues.push('AKA y AO solapan');
   }
   if (p.startSeconds != null && p.akaStartSeconds != null && p.akaStartSeconds < p.startSeconds - 1) issues.push('AKA antes del clip');
-  if (p.aoVideoId == null && p.endSeconds != null && p.aoEndSeconds != null && p.aoEndSeconds > p.endSeconds + 1) issues.push('AO despues del clip');
+  // AO fuera del tramo del encuentro = montaje con clip propio de AO (solo es error si empieza dentro y acaba fuera)
+  const aoInside = p.aoStartSeconds != null && p.startSeconds != null && p.aoStartSeconds >= p.startSeconds && p.aoStartSeconds < p.endSeconds;
+  if (p.aoVideoId == null && aoInside && p.aoEndSeconds > p.endSeconds + 1) issues.push('AO despues del clip');
   const durA = p.akaEndSeconds - p.akaStartSeconds, durO = p.aoEndSeconds - p.aoStartSeconds;
   if (durA < 60 || durA > 420) issues.push(`duracion AKA rara (${durA}s)`);
   if (durO < 60 || durO > 420) issues.push(`duracion AO rara (${durO}s)`);

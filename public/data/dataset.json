@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T19:51:53.567Z",
+  "generatedAt": "2026-10-12T20:24:38.253Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -14910,13 +14910,18 @@
       "kataAoNumber": 92,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1067&ver_info_action=catauslist",
       "officialScoreAka": 24.4,
       "officialScoreAo": 25.3,
       "judgesCount": 5,
       "videoId": "sbqsd0tA6yk",
-      "startSeconds": 3
+      "startSeconds": 3,
+      "endSeconds": 462,
+      "akaStartSeconds": 3,
+      "akaEndSeconds": 200,
+      "aoStartSeconds": 232,
+      "aoEndSeconds": 462
     },
     {
       "id": "31st-mediterranean-championships-2025-guadalajara_senior-female-kata_bronze_1",
@@ -22652,7 +22657,7 @@
       "kataAoNumber": 41,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=885&ver_info_action=catauslist",
       "officialScoreAka": 39.8,
       "officialScoreAo": 40.3,
@@ -22660,7 +22665,10 @@
       "videoId": "34ZRnW1Mnhw",
       "startSeconds": 13,
       "akaStartSeconds": 13,
-      "aoStartSeconds": 279
+      "aoStartSeconds": 279,
+      "endSeconds": 385,
+      "akaEndSeconds": 253,
+      "aoEndSeconds": 385
     },
     {
       "id": "wkf-cadet-junior-and-u21-world-championships-2024-venice_u21-male-kata_bronze_2",
@@ -22676,7 +22684,7 @@
       "kataAoNumber": 21,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=885&ver_info_action=catauslist",
       "officialScoreAka": 42.2,
       "officialScoreAo": 40.9,
@@ -22684,7 +22692,10 @@
       "videoId": "_cgKSHA9pKk",
       "startSeconds": 5,
       "akaStartSeconds": 5,
-      "aoStartSeconds": 154
+      "aoStartSeconds": 154,
+      "endSeconds": 318,
+      "akaEndSeconds": 132,
+      "aoEndSeconds": 318
     },
     {
       "id": "the-22nd-asian-cadet-junior-u21-championship-2024-manila-philippines_u21-female-kata_final",
@@ -25082,9 +25093,17 @@
         }
       ],
       "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 2, tatami 4 (los dos en el mismo vídeo). Hoja del examen de Bielsko-Biała: AKA 8.0, AO 8.5. El PDF pone \"H. Hung (HKG)\": se asume Hung Ho Wai Howard.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "75DGz9cXyqs",
-      "startSeconds": 3768
+      "startSeconds": 3768,
+      "endSeconds": 4211,
+      "akaStartSeconds": 3768,
+      "akaEndSeconds": 4020,
+      "aoStartSeconds": 4060,
+      "aoEndSeconds": 4211,
+      "officialScoreAka": 39.9,
+      "officialScoreAo": 42.3,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_23",
@@ -25105,12 +25124,15 @@
         }
       ],
       "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024. En la realidad Lueck perdió con Elmowafi y Ziad con Ishikawa.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "34ZRnW1Mnhw",
       "startSeconds": 13,
       "aoVideoId": "_cgKSHA9pKk",
       "akaStartSeconds": 13,
-      "aoStartSeconds": 154
+      "aoStartSeconds": 154,
+      "endSeconds": 253,
+      "akaEndSeconds": 253,
+      "aoEndSeconds": 318
     },
     {
       "id": "former-exams-ekf-wkf_24",
@@ -25131,12 +25153,15 @@
         }
       ],
       "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024 (los dos ganaron su bronce).",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "_cgKSHA9pKk",
       "startSeconds": 5,
       "aoVideoId": "34ZRnW1Mnhw",
       "akaStartSeconds": 5,
-      "aoStartSeconds": 279
+      "aoStartSeconds": 279,
+      "endSeconds": 132,
+      "akaEndSeconds": 132,
+      "aoEndSeconds": 385
     },
     {
       "id": "former-exams-ekf-wkf_27",
@@ -25158,9 +25183,14 @@
       ],
       "closeResult": true,
       "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. Resultado sin confirmar: de momento gana Iwamoto (AKA).",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "Kju_dQdMeuk",
-      "startSeconds": 1673
+      "startSeconds": 1673,
+      "endSeconds": 2097,
+      "akaStartSeconds": 1673,
+      "akaEndSeconds": 1853,
+      "aoStartSeconds": 1870,
+      "aoEndSeconds": 2097
     },
     {
       "id": "former-exams-ekf-wkf_28",
@@ -25181,9 +25211,17 @@
         }
       ],
       "notes": "Final del 31º Campeonato Mediterráneo (Guadalajara 2025): Taily 24.4, D'Onofrio 25.3.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "sbqsd0tA6yk",
-      "startSeconds": 3
+      "startSeconds": 3,
+      "endSeconds": 462,
+      "akaStartSeconds": 3,
+      "akaEndSeconds": 200,
+      "aoStartSeconds": 232,
+      "aoEndSeconds": 462,
+      "officialScoreAka": 24.4,
+      "officialScoreAo": 25.3,
+      "judgesCount": 5
     },
     {
       "id": "former-exams-ekf-wkf_29",
@@ -25205,11 +25243,14 @@
       ],
       "closeResult": true,
       "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75. Resultado sin confirmar: de momento gana Neto con Chatanyara Kushanku (AO).",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "tIZWs1ysRc0",
       "startSeconds": 875,
       "akaStartSeconds": 875,
-      "aoStartSeconds": 1610
+      "aoStartSeconds": 1610,
+      "endSeconds": 1117,
+      "akaEndSeconds": 1117,
+      "aoEndSeconds": 1783
     },
     {
       "id": "former-exams-ekf-wkf_30",
@@ -25230,11 +25271,14 @@
         }
       ],
       "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2): AO sale antes que AKA en el vídeo.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "tIZWs1ysRc0",
       "startSeconds": 3922,
       "akaStartSeconds": 3922,
-      "aoStartSeconds": 1142
+      "aoStartSeconds": 1142,
+      "endSeconds": 4106,
+      "akaEndSeconds": 4106,
+      "aoEndSeconds": 1299
     },
     {
       "id": "former-exams-ekf-wkf_25",
@@ -25255,12 +25299,15 @@
         }
       ],
       "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). Sin confirmar si fue Gojushiho Dai (22:56) o Sho (2:35) del mismo vídeo: de momento Dai.",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "xl4xnmkY9NA",
       "aoVideoId": "G8Y76Wwhb8k",
-      "startSeconds": 0,
-      "akaStartSeconds": 0,
-      "aoStartSeconds": 1376
+      "startSeconds": 2,
+      "akaStartSeconds": 2,
+      "aoStartSeconds": 1376,
+      "endSeconds": 128,
+      "akaEndSeconds": 128,
+      "aoEndSeconds": 1543
     },
     {
       "id": "former-exams-ekf-wkf_26",
@@ -25282,12 +25329,18 @@
       ],
       "closeResult": true,
       "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. Resultado sin confirmar: de momento gana Ariel Torres (AO).",
-      "status": "VIDEO_CATALOGUED",
+      "status": "READY",
       "videoId": "DRTtqFtEfXI",
       "aoVideoId": "a5Jpst_0JIM",
       "startSeconds": 0,
       "akaStartSeconds": 0,
-      "aoStartSeconds": 201
+      "aoStartSeconds": 201,
+      "endSeconds": 224,
+      "akaEndSeconds": 224,
+      "aoEndSeconds": 335,
+      "officialScoreAka": 42.4,
+      "officialScoreAo": 43.3,
+      "judgesCount": 5
     }
   ]
 }
