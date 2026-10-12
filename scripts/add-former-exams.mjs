@@ -195,9 +195,9 @@ const ROWS = [
   {
     apps: [null, null, null, null, null, null, 3],
     aka: { name: 'COLOMBIA (EQUIPO FEMENINO)', cc: 'COL', kata: 'Gankaku', video: 'xl4xnmkY9NA' },
-    ao: { name: 'FRANCIA (EQUIPO FEMENINO)', cc: 'FRA', kata: 'Gojushiho Sho', video: 'G8Y76Wwhb8k', t: 155 },
+    ao: { name: 'FRANCIA (EQUIPO FEMENINO)', cc: 'FRA', kata: 'Gojushiho Dai', video: 'G8Y76Wwhb8k', t: 1376 },
     winner: 'AO', cat: 'senior-female-team-kata',
-    note: 'Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). El PDF duda entre Gojushiho Sho (minuto 2:35) y Gojushiho Dai (22:56) del mismo vídeo.',
+    note: 'Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). Sin confirmar si fue Gojushiho Dai (22:56) o Sho (2:35) del mismo vídeo: de momento Dai.',
   },
   {
     apps: [null, null, null, null, null, null, 4],
