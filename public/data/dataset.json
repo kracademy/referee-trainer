@@ -25244,7 +25244,7 @@
       "akaAthleteId": "exam-colombia-equipo-femenino-col",
       "aoAthleteId": "exam-francia-equipo-femenino-fra",
       "kataAka": "Gankaku",
-      "kataAo": "Gojushiho Sho",
+      "kataAo": "Gojushiho Dai",
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
       "formerExam": true,
@@ -25254,13 +25254,13 @@
           "order": 3
         }
       ],
-      "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). El PDF duda entre Gojushiho Sho (minuto 2:35) y Gojushiho Dai (22:56) del mismo vídeo.",
+      "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). Sin confirmar si fue Gojushiho Dai (22:56) o Sho (2:35) del mismo vídeo: de momento Dai.",
       "status": "VIDEO_CATALOGUED",
       "videoId": "xl4xnmkY9NA",
       "aoVideoId": "G8Y76Wwhb8k",
       "startSeconds": 0,
       "akaStartSeconds": 0,
-      "aoStartSeconds": 155
+      "aoStartSeconds": 1376
     },
     {
       "id": "former-exams-ekf-wkf_26",
