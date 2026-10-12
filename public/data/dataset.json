@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T09:58:47.092Z",
+  "generatedAt": "2026-10-12T19:51:53.567Z",
   "competitions": [
     {
       "id": "karate-one-series-a-guadalajara-2026",
@@ -4368,8 +4368,8 @@
       "displayName": "HUNG HO WAI HOWARD",
       "country": "Hong Kong Karate",
       "countryCode": "HKG",
-      "firstName": "Howard",
-      "lastName": "Hung Ho Wai"
+      "firstName": "Ho Wai Howard",
+      "lastName": "Hung"
     },
     {
       "id": "team-hungary-hun",
@@ -7028,12 +7028,6 @@
       "lastName": "Taily"
     },
     {
-      "id": "exam-hong-kong-competidor-masculino-hkg",
-      "displayName": "HONG KONG (COMPETIDOR MASCULINO)",
-      "country": "HKG",
-      "countryCode": "HKG"
-    },
-    {
       "id": "exam-nishiyama-kakeru-jpn",
       "displayName": "NISHIYAMA KAKERU",
       "country": "JPN",
@@ -7458,6 +7452,114 @@
       "countryCode": "FRA",
       "firstName": "Liam",
       "lastName": "Gregoire"
+    },
+    {
+      "id": "exam-hung-ho-wai-howard-hkg",
+      "displayName": "HUNG HO WAI HOWARD",
+      "country": "HKG",
+      "countryCode": "HKG",
+      "firstName": "Ho Wai Howard",
+      "lastName": "Hung"
+    },
+    {
+      "id": "exam-lueck-aidan-randall-ger",
+      "displayName": "LUECK AIDAN RANDALL",
+      "country": "GER",
+      "countryCode": "GER",
+      "firstName": "Aidan Randall",
+      "lastName": "Lueck"
+    },
+    {
+      "id": "exam-ziad-youcef-alg",
+      "displayName": "ZIAD YOUCEF",
+      "country": "ALG",
+      "countryCode": "ALG",
+      "firstName": "Youcef",
+      "lastName": "Ziad"
+    },
+    {
+      "id": "exam-ishikawa-taiga-jpn",
+      "displayName": "ISHIKAWA TAIGA",
+      "country": "JPN",
+      "countryCode": "JPN",
+      "firstName": "Taiga",
+      "lastName": "Ishikawa"
+    },
+    {
+      "id": "exam-elmowafi-abdelrahman-egy",
+      "displayName": "ELMOWAFI ABDELRAHMAN",
+      "country": "EGY",
+      "countryCode": "EGY",
+      "firstName": "Abdelrahman",
+      "lastName": "Elmowafi"
+    },
+    {
+      "id": "exam-colombia-equipo-femenino-col",
+      "displayName": "COLOMBIA (EQUIPO FEMENINO)",
+      "country": "COL",
+      "countryCode": "COL"
+    },
+    {
+      "id": "exam-francia-equipo-femenino-fra",
+      "displayName": "FRANCIA (EQUIPO FEMENINO)",
+      "country": "FRA",
+      "countryCode": "FRA"
+    },
+    {
+      "id": "exam-ohata-kotaro-jpn",
+      "displayName": "OHATA KOTARO",
+      "country": "JPN",
+      "countryCode": "JPN",
+      "firstName": "Kotaro",
+      "lastName": "Ohata"
+    },
+    {
+      "id": "exam-torres-gutierrez-ariel-usa",
+      "displayName": "TORRES GUTIERREZ ARIEL",
+      "country": "USA",
+      "countryCode": "USA",
+      "firstName": "Ariel",
+      "lastName": "Torres Gutierrez"
+    },
+    {
+      "id": "exam-iwamoto-emiri-jpn",
+      "displayName": "IWAMOTO EMIRI",
+      "country": "JPN",
+      "countryCode": "JPN",
+      "firstName": "Emiri",
+      "lastName": "Iwamoto"
+    },
+    {
+      "id": "exam-bardos-adam-hun",
+      "displayName": "BARDOS ADAM",
+      "country": "HUN",
+      "countryCode": "HUN",
+      "firstName": "Adam",
+      "lastName": "Bardos"
+    },
+    {
+      "id": "exam-neto-artur-por",
+      "displayName": "NETO ARTUR",
+      "country": "POR",
+      "countryCode": "POR",
+      "firstName": "Artur",
+      "lastName": "Neto"
+    },
+    {
+      "id": "exam-elghobashy-mostafa-egy",
+      "displayName": "ELGHOBASHY MOSTAFA",
+      "country": "EGY",
+      "countryCode": "EGY",
+      "firstName": "Mostafa",
+      "lastName": "Elghobashy"
+    },
+    {
+      "id": "exam-ikeda-ryusei-jpn",
+      "displayName": "IKEDA RYUSEI",
+      "country": "JPN",
+      "countryCode": "JPN",
+      "firstName": "Ryusei",
+      "lastName": "Ikeda"
     }
   ],
   "videos": [
@@ -14808,11 +14910,13 @@
       "kataAoNumber": 92,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "VIDEO_CATALOGUED",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=1067&ver_info_action=catauslist",
       "officialScoreAka": 24.4,
       "officialScoreAo": 25.3,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "sbqsd0tA6yk",
+      "startSeconds": 3
     },
     {
       "id": "31st-mediterranean-championships-2025-guadalajara_senior-female-kata_bronze_1",
@@ -22548,11 +22652,15 @@
       "kataAoNumber": 41,
       "officialWinner": "AO",
       "officialResultType": "AO_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "VIDEO_CATALOGUED",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=885&ver_info_action=catauslist",
       "officialScoreAka": 39.8,
       "officialScoreAo": 40.3,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "34ZRnW1Mnhw",
+      "startSeconds": 13,
+      "akaStartSeconds": 13,
+      "aoStartSeconds": 279
     },
     {
       "id": "wkf-cadet-junior-and-u21-world-championships-2024-venice_u21-male-kata_bronze_2",
@@ -22568,11 +22676,15 @@
       "kataAoNumber": 21,
       "officialWinner": "AKA",
       "officialResultType": "AKA_WINS",
-      "status": "VIDEO_MISSING",
+      "status": "VIDEO_CATALOGUED",
       "sportDataUrl": "https://www.sportdata.org/wkf/set-online/veranstaltung_info_main.php?active_menu=calendar&vernr=885&ver_info_action=catauslist",
       "officialScoreAka": 42.2,
       "officialScoreAo": 40.9,
-      "judgesCount": 5
+      "judgesCount": 5,
+      "videoId": "_cgKSHA9pKk",
+      "startSeconds": 5,
+      "akaStartSeconds": 5,
+      "aoStartSeconds": 154
     },
     {
       "id": "the-22nd-asian-cadet-junior-u21-championship-2024-manila-philippines_u21-female-kata_final",
@@ -24009,27 +24121,6 @@
       "kataAo": "Papuren"
     },
     {
-      "id": "former-exams-ekf-wkf_20",
-      "competitionId": "former-exams-ekf-wkf",
-      "categoryId": "senior-male-kata",
-      "roundType": "OTHER",
-      "akaAthleteId": "exam-hong-kong-competidor-masculino-hkg",
-      "aoAthleteId": "exam-nishiyama-kakeru-jpn",
-      "officialWinner": "AO",
-      "officialResultType": "AO_WINS",
-      "formerExam": true,
-      "examAppearances": [
-        {
-          "exam": "WKF 26 Fujairah"
-        },
-        {
-          "exam": "WKF 26 Bielsko-Biała"
-        }
-      ],
-      "notes": "En SportData (2024–2026) no hay ningún combate de un competidor de Hong Kong contra Nishiyama: emparejamiento montado para el examen con dos vídeos distintos. Competidor de Hong Kong por confirmar.",
-      "status": "VIDEO_MISSING"
-    },
-    {
       "id": "former-exams-ekf-wkf_21",
       "competitionId": "former-exams-ekf-wkf",
       "categoryId": "senior-male-team-kata",
@@ -24044,10 +24135,11 @@
           "exam": "WKF 26 Fujairah"
         },
         {
-          "exam": "WKF 26 Bielsko-Biała"
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 9
         }
       ],
-      "notes": "AKA: equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025); en SportData solo hubo un combate, España A (Paiku 24.1) contra España B (Unsu 23.5). AO: equipo de Burkina Faso, sin rastro en SportData 2024–2026 (solo aparece su equipo femenino en el UFAK 2026). Oriol tiene los dos vídeos.",
+      "notes": "Montaje con dos vídeos: AKA es el equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025), Paiku. AO es el equipo masculino de Burkina Faso del Campeonato de África (UFAK) Casablanca 2023, Anan.",
       "status": "READY",
       "videoId": "q1zuEuT29sE",
       "startSeconds": 25,
@@ -24056,7 +24148,9 @@
       "akaEndSeconds": 347,
       "aoStartSeconds": 337,
       "aoEndSeconds": 594,
-      "aoVideoId": "76kXHBF4SdM"
+      "aoVideoId": "76kXHBF4SdM",
+      "kataAka": "Paiku",
+      "kataAo": "Anan"
     },
     {
       "id": "former-exams-ekf-wkf_22",
@@ -24965,6 +25059,235 @@
         "ao": 5
       },
       "notes": "Sistema 2026: ganador por mayoría de votos de 5 jueces."
+    },
+    {
+      "id": "former-exams-ekf-wkf_20",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-hung-ho-wai-howard-hkg",
+      "aoAthleteId": "exam-nishiyama-kakeru-jpn",
+      "kataAka": "Suparinpei",
+      "kataAo": "Seisan",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Fujairah"
+        },
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 10
+        }
+      ],
+      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 2, tatami 4 (los dos en el mismo vídeo). Hoja del examen de Bielsko-Biała: AKA 8.0, AO 8.5. El PDF pone \"H. Hung (HKG)\": se asume Hung Ho Wai Howard.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "75DGz9cXyqs",
+      "startSeconds": 3768
+    },
+    {
+      "id": "former-exams-ekf-wkf_23",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "u21-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-lueck-aidan-randall-ger",
+      "aoAthleteId": "exam-ziad-youcef-alg",
+      "kataAka": "Anan Dai",
+      "kataAo": "Gojushiho Sho",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 1
+        }
+      ],
+      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024. En la realidad Lueck perdió con Elmowafi y Ziad con Ishikawa.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "34ZRnW1Mnhw",
+      "startSeconds": 13,
+      "aoVideoId": "_cgKSHA9pKk",
+      "akaStartSeconds": 13,
+      "aoStartSeconds": 154
+    },
+    {
+      "id": "former-exams-ekf-wkf_24",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "u21-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-ishikawa-taiga-jpn",
+      "aoAthleteId": "exam-elmowafi-abdelrahman-egy",
+      "kataAka": "Unsu",
+      "kataAo": "Kanku Sho",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 2
+        }
+      ],
+      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024 (los dos ganaron su bronce).",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "_cgKSHA9pKk",
+      "startSeconds": 5,
+      "aoVideoId": "34ZRnW1Mnhw",
+      "akaStartSeconds": 5,
+      "aoStartSeconds": 279
+    },
+    {
+      "id": "former-exams-ekf-wkf_27",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-female-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-iwamoto-emiri-jpn",
+      "aoAthleteId": "exam-mota-nicole-bra",
+      "kataAka": "Anan",
+      "kataAo": "Suparinpei",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 5
+        }
+      ],
+      "closeResult": true,
+      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "Kju_dQdMeuk",
+      "startSeconds": 1673
+    },
+    {
+      "id": "former-exams-ekf-wkf_28",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-female-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-taily-helvetia-fra",
+      "aoAthleteId": "exam-d-onofrio-terryana-ita",
+      "kataAka": "Suparinpei",
+      "kataAo": "Suparinpei",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 6
+        }
+      ],
+      "notes": "Final del 31º Campeonato Mediterráneo (Guadalajara 2025): Taily 24.4, D'Onofrio 25.3.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "sbqsd0tA6yk",
+      "startSeconds": 3
+    },
+    {
+      "id": "former-exams-ekf-wkf_29",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-bardos-adam-hun",
+      "aoAthleteId": "exam-neto-artur-por",
+      "kataAka": "Suparinpei",
+      "kataAo": "Chatanyara Kushanku",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 7
+        }
+      ],
+      "closeResult": true,
+      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75, con los dos marcados como ganador.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "tIZWs1ysRc0",
+      "startSeconds": 875,
+      "akaStartSeconds": 875,
+      "aoStartSeconds": 1610
+    },
+    {
+      "id": "former-exams-ekf-wkf_30",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-elghobashy-mostafa-egy",
+      "aoAthleteId": "exam-ikeda-ryusei-jpn",
+      "kataAka": "Gojushiho Sho",
+      "kataAo": "Anan",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 8
+        }
+      ],
+      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2): AO sale antes que AKA en el vídeo.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "tIZWs1ysRc0",
+      "startSeconds": 3922,
+      "akaStartSeconds": 3922,
+      "aoStartSeconds": 1142
+    },
+    {
+      "id": "former-exams-ekf-wkf_25",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-female-team-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-colombia-equipo-femenino-col",
+      "aoAthleteId": "exam-francia-equipo-femenino-fra",
+      "kataAka": "Gankaku",
+      "kataAo": "Gojushiho Sho",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 3
+        }
+      ],
+      "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). El PDF duda entre Gojushiho Sho (minuto 2:35) y Gojushiho Dai (22:56) del mismo vídeo.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "xl4xnmkY9NA",
+      "aoVideoId": "G8Y76Wwhb8k",
+      "startSeconds": 0,
+      "akaStartSeconds": 0,
+      "aoStartSeconds": 155
+    },
+    {
+      "id": "former-exams-ekf-wkf_26",
+      "competitionId": "former-exams-ekf-wkf",
+      "categoryId": "senior-male-kata",
+      "roundType": "OTHER",
+      "akaAthleteId": "exam-ohata-kotaro-jpn",
+      "aoAthleteId": "exam-torres-gutierrez-ariel-usa",
+      "kataAka": "Papuren",
+      "kataAo": "Anan",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
+      "formerExam": true,
+      "examAppearances": [
+        {
+          "exam": "WKF 26 Bielsko-Biała",
+          "order": 4
+        }
+      ],
+      "closeResult": true,
+      "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.",
+      "status": "VIDEO_CATALOGUED",
+      "videoId": "DRTtqFtEfXI",
+      "aoVideoId": "a5Jpst_0JIM",
+      "startSeconds": 0,
+      "akaStartSeconds": 0,
+      "aoStartSeconds": 201
     }
   ]
 }

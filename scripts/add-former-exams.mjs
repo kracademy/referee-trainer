@@ -16,7 +16,7 @@ const EXAM_LABELS = ['EKF 25', 'WKF 25-1', 'WKF 25-2', 'EKF 26', 'WKF 26-1', 'WK
 /**
  * Cada fila del documento. `apps` = posición en cada examen (índice = EXAM_LABELS).
  * `aka`/`ao`: { name, cc?, kata?, video?, t? }  ·  `winner`: 'AKA' | 'AO'
- * `cat`: categoría (?: por confirmar) · `note`: contexto/observaciones
+ * `cat`: categoría (?: por confirmar) · `note`: contexto/observaciones · `close`: resultado ajustado (⚖️)
  */
 const ROWS = [
   {
@@ -156,18 +156,19 @@ const ROWS = [
     note: "Premier League Rabat 2025 (30 may 2025), liguilla del Pool 1 femenino (con Xenou y Lo Sum Man), emisión WKF del viernes, tatami 1. Taily Unsu 38.5 vs D'Onofrio Papuren 40.1. Otros cruces anteriores al examen: final EKF Yerevan 2025 y octavos del Mundial El Cairo 2025.",
   },
   {
-    apps: [null, null, null, null, null, 0, 0],
-    aka: { name: 'HONG KONG (COMPETIDOR MASCULINO)', cc: 'HKG' },
-    ao: { name: 'NISHIYAMA KAKERU', cc: 'JPN' },
+    apps: [null, null, null, null, null, 0, 10],
+    aka: { name: 'HUNG HO WAI HOWARD', cc: 'HKG', kata: 'Suparinpei', video: '75DGz9cXyqs', t: 3768 },
+    ao: { name: 'NISHIYAMA KAKERU', cc: 'JPN', kata: 'Seisan', video: '75DGz9cXyqs', t: 3768 },
     winner: 'AO', cat: 'senior-male-kata',
-    note: 'En SportData (2024–2026) no hay ningún combate de un competidor de Hong Kong contra Nishiyama: emparejamiento montado para el examen con dos vídeos distintos. Competidor de Hong Kong por confirmar.',
+    note: 'Karate1 Premier League Fukuoka 2023, emisión WKF día 2, tatami 4 (los dos en el mismo vídeo). Hoja del examen de Bielsko-Biała: AKA 8.0, AO 8.5. El PDF pone "H. Hung (HKG)": se asume Hung Ho Wai Howard.',
   },
   {
-    apps: [null, null, null, null, null, 0, 0],
-    aka: { name: 'ESPAÑA (EQUIPO MASCULINO)', cc: 'ESP' },
-    ao: { name: 'BURKINA FASO (EQUIPO MASCULINO)', cc: 'BUR' },
+    apps: [null, null, null, null, null, 0, 9],
+    aka: { name: 'ESPAÑA (EQUIPO MASCULINO)', cc: 'ESP', kata: 'Paiku', video: 'q1zuEuT29sE', t: 25 },
+    ao: { name: 'BURKINA FASO (EQUIPO MASCULINO)', cc: 'BUR', kata: 'Anan', video: '76kXHBF4SdM', t: 337 },
     winner: 'AKA', cat: 'senior-male-team-kata',
-    note: 'AKA: equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025); en SportData solo hubo un combate, España A (Paiku 24.1) contra España B (Unsu 23.5). AO: equipo de Burkina Faso, sin rastro en SportData 2024–2026 (solo aparece su equipo femenino en el UFAK 2026). Oriol tiene los dos vídeos.',
+    clip: { start: 25, end: 347, akaStart: 25, akaEnd: 347, aoStart: 337, aoEnd: 594 },
+    note: 'Montaje con dos vídeos: AKA es el equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025), Paiku. AO es el equipo masculino de Burkina Faso del Campeonato de África (UFAK) Casablanca 2023, Anan.',
   },
   {
     apps: [null, null, null, null, null, 0],
@@ -175,6 +176,63 @@ const ROWS = [
     ao: { name: 'KIYUNA RYO (MAYOR)', cc: 'JPN' },
     winner: 'AO', cat: 'senior-male-kata',
     note: 'Encuentro inventado para el examen: Kiyuna de joven contra Kiyuna en una etapa posterior. Sin vídeo, solo para recordarlo.',
+  },
+  // ── Examen WKF Bielsko-Biała 2026 (11 oct 2026). Además repitieron el 9 (_21) y el 10 (_20). ──
+  {
+    apps: [null, null, null, null, null, null, 1],
+    aka: { name: 'LUECK AIDAN RANDALL', cc: 'GER', kata: 'Anan Dai', video: '34ZRnW1Mnhw', t: 13 },
+    ao: { name: 'ZIAD YOUCEF', cc: 'ALG', kata: 'Gojushiho Sho', video: '_cgKSHA9pKk', t: 154 },
+    winner: 'AO', cat: 'u21-male-kata',
+    note: 'Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024. En la realidad Lueck perdió con Elmowafi y Ziad con Ishikawa.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 2],
+    aka: { name: 'ISHIKAWA TAIGA', cc: 'JPN', kata: 'Unsu', video: '_cgKSHA9pKk', t: 5 },
+    ao: { name: 'ELMOWAFI ABDELRAHMAN', cc: 'EGY', kata: 'Kanku Sho', video: '34ZRnW1Mnhw', t: 279 },
+    winner: 'AKA', cat: 'u21-male-kata',
+    note: 'Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024 (los dos ganaron su bronce).',
+  },
+  {
+    apps: [null, null, null, null, null, null, 3],
+    aka: { name: 'COLOMBIA (EQUIPO FEMENINO)', cc: 'COL', kata: 'Gankaku', video: 'xl4xnmkY9NA' },
+    ao: { name: 'FRANCIA (EQUIPO FEMENINO)', cc: 'FRA', kata: 'Gojushiho Sho', video: 'G8Y76Wwhb8k', t: 155 },
+    winner: 'AO', cat: 'senior-female-team-kata',
+    note: 'Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). El PDF duda entre Gojushiho Sho (minuto 2:35) y Gojushiho Dai (22:56) del mismo vídeo.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 4],
+    aka: { name: 'OHATA KOTARO', cc: 'JPN', kata: 'Papuren', video: 'DRTtqFtEfXI' },
+    ao: { name: 'TORRES GUTIERREZ ARIEL', cc: 'USA', kata: 'Anan', video: 'a5Jpst_0JIM', t: 201 },
+    winner: 'AKA', close: true, cat: 'senior-male-kata',
+    note: 'Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 5],
+    aka: { name: 'IWAMOTO EMIRI', cc: 'JPN', kata: 'Anan', video: 'Kju_dQdMeuk', t: 1673 },
+    ao: { name: 'MOTA NICOLE', cc: 'BRA', kata: 'Suparinpei', video: 'Kju_dQdMeuk', t: 1673 },
+    winner: 'AKA', close: true, cat: 'senior-female-kata',
+    note: 'Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 6],
+    aka: { name: 'TAILY HELVETIA', cc: 'FRA', kata: 'Suparinpei', video: 'sbqsd0tA6yk', t: 3 },
+    ao: { name: "D'ONOFRIO TERRYANA", cc: 'ITA', kata: 'Suparinpei', video: 'sbqsd0tA6yk', t: 3 },
+    winner: 'AO', cat: 'senior-female-kata',
+    note: 'Final del 31º Campeonato Mediterráneo (Guadalajara 2025): Taily 24.4, D\'Onofrio 25.3.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 7],
+    aka: { name: 'BARDOS ADAM', cc: 'HUN', kata: 'Suparinpei', video: 'tIZWs1ysRc0', t: 875 },
+    ao: { name: 'NETO ARTUR', cc: 'POR', kata: 'Chatanyara Kushanku', video: 'tIZWs1ysRc0', t: 1610 },
+    winner: 'AO', close: true, cat: 'senior-male-kata',
+    note: 'Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75, con los dos marcados como ganador.',
+  },
+  {
+    apps: [null, null, null, null, null, null, 8],
+    aka: { name: 'ELGHOBASHY MOSTAFA', cc: 'EGY', kata: 'Gojushiho Sho', video: 'tIZWs1ysRc0', t: 3922 },
+    ao: { name: 'IKEDA RYUSEI', cc: 'JPN', kata: 'Anan', video: 'tIZWs1ysRc0', t: 1142 },
+    winner: 'AO', cat: 'senior-male-kata',
+    note: 'Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2): AO sale antes que AKA en el vídeo.',
   },
 ];
 
@@ -236,6 +294,7 @@ ROWS.forEach((row, i) => {
     officialResultType: row.winner === 'AKA' ? 'AKA_WINS' : 'AO_WINS',
     formerExam: true,
     examAppearances,
+    ...(row.close ? { closeResult: true } : {}),
     notes: row.note,
     status: 'MISSING_DATA',
   };
@@ -245,9 +304,10 @@ ROWS.forEach((row, i) => {
     perf.videoId = row.aka.video;
     if (row.aka.t != null) perf.startSeconds = row.aka.t;
     if (row.ao.video && row.ao.video !== row.aka.video) perf.aoVideoId = row.ao.video;
-    // tiempos por atleta cuando el documento da un instante distinto para cada uno
-    if (row.aka.t != null && row.ao.t != null && row.ao.t !== row.aka.t) {
-      perf.akaStartSeconds = row.aka.t;
+    // tiempos por atleta cuando el documento da un instante distinto para cada uno (sin instante de AKA = desde el principio)
+    if (row.ao.t != null && (perf.aoVideoId || row.ao.t !== row.aka.t)) {
+      perf.startSeconds = row.aka.t ?? 0;
+      perf.akaStartSeconds = row.aka.t ?? 0;
       perf.aoStartSeconds = row.ao.t;
     }
   }
