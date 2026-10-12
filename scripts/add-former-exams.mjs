@@ -10,7 +10,7 @@ const datasetPath = join(here, '..', 'public', 'data', 'dataset.json');
 const ds = JSON.parse(readFileSync(datasetPath, 'utf8'));
 
 const COMP_ID = 'former-exams-ekf-wkf';
-const EXAM_LABELS = ['EKF 25', 'WKF 25-1', 'WKF 25-2', 'EKF 26', 'WKF 26-1', 'WKF 26 Fujairah'];
+const EXAM_LABELS = ['EKF 25', 'WKF 25-1', 'WKF 25-2', 'EKF 26', 'WKF 26-1', 'WKF 26 Fujairah', 'WKF 26 Bielsko-Biała'];
 // `apps[i] === 0` = salió en ese examen pero no sabemos en qué posición
 
 /**
@@ -156,14 +156,14 @@ const ROWS = [
     note: "Premier League Rabat 2025 (30 may 2025), liguilla del Pool 1 femenino (con Xenou y Lo Sum Man), emisión WKF del viernes, tatami 1. Taily Unsu 38.5 vs D'Onofrio Papuren 40.1. Otros cruces anteriores al examen: final EKF Yerevan 2025 y octavos del Mundial El Cairo 2025.",
   },
   {
-    apps: [null, null, null, null, null, 0],
+    apps: [null, null, null, null, null, 0, 0],
     aka: { name: 'HONG KONG (COMPETIDOR MASCULINO)', cc: 'HKG' },
     ao: { name: 'NISHIYAMA KAKERU', cc: 'JPN' },
     winner: 'AO', cat: 'senior-male-kata',
     note: 'En SportData (2024–2026) no hay ningún combate de un competidor de Hong Kong contra Nishiyama: emparejamiento montado para el examen con dos vídeos distintos. Competidor de Hong Kong por confirmar.',
   },
   {
-    apps: [null, null, null, null, null, 0],
+    apps: [null, null, null, null, null, 0, 0],
     aka: { name: 'ESPAÑA (EQUIPO MASCULINO)', cc: 'ESP' },
     ao: { name: 'BURKINA FASO (EQUIPO MASCULINO)', cc: 'BUR' },
     winner: 'AKA', cat: 'senior-male-team-kata',
