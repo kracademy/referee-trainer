@@ -25157,7 +25157,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.",
+      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. Resultado sin confirmar: de momento gana Iwamoto (AKA).",
       "status": "VIDEO_CATALOGUED",
       "videoId": "Kju_dQdMeuk",
       "startSeconds": 1673
@@ -25204,7 +25204,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75, con los dos marcados como ganador.",
+      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75. Resultado sin confirmar: de momento gana Neto con Chatanyara Kushanku (AO).",
       "status": "VIDEO_CATALOGUED",
       "videoId": "tIZWs1ysRc0",
       "startSeconds": 875,
@@ -25271,8 +25271,8 @@
       "aoAthleteId": "exam-torres-gutierrez-ariel-usa",
       "kataAka": "Papuren",
       "kataAo": "Anan",
-      "officialWinner": "AKA",
-      "officialResultType": "AKA_WINS",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25281,7 +25281,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.",
+      "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. Resultado sin confirmar: de momento gana Ariel Torres (AO).",
       "status": "VIDEO_CATALOGUED",
       "videoId": "DRTtqFtEfXI",
       "aoVideoId": "a5Jpst_0JIM",

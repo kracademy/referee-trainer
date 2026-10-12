@@ -203,15 +203,15 @@ const ROWS = [
     apps: [null, null, null, null, null, null, 4],
     aka: { name: 'OHATA KOTARO', cc: 'JPN', kata: 'Papuren', video: 'DRTtqFtEfXI' },
     ao: { name: 'TORRES GUTIERREZ ARIEL', cc: 'USA', kata: 'Anan', video: 'a5Jpst_0JIM', t: 201 },
-    winner: 'AKA', close: true, cat: 'senior-male-kata',
-    note: 'Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.',
+    winner: 'AO', close: true, cat: 'senior-male-kata',
+    note: 'Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. Resultado sin confirmar: de momento gana Ariel Torres (AO).',
   },
   {
     apps: [null, null, null, null, null, null, 5],
     aka: { name: 'IWAMOTO EMIRI', cc: 'JPN', kata: 'Anan', video: 'Kju_dQdMeuk', t: 1673 },
     ao: { name: 'MOTA NICOLE', cc: 'BRA', kata: 'Suparinpei', video: 'Kju_dQdMeuk', t: 1673 },
     winner: 'AKA', close: true, cat: 'senior-female-kata',
-    note: 'Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. En la hoja salen marcados los dos como ganador: AKA puesto de forma provisional.',
+    note: 'Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. Resultado sin confirmar: de momento gana Iwamoto (AKA).',
   },
   {
     apps: [null, null, null, null, null, null, 6],
@@ -225,7 +225,7 @@ const ROWS = [
     aka: { name: 'BARDOS ADAM', cc: 'HUN', kata: 'Suparinpei', video: 'tIZWs1ysRc0', t: 875 },
     ao: { name: 'NETO ARTUR', cc: 'POR', kata: 'Chatanyara Kushanku', video: 'tIZWs1ysRc0', t: 1610 },
     winner: 'AO', close: true, cat: 'senior-male-kata',
-    note: 'Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75, con los dos marcados como ganador.',
+    note: 'Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75. Resultado sin confirmar: de momento gana Neto con Chatanyara Kushanku (AO).',
   },
   {
     apps: [null, null, null, null, null, null, 8],
