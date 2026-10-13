@@ -24150,7 +24150,7 @@
           "order": 9
         }
       ],
-      "notes": "Montaje con dos vídeos: AKA es el equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025), Paiku. AO es el equipo masculino de Burkina Faso del Campeonato de África (UFAK) Casablanca 2023, Anan.",
+      "notes": "Montaje con dos vídeos: AKA es el equipo masculino de España del 31º Campeonato Mediterráneo (Guadalajara 2025), Paiku. AO es el equipo masculino de Burkina Faso del Campeonato de África (UFAK) Casablanca 2023, Anan. Respuesta de la comisión en Bielsko-Biała (supuesta): gana AKA.",
       "status": "READY",
       "videoId": "q1zuEuT29sE",
       "startSeconds": 25,
@@ -25092,7 +25092,7 @@
           "order": 10
         }
       ],
-      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 2, tatami 4 (los dos en el mismo vídeo). Hoja del examen de Bielsko-Biała: AKA 8.0, AO 8.5. El PDF pone \"H. Hung (HKG)\": se asume Hung Ho Wai Howard.",
+      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 2, tatami 4 (los dos en el mismo vídeo). Hoja del examen de Bielsko-Biała: AKA 8.0, AO 8.5. El PDF pone \"H. Hung (HKG)\": se asume Hung Ho Wai Howard. Respuesta de la comisión en Bielsko-Biała (supuesta): gana AO.",
       "status": "READY",
       "videoId": "75DGz9cXyqs",
       "startSeconds": 3768,
@@ -25114,8 +25114,8 @@
       "aoAthleteId": "exam-ziad-youcef-alg",
       "kataAka": "Anan Dai",
       "kataAo": "Gojushiho Sho",
-      "officialWinner": "AO",
-      "officialResultType": "AO_WINS",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25123,7 +25123,7 @@
           "order": 1
         }
       ],
-      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024. En la realidad Lueck perdió con Elmowafi y Ziad con Ishikawa.",
+      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024. En la realidad Lueck perdió con Elmowafi y Ziad con Ishikawa. Respuesta de la comisión en Bielsko-Biała (segura): gana AKA.",
       "status": "READY",
       "videoId": "34ZRnW1Mnhw",
       "startSeconds": 13,
@@ -25143,8 +25143,8 @@
       "aoAthleteId": "exam-elmowafi-abdelrahman-egy",
       "kataAka": "Unsu",
       "kataAo": "Kanku Sho",
-      "officialWinner": "AKA",
-      "officialResultType": "AKA_WINS",
+      "officialWinner": "AO",
+      "officialResultType": "AO_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25152,7 +25152,7 @@
           "order": 2
         }
       ],
-      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024 (los dos ganaron su bronce).",
+      "notes": "Montaje con los dos bronces U21 masculino del Mundial Cadete, Junior y U21 de Venecia (Jesolo) 2024 (los dos ganaron su bronce). Respuesta de la comisión en Bielsko-Biała (deducida): gana AO.",
       "status": "READY",
       "videoId": "_cgKSHA9pKk",
       "startSeconds": 5,
@@ -25182,7 +25182,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. Resultado sin confirmar: de momento gana Iwamoto (AKA).",
+      "notes": "Karate1 Premier League Fukuoka 2023, emisión WKF día 1, tatami 2. Respuesta de la comisión en Bielsko-Biała (deducida): gana AKA.",
       "status": "READY",
       "videoId": "Kju_dQdMeuk",
       "startSeconds": 1673,
@@ -25210,7 +25210,7 @@
           "order": 6
         }
       ],
-      "notes": "Final del 31º Campeonato Mediterráneo (Guadalajara 2025): Taily 24.4, D'Onofrio 25.3.",
+      "notes": "Final del 31º Campeonato Mediterráneo (Guadalajara 2025): Taily 24.4, D'Onofrio 25.3. Respuesta de la comisión en Bielsko-Biała (supuesta): gana AO.",
       "status": "READY",
       "videoId": "sbqsd0tA6yk",
       "startSeconds": 3,
@@ -25232,8 +25232,8 @@
       "aoAthleteId": "exam-neto-artur-por",
       "kataAka": "Suparinpei",
       "kataAo": "Chatanyara Kushanku",
-      "officialWinner": "AO",
-      "officialResultType": "AO_WINS",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25242,7 +25242,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75. Resultado sin confirmar: de momento gana Neto con Chatanyara Kushanku (AO).",
+      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2). Hoja del examen: AKA 7.66, AO 7.75. Respuesta de la comisión en Bielsko-Biała (segura): gana AKA.",
       "status": "READY",
       "videoId": "tIZWs1ysRc0",
       "startSeconds": 875,
@@ -25261,8 +25261,8 @@
       "aoAthleteId": "exam-ikeda-ryusei-jpn",
       "kataAka": "Gojushiho Sho",
       "kataAo": "Anan",
-      "officialWinner": "AO",
-      "officialResultType": "AO_WINS",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25270,7 +25270,7 @@
           "order": 8
         }
       ],
-      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2): AO sale antes que AKA en el vídeo.",
+      "notes": "Montaje de la Premier League Istanbul 2026 (emisión WKF del sábado, tatami 2): AO sale antes que AKA en el vídeo. Respuesta de la comisión en Bielsko-Biała (deducida): gana AKA.",
       "status": "READY",
       "videoId": "tIZWs1ysRc0",
       "startSeconds": 3922,
@@ -25298,7 +25298,7 @@
           "order": 3
         }
       ],
-      "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). Sin confirmar si fue Gojushiho Dai (22:56) o Sho (2:35) del mismo vídeo: de momento Dai.",
+      "notes": "Karate World Cup Pamplona 2024. AKA: Colombia en la fase final (pérdida de equilibrio en Gankaku). AO: Francia en la fase de grupos (día 1, tatami 4). Sin confirmar si fue Gojushiho Dai (22:56) o Sho (2:35) del mismo vídeo: de momento Dai. Respuesta de la comisión en Bielsko-Biała (supuesta): gana AO.",
       "status": "READY",
       "videoId": "xl4xnmkY9NA",
       "aoVideoId": "G8Y76Wwhb8k",
@@ -25318,8 +25318,8 @@
       "aoAthleteId": "exam-torres-gutierrez-ariel-usa",
       "kataAka": "Papuren",
       "kataAo": "Anan",
-      "officialWinner": "AO",
-      "officialResultType": "AO_WINS",
+      "officialWinner": "AKA",
+      "officialResultType": "AKA_WINS",
       "formerExam": true,
       "examAppearances": [
         {
@@ -25328,7 +25328,7 @@
         }
       ],
       "closeResult": true,
-      "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. Resultado sin confirmar: de momento gana Ariel Torres (AO).",
+      "notes": "Montaje de la Premier League Rabat 2025: AKA de la semifinal Ohata–Nishiyama, AO de los cuartos Abe–Torres. Respuesta de la comisión en Bielsko-Biała (deducida): gana AKA.",
       "status": "READY",
       "videoId": "DRTtqFtEfXI",
       "aoVideoId": "a5Jpst_0JIM",
