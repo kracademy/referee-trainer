@@ -25337,10 +25337,7 @@
       "aoStartSeconds": 201,
       "endSeconds": 224,
       "akaEndSeconds": 224,
-      "aoEndSeconds": 335,
-      "officialScoreAka": 42.4,
-      "officialScoreAo": 43.3,
-      "judgesCount": 5
+      "aoEndSeconds": 335
     }
   ]
 }
